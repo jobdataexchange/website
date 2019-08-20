@@ -1,5 +1,5 @@
 {
-  "name": "frictionlessdata",
+  "name": "jobdataexchange",
   "version": "1.0.0",
   "specsBranchOrTag": "master",
   "devDependencies": {

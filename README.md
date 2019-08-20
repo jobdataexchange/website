@@ -1,8 +1,8 @@
-# Frictionless Data Website
+# JDX Developer Website
 
 [![Build Status](https://travis-ci.org/frictionlessdata/website.svg)](https://travis-ci.org/frictionlessdata/website)
 
-This is the Frictionless Data website, hosted at https://frictionlessdata.io
+This is the Job Data Exchange Developer website, hosted at https://jobdataexchange.io
 
 ## Contributing
 
@@ -21,11 +21,11 @@ See the [Open Knowledge Foundation coding standards](https://github.com/okfn/cod
 
 ### Contributing Translations
 
-We are keen on having Frictionless Data content translated and made available in different languages. Here is how to submit your content translations for review:
+We are keen on having Job Data Exchange content translated and made available in different languages. Here is how to submit your content translations for review:
 
 #### Open an issue
 
-- [Open a new issue](https://github.com/frictionlessdata/website/github/issues/new?title=New%20Content%20Translations%20For%20Review&body=bar)
+- [Open a new issue]()
 - Specify pages that have been translated, and provide a link to the translated content
 
 #### As a Pull Request
@@ -36,9 +36,9 @@ We are keen on having Frictionless Data content translated and made available in
 - Add your translated text in the file above, in Markdown format.
 - Submit a pull request.
 
-Your submission will then undergo a review process, and once edits and suggestions have been incorporated, your translation will be added to the Frictionless Data website.
+Your submission will then undergo a review process, and once edits and suggestions have been incorporated, your translation will be added to the Job Data Exchange Developer website.
 
-All content on the Frictionless Data website is made available under the CC-BY license.
+All content on the Job Data Exchange developer website is made available under the CC-BY license.
 
 ### CSS
 

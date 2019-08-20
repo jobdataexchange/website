@@ -1,5 +1,5 @@
 [project]
-name = Frictionless Data
+name = Jobs Data Exchange
 
 [packages]
 lektor-s3 = 0.5.0
@@ -10,7 +10,7 @@ lektor-markdown-admonition = 0.1
 [servers.s3]
 name = S3
 enabled = yes
-target = s3://frictionlessdata.io
+target = s3://jobsdataexchange.org
 
 [servers.ghpages]
-target = ghpages://frictionlessdata/website
+target = ghpages://jobsdataexchange/website
