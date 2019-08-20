@@ -1,6 +1,6 @@
-title: Visible, findable, shareable data
+title: Structured, skills-rich, shareable jobs data
 ---
-intro: Getting your data out into the world is a crucial step towards its being used and useful. We walk through the steps to publishing on the top data platforms.
+intro: Getting your job data out into the world is a crucial step towards its being used and useful. We walk through the steps to publishing on the top job platforms.
 ---
 body:
 
@@ -168,7 +168,7 @@ The sample datasets used in this example, that is, List of schools in Birmingham
 ---
 ft_img: visible.png
 ---
-required:
+required: 
 ---
 tools: Goodtables
 ---

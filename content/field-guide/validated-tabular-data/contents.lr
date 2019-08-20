@@ -1,10 +1,10 @@
-title: Validated tabular data
+title: Validated jobs data
 ---
-intro: When it comes to validating tabular data, you have some great tools at your disposal. We take a look at a couple of ways to utilise goodtables.
+intro: When it comes to validating job data, you now have JDX tools at your disposal. We take a look at a couple of ways to utilise goodjob.
 ---
 body:
 
-Errors in data are not uncommon. They also often get in the way of quick and timely data analysis for many data users. What if there was a way to quickly identify errors in your data to accelerate the process by which you fix them before sharing your data or using it for analysis?
+Errors in job data are not uncommon. They also often get in the way of quick and timely data analysis for many data users. What if there was a way to quickly identify errors in your data to accelerate the process by which you fix them before sharing your data or using it for analysis?
 
 In this section, we will learn how to carry out one-time data validation using
 * a free web tool called [try.goodtables.io](https://try.goodtables.io),

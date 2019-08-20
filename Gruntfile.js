@@ -89,7 +89,7 @@ module.exports = function(grunt) {
     shell.config.fatal = true
     shell.config.verbose = true
     shell.rm('-rf', 'specs')
-    shell.exec(`git clone --depth=1 --branch=${config.specsBranchOrTag} https://github.com/frictionlessdata/specs.git`)
+    shell.exec(`git clone --depth=1 --branch=${config.specsBranchOrTag} https://github.com/jobdataexchange/specs.git`)
     shell.exec('npm install --prefix specs')
     shell.exec('npm run build --prefix specs')
     shell.exec('npm run test --prefix specs')

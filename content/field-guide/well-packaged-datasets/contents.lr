@@ -1,6 +1,6 @@
-title: Well packaged datasets
+title: Well structured jobs data
 ---
-intro: There's an art to creating a good collection of data. Improve the quality of your datasets; making use of schemas, metadata, and data packages.
+intro: There's an art to creating a good job description. Improve the quality of your job descriptions and job postings; making use of standard schemas, skills and competency data, and other JDX tools.
 ---
 body:
 
@@ -147,7 +147,7 @@ Congratulations! You have now created a schema for your data, and combined it wi
 ---
 ft_img: well-packaged.png
 ---
-required:
+required: 
 ---
 tools: Data Package Creator
 ---
