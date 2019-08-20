@@ -1,0 +1,153 @@
+_model: home
+---
+banner_main_text: Improve employer signaling with JDX
+---
+banner_cta_text: Play video
+---
+banner_image: video.jpg
+---
+about_heading: Our Vision
+---
+about_intro: Organic labor market data about the jobs that are available and the skills required to fill them, delivered in real-time. The JDX™ open-data toolset will improve an employer's ability to communicate their hiring needs to their education and workforce partners.
+---
+fellows_heading: Announcing the 2019 JDX Partners Program
+---
+feature1_heading: Specifications
+---
+feature2_heading: Developer Resources
+---
+feature3_heading: Case Studies
+---
+fellows_intro:
+
+The Frictionless Data Reproducible Research Fellows Programme, supported by the Sloan Foundation, is recruiting and training early career researchers to become champions of the Frictionless Data tools and approaches in their field. Fellows will learn about Frictionless Data, lead workshops and events, and write blogs. In addition to mentorship, we are providing successful applicants with stipends of $5,000 to support their work and time during the nine-month long Fellows Programme. We welcome applications until 30th July 2019.
+
+---
+feature1_body: Lightweight containerisation formats for data that provide a minimal yet powerful foundation for data publication, transport, and consumption.
+---
+feature2_body: Apps and integrations that make it easy to integrate Frictionless Data specifications into your data publication, access, and analysis workflows.
+---
+feature3_body: Labs, libraries, governments, and companies are using Frictionless Data in their data workflows to reduce grunt work and move faster to insight.
+---
+fellows_link_text: Read more and join the JDX Partners Program here.
+---
+feature1_link_text: Go to specifications
+---
+feature2_link_text: Go to developer resources
+---
+feature3_link_text: Go to articles
+---
+feature1_link_url: specs
+---
+feature2_link_url: software
+---
+feature3_link_url: articles
+---
+feature1_icon: package
+---
+feature2_icon: software
+---
+feature3_icon: docs
+---
+about_image: diagram.png
+---
+about_image_width: 777
+---
+about_body:
+
+There are 7 million unfilled job postings in America and many of those will remain unfilled because job seekers, employers, and educators are out of sync. We learn about the needs of the business community through outdated vehicles, such as a static job description PDF where the primary goal of the content is to market that job to a job seeker. And the current data we have is often out of date or based on analytics that don’t tell the whole story about what employers want and need in a workforce.   
+
+Degrees, certificates, and credentials are only as good as the data that informs them. Employers are starting to take the wheel, defining the competencies and skills that they need to inspire education and training. Hiring based on competency, what someone knows and is able to do, is on the rise, but not every employer has the tools they need to make the shift. 
+
+We need a technological leap forward when it comes to communicating what’s inside a job.
+
+### What We Are Doing
+
+A new open-data tool, the Job Data Exchange (JDX) is the vehicle employers need to move in a scalable, sustainable way towards competency-based hiring.
+
+The JDX, and the data standard it employs, help employers and their HR partners break down a job description into specific skill and hiring requirements. Open-source, non-proprietary, and free to use, the JDX collects that hiring data in a structured, machine-readable way and then makes that data available to the education and workforce partners that are helping students and job seekers prepare for the workforce. 
+
+### The JDX Will
+
+- Develop competency-based job descriptions
+- Provide employers with feedback and recommendations on how to make improvements to job descriptions and postings 
+- Validate job descriptions across an industry
+- Distribute job postings to education and workforce partners in real time
+
+### The Endgame
+
+- Education and training providers receive better signals of skill requirements from the business community 
+- Job seekers have an improved experience when searching for jobs with more equitable hiring opportunities based on skills and competencies
+- Employers benefit from better alignment with their education and workforce partners
+- HR partners experience seamless integration with their existing HR tools and workflows
+- Data partners get better, more accurate labor market information
+
+If employers participate in moving away from static job descriptions and towards open, linked data that can be updated in real time as requirements change, the result will be a lasting open-data infrastructure that sends clearer signals on workforce needs that is always up-to-date. 
+---
+newsletter_intro: Sign up for our newsletter to receive updates on software or specification releases, events, and other news related to JDX
+---
+section1_heading: From creation to publication, from access to analytics--The future of jobs data is clearer with JDX.
+---
+section2_heading: Get involved.
+---
+feature4_body: Learn how to get started using and developing with JDX through our guides, tutorials and documentation.
+---
+feature4_heading: Documentation
+---
+feature4_icon: book
+---
+feature4_link_text: Go to docs
+---
+feature4_link_url: docs
+---
+feature5_body: We also have a chat room on Gitter dedicated to technical discussion about JDX. Feel free to stop by and introduce yourself.
+---
+feature5_heading: Chat
+---
+feature5_icon: gitter
+---
+feature5_link_text: Go to chatroom
+---
+feature5_link_url: https://gitter.im/jdx/chat
+---
+feature6_body: If you have a use case that you'd like to see supported, including integration with a particular tool or file format, leave a note.
+---
+feature6_heading: Forum
+---
+feature6_icon: forum
+---
+feature6_link_text: Go to forum
+---
+feature6_link_url: https://discuss.jdx.io/c/jdx
+---
+feature7_body: All our code is open source and made available under the CC-by license. Code and documentation contributions and adoptions are highly encouraged.
+---
+feature7_heading: GitHub
+---
+feature7_icon: github
+---
+feature7_link_text: Go to GitHub
+---
+feature7_link_url: https://github.com/jobsdataexchange
+---
+feature8_body: If you have adopted Frictionless Data specs, and noticed a problem, open an issue in our tracker. Feature requests and suggestions are  also welcome.
+---
+feature8_heading: Issue Tracker
+---
+feature8_icon: tools
+---
+feature8_link_text: Go to Issue Tracker
+---
+feature8_link_url: https://github.com/jobsdataexchange/specs/issues
+---
+feature9_body: The JDX team runs workshops all year round. Find out where we'll be next and join us, or mail us an invite to your event: [jdx@jobsdataexchange.org](emailto:jdx@jobsdataexchange.org)
+---
+feature9_heading: Events Calendar
+---
+feature9_icon: rocket
+---
+feature9_link_text: Go to Events Calendar
+---
+feature9_link_url: https://calendar.google.com/calendar/
+---
+section3_heading: Get involved.
