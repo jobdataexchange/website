@@ -4,9 +4,9 @@ pub_date: 2016-08-30
 ---
 doc_category: publishing-data
 ---
-body: You can publish **any kind of data** as a Data Package.
+body: You can publish **any kind of job data** in JDX format.
 
-Making existing data into a Data Package is very simple.
+Making existing data into a JDX job is very simple.
 
 And once you have packaged up your data making it available for others is as
 simple as [putting it online][online] or sending an email.

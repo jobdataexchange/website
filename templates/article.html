@@ -6,11 +6,11 @@
   <div class="container">
     <h1>{{ this.title }}</h1>
 
-    {% if this.article_type == 'grantee-profiles' %}
+    {% if this.article_type == 'contributor-profiles' %}
     <p>
       {{ this.summary }}
     </p>
-    {% elif this.article_type == 'grantee-profiles-2019' %}
+    {% elif this.article_type == 'partner-profiles' %}
     <p>
       {{ this.summary }}
     </p>
@@ -56,7 +56,7 @@
       </div>
       {% endif %}
       
-      {% if this.article_type == 'grantee-profiles' %}
+      {% if this.article_type == 'contributor-profiles' %}
       <div class="callout">
         {% if this.subject_img %}
         <div class="profile image"><span style="background-image: url({{ this.subject_img }});"></span></div>
@@ -81,7 +81,7 @@
       </div>
       {% endif %}
 
-      {% if this.article_type == 'grantee-profiles-2019' %}
+      {% if this.article_type == 'partner-profiles' %}
       <div class="callout">
         {% if this.subject_img %}
         <div class="profile image"><span style="background-image: url({{ this.subject_img }});"></span></div>

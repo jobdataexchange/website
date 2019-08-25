@@ -1,0 +1,15 @@
+title: try.goodjobdata.io
+---
+description: A web service to validate and process job description data.
+---
+link1: http://try.goodjobdata.io
+---
+link1_label: Website
+---
+link2: https://github.com/jobdataexchange/goodjobdata.io/issues
+---
+link2_label: Issue Tracker
+---
+tool_category: apps
+---
+priority: 4
