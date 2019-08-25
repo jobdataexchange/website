@@ -1,8 +1,8 @@
 # JDX Developer Website
 
-[![Build Status](https://travis-ci.org/frictionlessdata/website.svg)](https://travis-ci.org/frictionlessdata/website)
+[![Build Status](https://travis-ci.org/jobdataexchange/website.svg)](https://travis-ci.org/jobdataexchange/website)
 
-This is the Job Data Exchange Developer website, hosted at https://jobdataexchange.io
+This is the Job Data Exchange Developer and Partner website, hosted at https://jobdataexchange.io
 
 ## Contributing
 
@@ -47,6 +47,8 @@ Style changes should be made to the SCSS files. Use `grunt` to watch for changes
 ### Notes
 
 If you get errors like below, ensure that there are not codeblocks in content with mentioned syntax (`yaml=` in this case). Make sure that you `npm run build` before checking to pull the latest specs documents. Lektor errors could be confusing because we use the TOC plugin - so it could show the same error for all documents while the real error is only inside one of them.
+
+Thanks to the team at [Frictionless Data](frictionlessdata.io) for creating a great website for a community data standard project with a creative commons license that we could fork to create the Job Data Exchange website. Your all are great!
 
 ```
 E index.html (ClassNotFound: no lexer for alias u'yaml=' found)
