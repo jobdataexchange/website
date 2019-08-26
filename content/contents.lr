@@ -118,9 +118,9 @@ feature6_icon: forum
 ---
 feature6_link_text: Go to forum
 ---
-feature6_link_url: https://discuss.jdx.io/c/jdx
+feature6_link_url: https://discuss.jobdataexchange.io/c/jdx
 ---
-feature7_body: All our code is open source and made available under the CC-by license. Code and documentation contributions and adoptions are highly encouraged.
+feature7_body: All our code is open source and made available under the CC BY license. Code and documentation contributions and adoptions are highly encouraged.
 ---
 feature7_heading: GitHub
 ---
@@ -130,7 +130,7 @@ feature7_link_text: Go to GitHub
 ---
 feature7_link_url: https://github.com/jobsdataexchange
 ---
-feature8_body: If you have adopted Frictionless Data specs, and noticed a problem, open an issue in our tracker. Feature requests and suggestions are  also welcome.
+feature8_body: If you have adopted JDX Data specs, and noticed a problem, open an issue in our tracker. Feature requests and suggestions are  also welcome.
 ---
 feature8_heading: Issue Tracker
 ---
