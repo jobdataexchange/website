@@ -12,29 +12,27 @@ body:
 
 From December 2019 and over a period of three years, the JDX team will focus on enhanced dissemination and training activities, and further iterations on our [tools](https://jobdataexchange.io/tools/) and [specifications](https://jobdataexchange.io/specs/) via a range of deep [pilot projects](https://jobdataexchange.io/articles/) with research partners.
 ---
-person1_body: Paul Walsh is the Chief Product Officer at Open Knowledge Foundation, with overall responsibility for the technical product the organisation produces and maintains. Paul has over 10 years experience working on product, technology, and marketing in the commercial and nonprofit sectors.
+person1_body: Matthew Gee is CEO of BrightHive and Senior Research Fellow at the University of Chicago. Matt has over 10 years experience working at the intersection of research, data, algorithms, and society in the nonprofit, government, and commecial sectors.
 ---
-person1_heading: Paul Walsh, Principal Investigator
+person1_heading: Matthew Gee, Principal Investigator
 ---
 person1_image: https://gravatar.com/avatar/7630147a63e1f0d9f1275b4aee414466?s=400
 ---
-person2_body: Jo Barratt is the Frictionless Data project manager and Delivery Manager at Open Knowledge Foundation. He has over 10 years experience managing projects across a wide range of technology, arts and communications projects.
+person2_body: Bob Sheets is the JDX project manager and longtime consultant of the US Chamber of Commerce. He has over 30 years experience managing research and development projects across a wide range of areas bridging public data use, education, and labor markets.
 ---
-person2_heading: Jo Barratt, Project Manager
+person2_heading: Bob Sheets, Project Manager
 ---
 person2_image: https://gravatar.com/avatar/5fb6338abdbf8ec14a607e9c691d6991?s=400
 ---
 person3_image: https://gravatar.com/avatar/ddf27d2815b3012cf25e82d8206d7c78?s=400
 ---
-person4_image: https://gravatar.com/avatar/69f14e9af81f4441755fce755a925319?s=400
+person3_body: Tom is Head of Platform at BrightHive and has over a decade of experience working in the Data for Good, Open Data and Civic Tech fields. He is an enthusiast of the Open Web, specially the communities built around Open Source projects and Open Standards. He has a PhD in Astorphisics.
 ---
-person3_body: Lilly Winfree has her PhD in neuroscience from Oregon Health and Science University and is an open science and open data enthusiast. Lilly’s research interests include understanding the cultural motivations of scientists to share their data. As the Product Manager for Frictionless Data for Reproducible Research at Open Knowledge Foundation, she is also exploring how computational tools can enhance researcher’s workflows with a goal of making scientific data more open, shareable, and reproducible.
+person3_heading: Tom Plagge, PhD, Platform and Partnerships Lead
 ---
-person3_heading: Lilly Winfree, PhD, Product Owner
+person4_body:  Kwame is the principle contibutor to the Competensor library for JDX. He is currently a PhD student at Univerity of Michigan studying AI and Society. 
 ---
-person4_body: Adrià has over a decade of experience working in the Open Data and Civic Tech fields. He is an enthusiast of the Open Web, specially the communities built around Open Source projects and Open Standards. He is a member of the CKAN Technical Team and works across different projects at Open Knowledge Foundation. He has a Degree in Biology and an MSc in Geographic Information Systems. He currently lives near the shores of the Mediterranean, in the beautiful city of Tarragona.
----
-person4_heading: Adrià Mercader, Tech Lead
+person4_heading: Kwame Porter-Robinson, Senior Scientists
 ---
 people_heading: The Team
 ---
@@ -42,10 +40,10 @@ body_2:
 
 ## JOBS Data
 
-At the onset of this project, we spent time reflecting on [](https://blog.okfn.org/2018/08/14/frictionless-data-and-fair-research-principles/), and expounded on the concept of job data as an example of FAIRness. 
+At the onset of the JDX project, we spent time reflecting on [the use of jobs data for imporving labor market information](https://blog.okfn.org/2018/08/14/frictionless-data-and-fair-research-principles/), and expounded on the concept of job data as an example of FAIRness. 
 ---
 body_3:
 
 ## Collaboration
 
-We welcome questions, suggestions and invitations to collaborate from research communities in various domains. All correspondence sent to our team via [jobdataexchange@uschamber.org](mailto:frictionlessdata@okfn.org) will be carefully mulled over and responded to.
+We welcome questions, suggestions and invitations to collaborate from research communities in various domains. All correspondence sent to our team via [contact@jdx.dev](mailto:contact@jdx.dev) will be carefully mulled over and responded to.
