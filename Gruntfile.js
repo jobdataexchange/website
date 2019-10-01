@@ -85,6 +85,7 @@ module.exports = function(grunt) {
   });
 
   // Build specs
+
   grunt.registerTask('specs', 'Build specs', () => {
     shell.config.fatal = true
     shell.config.verbose = true
@@ -98,6 +99,7 @@ module.exports = function(grunt) {
     shell.rm('-rf', 'specs')
     grunt.log.writeln('Specs build is integrated!');
   });
+  
 
   // Load the plugins
   grunt.loadNpmTasks('grunt-svgstore');

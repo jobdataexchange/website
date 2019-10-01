@@ -1,6 +1,6 @@
 _model: home
 ---
-banner_main_text: Improve employer signaling with JDX
+banner_main_text: Improve employer signaling with JDX foobar
 ---
 banner_cta_text: Play video
 ---
@@ -16,7 +16,7 @@ feature1_heading: Specifications
 ---
 feature2_heading: Developer Resources
 ---
-feature3_heading: Case Studies
+feature3_heading: Articles
 ---
 fellows_intro:
 
@@ -86,7 +86,7 @@ If employers participate in moving away from static job descriptions and towards
 ---
 newsletter_intro: Sign up for our newsletter to receive updates on software or specification releases, events, and other news related to JDX
 ---
-section1_heading: From creation to publication, from access to analytics--The future of jobs data is clearer with JDX.
+section1_heading: From creation to publication, from access to analytics: The future of jobs data is clearer with JDX.
 ---
 section2_heading: Get involved.
 ---
