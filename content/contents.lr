@@ -1,10 +1,10 @@
 _model: home
 ---
-banner_main_text: Improve employer signaling with JDX foobar
+banner_main_text: Improve employer signaling with JDX
 ---
 banner_cta_text: Play video
 ---
-banner_image: video.jpg
+banner_image: jdx-video-still-dr-maria-harper-marinick.png
 ---
 about_heading: Our Vision
 ---
@@ -16,7 +16,7 @@ feature1_heading: Specifications
 ---
 feature2_heading: Developer Resources
 ---
-feature3_heading: Articles
+feature3_heading: 
 ---
 fellows_intro:
 
@@ -27,7 +27,7 @@ feature1_body: Lightweight containerisation formats for data that provide a mini
 ---
 feature2_body: Documentation, open data resources, and software tools that make it easy to integrate JDX specifications into your job data creation, publication, access, and analysis workflows.
 ---
-feature3_body: Companies, software platforms, government agencies, and research organizations are using JDX in their job data workflows to improve the quality of signals and the dynamism of labor demand analysis.
+feature3_body: 
 ---
 fellows_link_text: Read more and join the JDX Partners Program here.
 ---
@@ -35,19 +35,19 @@ feature1_link_text: Go to specifications
 ---
 feature2_link_text: Go to developer resources
 ---
-feature3_link_text: Go to articles
+feature3_link_text: 
 ---
 feature1_link_url: specs
 ---
 feature2_link_url: software
 ---
-feature3_link_url: articles
+feature3_link_url: 
 ---
 feature1_icon: package
 ---
 feature2_icon: software
 ---
-feature3_icon: docs
+feature3_icon: 
 ---
 about_image: diagram.png
 ---
