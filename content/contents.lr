@@ -1,6 +1,6 @@
 _model: home
 ---
-banner_main_text: JDX helps employers create more effective job descriptions and postings.
+banner_main_text: Better job descriptions lead to better data on jobs.
 ---
 banner_cta_text: Play video
 ---
@@ -23,11 +23,11 @@ fellows_intro:
 The JDX Partners Program, supported by the US Chamber of Commerce Foundation, is supporting HRIS, ATS, and other jobs data platform partners in adopting JDX standards and tools to improve their customers' job data creation workflows. Interested partners can contact the US Chamber about the program through the link below.
 
 ---
-feature1_body: Introducing JDX JobSchema+ Lite, a standardized way of organizing structured data on the web for jobs.
+feature1_body: Introducing a first look at JDX JobSchema+, a standardized way of organizing structured data on the web for jobs.
 ---
 feature2_body: Tools, APIs, data sources, and ready-to-use software for working with jobs data including skills and competencies. These tools are of interest to the JDX ecosystem and will be added on a rolling basis.
 ---
-feature3_body: Learn more about JDX using our guides, tutorials and documentation.
+feature3_body: Get an overview of JDX, the workflow, and our progress using our documentation.
 ---
 fellows_link_text: Read more and join the JDX Partners Program here.
 ---
@@ -68,21 +68,24 @@ JDX will
 - Support the validation of job descriptions across an industry
 - Distribute job postings to education and workforce partners in real time
 
+
 ### The Endgame
 Open data infrastructure and open, linked data that supports real-time information on workforce needs through dynamic job descriptions that reflect up to date requirements and competencies
 - HR partners improve employer hiring metrics through seamless integration of JDX with their existing HR tools and workflows
 - Education and training providers receive clearer signals of aggregated skill and credential requirements from regional, national, and industry employer networks
-- Jobseekers can match their skills to opportunities previously barred by unnecessary credentials or imprecise requirements and save time by filtering every opportunity for their own requirements such as company characteristics and citizenship, physical, and location requirements, which are usually buried in different locations throughout job postings or excluded altogether. 
+- Job seekers can match their skills to opportunities previously barred by unnecessary credentials or imprecise requirements and save time by filtering every opportunity for their own requirements such as company characteristics and citizenship, physical, and location requirements, which are usually buried in different locations throughout job postings or excluded altogether. 
 - Employers benefit from access to greater numbers of qualified applicants and a talent pool enabled to better self-filter, for gains in applicant engagement, screening efficiency, time to hire, retention, and more.
 - Data partners access an increasing volume of  more granular labor market information
 ---
-newsletter_intro: Sign up for our newsletter to receive updates on software or specification releases, events, and other news related to JDX
+newsletter_intro:
+
+Sign up to receive JDX updates and digest emails on JDX topics. 
 ---
-section1_heading: The Job Data Exchange (JDX) and its open data toolset improves employers’ ability to communicate their hiring needs to jobseekers, educators, and workforce data partners.
+section1_heading: The Job Data Exchange (JDX) and its open data toolkit improves employers’ ability to communicate their hiring needs to jobseekers, educators, and workforce data partners.
 ---
 section2_heading: Get involved.
 ---
-feature4_body: All our code is open source and made available under the CC BY license. Code and documentation contributions and adoptions are highly encouraged.
+feature4_body: All our code is made available under a free and open source license. Code and documentation contributions and adoptions are highly encouraged.
 ---
 feature4_heading: GitHub
 ---
@@ -92,9 +95,7 @@ feature4_link_text: Go to Github
 ---
 feature4_link_url: https://github.com/jobdataexchange
 ---
-feature5_body:
-
-To discuss any concerns or suspected issues, open an issue in Github. 
+feature5_body: To discuss any concerns or suspected issues, open an issue in Github.
 ---
 feature5_heading: Issue Tracker
 ---
@@ -151,4 +152,4 @@ section3_heading: Get involved.
 ---
 partners_heading: Communicate what employers need from workers by developing competency-based job descriptions.
 ---
-partners_intro: Explore JDX and JobSchema+ Lite. Then, reach out to become an official JDX partner to join the movement of employers and HRIS providers using JDX to send clearer, always up-to-date signals about workforce needs.
+partners_intro: Explore JDX and JobSchema+. Then, reach out to become an official JDX partner to join the movement of employers and HRIS providers using JDX to send clearer, always up-to-date signals about workforce needs.
