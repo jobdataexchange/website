@@ -1,0 +1,21 @@
+title: Credential Engine’s Handbooks
+---
+description: Quick reference and example solutions in describing credentials and other key entities in the credentialing ecosystem, such as competency frameworks (CTDL-ASN). The Credential Engine Registry is a repository of metadata about Credentials and related entities (such as organizations, assessments, and learning opportunities) and a set of related services to enable publishing, finding, and retrieving data about these entities.
+---
+featured: yes
+---
+link1: https://credreg.net/ctdl/handbook
+---
+link1_label:
+
+Credential Transparency Description Language (CTDL) 
+---
+link2: https://credreg.net/ctdlasn/handbook
+---
+link2_label: CTDL-ASN
+---
+link3: https://credreg.net/registry/handbook
+---
+link3_label: Credential Registry
+---
+priority: 14

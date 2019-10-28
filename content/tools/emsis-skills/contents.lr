@@ -1,0 +1,19 @@
+title: Emsi’s Skills
+---
+description: Emsi is pleased to introduce a skills library to serve as a common language between people looking for work, work looking for people, and educational programs looking to connect people to the labor market.
+---
+featured: yes
+---
+link1: https://skills.emsidata.com/extraction
+---
+link1_label: Real-time skills extractor
+---
+link2: https://api.emsidata.com/apis/skills-classification
+---
+link2_label: Skills Classification API
+---
+link3: https://skills.emsidata.com/faqs
+---
+link3_label: FAQ
+---
+priority: 15
