@@ -1,0 +1,133 @@
+title: Namespace Policy & Expectations for Maintenance
+---
+body:
+
+## 1 Introduction
+All terms (properties & classes) used in metadata descriptions that conform to the JDX schema must be assigned a unique URI. The term URIs that are assigned and managed by JDX are grouped into collections known as JDX namespaces. This document describes how term URIs are allocated by JDX and the policies associated with JDX namespaces.
+
+## 2 Glossary of Terms
+##### term
+A property (RDF), class (RDFS), concept scheme (SKOS), or concept (SKOS).
+##### URI
+A Uniform Resource Identifier (URI) is a string of characters that unambiguously identifies a particular resource.
+##### IRI
+The Internationalized Resource Identifier (IRI) – is an internet protocol standard which extends the ASCII characters subset of the Uniform Resource Identifier (URI) protocol. While URIs are limited to a subset of the ASCII character set, IRIs may contain characters from the Universal Character Set (Unicode/ISO 10646), including Chinese or Japanese kanji, Korean, Cyrillic characters, etc. Currently, the focus of JDX is on URI.
+##### JDX Term
+A term that is declared and maintained in a namespace by JDX.
+##### term URI
+The URI that identifies a term.
+##### JDX term URI
+The URI for a term that is declared and managed by JDX.
+##### term name
+A unique token assigned to a term. For all JDX terms, the term name is appended to a JDX namespace URI to create the JDX term URI. The term name for properties, classes and concepts in JDX are lexical in nature (e.g., "fullTime); all other terms names are opaque and use UUIDs (e.g., "f0a23159-e3c3-43df-94da-b15c749599d0").
+##### term label
+A human-readable label assigned to a term that may or may not be lexically identical to the term name.
+##### JDX namespace
+A collection of JDX term URIs where each term is assigned a URI that starts with the same 'base URI'. The 'base URI' is known as the JDX namespace URI. (Note that a JDX namespace is not the same as an 'XML namespace').
+##### JDX namespace URI
+The URI that identifies a JDX namespace.
+##### JDX term declaration
+A representation (description) of a JDX term.
+##### JDX JobSchema+ Profile
+
+In addition to terms declared in JDX namespaces, the JobSchema+ application profile also uses terms defined in other namespaces—e.g., schema.org, CTDL-ASN, ASN, etc.—in order to increase interoperability on the open Web. None of the non-JDX terms in the JDX Jobschema+ application profile are affected by the policies outlined here for the JDX namespaces.
+>NOTE: Term URIs are grouped into JDX namespaces in order to ease the assignment of URIs to terms and to streamline their use in particular serializations. >Note that the grouping of term URIs into JDX namespaces is orthogonal to the grouping of terms into sets designed to meet other functional needs, e.g., as >various types of vocabularies, particular profiles, or as specific graph shapes or record structures.
+
+## 3 Namespace URIs
+### 3.1 URIs for Properties and Classes
+The JDX namespace URI (base URI) for the collection of all JDX terms (properties and classes) is:
+
+```http://purl.org/jdx/terms/```
+
+An individual property or class term URI is achieved by appending its term name to the namespace URI in the following manner:
+
+```http://purl.org/jdx/terms/jobStartDate```
+
+### 3.2 URIs for Concept Schemes—Controlled Vocabularies
+All concept schemes (controlled vocabularies, value enumerations, tag lists, etc.) exist in a general namespace:
+
+```https://jobdataexchange.org/jdx/vocabs/```
+
+Within /vocabs/, each separate concept scheme has it's own JDX namespace URI (base URI). The current list of controlled vocabulary namespace URI are as follows:
+
+```
+https://jobdataexchange.org/jdx/vocabs/assessmentMethod/
+https://jobdataexchange.org/jdx/vocabs/careerLevel/
+https://jobdataexchange.org/jdx/vocabs/contactType/
+https://jobdataexchange.org/jdx/vocabs/credentialCategory/
+https://jobdataexchange.org/jdx/vocabs/educationLevel/
+https://jobdataexchange.org/jdx/vocabs/evidenceCategory/
+https://jobdataexchange.org/jdx/vocabs/experienceCategory/
+https://jobdataexchange.org/jdx/vocabs/industryCode/
+https://jobdataexchange.org/jdx/vocabs/jobAgreement/
+https://jobdataexchange.org/jdx/vocabs/jobSchedule/
+https://jobdataexchange.org/jdx/vocabs/jobTerm/
+https://jobdataexchange.org/jdx/vocabs/levelCode/
+https://jobdataexchange.org/jdx/vocabs/occupationalCategory/
+https://jobdataexchange.org/jdx/vocabs/payCycleInterval/
+https://jobdataexchange.org/jdx/vocabs/physicalActivity/
+https://jobdataexchange.org/jdx/vocabs/responsibility/
+https://jobdataexchange.org/jdx/vocabs/riskExposureType/
+https://jobdataexchange.org/jdx/vocabs/scaleCategory/
+https://jobdataexchange.org/jdx/vocabs/shiftSchedule/
+```
+
+An individual concept's term URI is achieved by appending the term name to the concept scheme's namespace URI in the following manner:
+
+```https://jobdataexchange.org/jdx/vocabs/jobSchedule/fullTime```
+
+### 3.3 URIs for CompetenciesUp arrow icon
+The JDX treats Competency as a key attribute of JDX job descriptions. Following the lead of the U.S. Department of Labor's Employment and Training Administration, we define competence as follows:
+
+Capability of applying or using knowledge, skills, abilities, behaviors, and personal characteristics to successfully perform critical work tasks, specific functions, or operate in a given role or position.
+JDX defines an array of subproperties to competency property that support the capture of more fine-grained assertions about them. To capture these distinct forms of assertion, JDX defines the following namespace URIs:
+
+```
+https://jobdataexchange.org/jdx/competency/ability/
+https://jobdataexchange.org/jdx/competency/attitude/
+https://jobdataexchange.org/jdx/competency/knowledge/
+https://jobdataexchange.org/jdx/competency/skill/
+https://jobdataexchange.org/jdx/competency/task/
+https://jobdataexchange.org/jdx/competency/technology/
+https://jobdataexchange.org/jdx/competency/workActivity/
+```
+
+An individual competency URI is achieved by appending its term name (here a UUID) to the namespace URI in the following manner:
+
+```https://jobdataexchange.org/jdx/competency/skill/f0a23159-e3c3-43df-94da-b15c749599d0```
+
+Since ability, attitude, knowledge, skill, task, technology, and workActivity are declared as subproperties of competency, downstream applications can role up the values of this array of properties and express them all using ```https://purl.org/jdx/competency/```.
+
+### 3.4 URIs for Resources
+Upon submitting a job posting or description to JDX for review and advice, each assertion in that description or posting is assigned a pre-process (PP) URI to enable the linking of the pre-processed assertion to other assertions subsequently associated (linked) to the PP URI for purposes of downstream analytics. The namespace for these pre-process assertions uses the following namespace:
+
+```https://jobdataexchange.org/jdx/pp/resource/```
+
+An individual resource URI is achieved by appending its term name (here a UUID) to the namespace URI in the following manner:
+
+```https://jobdataexchange.org/jdx/pp/resource/f0a23159-e3c3-43df-94da-b15c749599d0```
+
+## 4 JDX Terms Change Policy
+Changes to JDX terms or term declarations will occur from time to time for a variety of reasons. Such changes have varying implications for JDX term URIs and JDX namespaces. The following kinds of changes are identified along with examples and associated implications.
+In all cases, any changes to JDX terms or term declarations will result in an update to the versioning information carried in the JDX term declaration associated with that term.
+
+### 4.1 Minor Editorial Change
+Errors of spelling, punctuation, or other clerical mistakes discovered in JDX term declarations will be corrected without a public comment period, following notification to the appropriate JDX Advisory Committee, as long as, in the judgment of the JDX Technical Team, there are no implications for negative impact on users or applications that rely on those JDX term declarations. If the JDX Technical Team is uncertain as to potential negative impact of such a change, a public comment period will be declared on notification of the appropriate JDX Advisory Committee.
+Correction of minor editorial errata will result in no changes to JDX term URIs.
+
+### 4.2 Semantic Change to a JDX Term
+Changes of definitions within a JDX term declaration will be reflected in the affected JDX term declaration. If, in the judgment of the JDX Technical Team, such changes of meaning are likely to have substantial impact on either existing machine processing of JDX terms or the functional semantics of the terms, then these changes will be reflected in a change of URI for the JDX term or terms in question. The URIs for any new JDX namespaces resulting from such changes will conform to the JDX namespace URI patterns defined above.
+
+### 4.3 Additions to a JDX Namespace
+New JDX term URIs will occasionally be added to existing JDX namespaces. Addition of JDX term URIs to existing JDX namespaces will not trigger changes in existing JDX namespace URIs.
+
+## 5 Persistence Policy
+JDX recognizes that people and applications depend on the persistence of formal documents and machine processable schemas that have been made publicly available. In particular, the stability of JDX term URIs and JDX namespace URIs is critical to interoperability over time. Thus, the wide promulgation of this set of URIs dictates that they be maintained to support legacy applications that have adopted them.
+
+## 6 Editors' Notes
+The JDX Namespace Policy is adapted from the namespace policies of the following organizations:
+* Dublin Core Metadata Initiative (DCMI)
+* Credential Engine (CE)
+
+---
+doc_category: specifications
