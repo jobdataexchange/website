@@ -4,4 +4,85 @@ title: Changelog
 ---
 body:
 
-this text is not rendered.
+<table class="grid">
+<tbody><tr>
+    <th>Release</th>
+    <th>Overview</th>
+    <th>Description</th>
+</tr>
+
+<tr>
+<td class="release"><a href="@@@">v1.0.0-beta Overview</a><br>2019</td>
+<td>
+<span id="v.next"></span>
+<span id="v1.0.0-beta"></span>
+<p>
+Please review the proposed features on github issues @@@. 
+</p>
+</td>
+
+</tr>
+
+
+<tr>
+<td class="release"><a href="@@@">v0.9.0 Overview</a><br>2019</td>
+<td>
+<span id="v.next"></span>
+<span id="v0.9.0"></span>
+<p>
+The version used to pilot Jobschema+ with a cohort of 12 employers. Not a stable release.
+</p>
+</td>
+<td>
+<h3>Vocabulary</h3>
+<!-- ><h3>Core changes</h3> -->
+<!-- <p>Moved from Pending to Core:</p>--><ul></ul>
+<!-- <p>Other changes in Core section:</p> --><ul></ul>
+
+<h3>Changes from v0.8.0:</h3>
+<ul>
+  <li>Properties used in the pilot which were not in the original <a href="https://www.uschamberfoundation.org/jdx/job-schema">Jobschema+ table</a> include schema:telephone, schema:address, schema:email, schema:url, and jdx:competency > schema:inDefinedTermSet > name > url which represents the name of the competency framework associated with each competency.</li>
+  <li>Properties not used in the pilot which were in the original <a href="https://www.uschamberfoundation.org/jdx/job-schema">Jobschema+ table</a> include Responsibility, and Estimated Salary.</li>
+<li>All combinations of Alternative/Equivalent/Minimum/Preferred/Required x Credential/Education/Experience were combined temporarily into a single property "Education and Experience" due to the challenges of parsing these out. </li> 
+
+<!--  <li id="g2322"><a href="https://github.com/schemaorg/schemaorg/issues/2322">Issue 2322</a>: Linked <a href="/skills">skills</a> description to formal definitions of competencies.</li> -->
+</ul>
+
+<!--
+<h3>Changes in <a href="http://bib.schema.org/">bib</a> section:</h3>
+<ul>
+<li id="g2232"><a href="https://github.com/schemaorg/schemaorg/pull/2232">PR #2232</a>:
+Simplified example for <a href="/Audiobook">Audiobook</a> .
+</li>
+</ul>
+-->
+
+<h3>Site Improvements</h3>
+<ul>
+<li> JDX website created.
+</li>
+</ul>
+
+</td>
+</tr>
+
+<tr>
+<td class="release"><a href="@@@">v0.8.0 Overview</a><br>2019</td>
+<td>
+<span id="v.next"></span>
+<span id="v0.8.0"></span>
+<p>
+This version consists only of an initial <a href="https://www.uschamberfoundation.org/jdx/job-schema">Jobschema+ table</a> of proposed vocabulary. 
+</p>
+</td>
+
+<td>
+<h3>Vocabulary</h3>
+<ul>
+<li> This table is a profile of the full Jobschema+ for the purposes of pilot testing the vocabulary.
+</li>
+</ul>
+</td>
+</tr>
+
+</tbody></table>

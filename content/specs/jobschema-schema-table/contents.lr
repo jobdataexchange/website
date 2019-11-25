@@ -606,3 +606,5 @@ The Jobschema+ schema table is a way to easily see all the JDX properties propos
 updated: 2019-10-24
 ---
 version: 1.0
+---
+_hidden: yes

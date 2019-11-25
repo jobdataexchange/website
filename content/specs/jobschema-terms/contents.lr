@@ -6,11 +6,12 @@ body:
 
 The JDX Application Profile (Jobschema+) is comprised of all of the classes and properties enabling JDX to make assertions about job postings and other entities in a posting's lifecycle. The result is called an "application profile" because the terms (properties and classes) it uses come from an array of relevant namespaces such as Schema.org and HR Open Standards. The rationale behind leveraging terms from these established specifications is to increase JDX interoperability throughout the talent signaling ecosystem. The properties and classes from Schema.org have been directly incorporated into JobSchema+ because they are web-ready and many attributes of HR Open Standards are incorporated directly into the JDX namespace. A number of value spaces (controlled vocabularies) developed by HR Open Standards have been incorporated. Only where JDX could not directly use terms from these namespaces have new JDX terms been coined.
 
-Below, we set out only the 36 properties used in piloting JDX out of the current 166 properties and 22 classes of Job Schema+. To understand the breadth possible, please see the [full application profile](https://github.com/jobdataexchange/Data-Modeling/blob/master/jdxTerms.json). The lighter 1.0 version is [here](https://github.com/jobdataexchange/Data-Modeling/blob/pilot-version/jdxTerms.json). 
+Below, we set out only the 36 properties used in piloting JDX out of the current 166 properties and 22 classes of Job Schema+. To understand the breadth possible, please see the [full application profile](https://github.com/jobdataexchange/Data-Modeling/blob/master/jdxTerms.json). The lighter 0.9.0 version which we piloted is [here](https://github.com/jobdataexchange/Data-Modeling/blob/pilot-version/jdxTerms.json). 
 
-We will identify the various namespaces used in defining the terms. In section 3 we provide links to both a machine serialization of the terms and an image of the Job Schema+ domain model. Sections 4 and 5 provide an linked index to the tables defining the terms as well as the tables themselves.
+We will identify the various namespaces used in defining the terms. We provide an linked index to the tables defining the terms as well as the tables themselves.
 
 # Namespace/Vocabularies Used
+In the tables below, the following prefixes refer to the following schema sources:
 <table>
   <tr>
     <th>Prefixed<br>Used</th>
@@ -42,6 +43,11 @@ We will identify the various namespaces used in defining the terms. In section 3
     <td>Dublin Core Metadata Terms</td>
     <td>http://purl.org/dc/terms/</td>
   </tr>
+<tr>
+    <td>xsd</td>
+    <td>XML Schema Definition (W3C)</td>
+    <td>http://www.w3.org/2001/XMLSchema#</td>
+  </tr>
 </table>
 
 # Conceptual Model & Schema Serializations
@@ -49,8 +55,272 @@ The following serialization of the latest version of the JDX Application Profile
 
 The JDX Conceptual Model is available. (Full Size) ***
 
-# JDX Terms—Properties & Classes
+## JDX Terms—Properties & Classes
 
+### **Classes**
+The format and content of the JDX class tables are summarized in the following table. All of the classes are of the type (http://www.w3.org/2000/01/rdf-schema#Class)
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+<td width="150" align="right">Class URI
+</td>
+<td>A Uniform Resource Identifier used to identify the class.
+</td></tr>
+<tr>
+<td align="right">Label
+</td>
+<td>A human-readableLabel assigned to the class (May be represented in different languages.)
+</td></tr>
+<tr>
+<td align="right">Defined By
+</td>
+<td>An identifier of a namespace, pointer to a schema, or bibliographic reference for a document within which the class is defined.
+</td></tr>
+<tr>
+   <td align="right">JDX Definition</td>
+   <td>The definition of the class in the JDX namespace and profile. (Where JDX is profiling a source class, the JDX definition adheres to the intention of the source while particularizing the text for the JDX context.)</td>
+</tr>
+<tr>
+   <td align="right">JDX Comment</td>
+   <td>The comment on the property in the JDX namespace and profile. (The JDX comment may deviate from the source comment.)</td>
+</tr>
+<tr>
+<td align="right">Source Definition
+</td>
+<td>The definition of the class in the namespace in which the class was originated. (May be represented in different languages.)
+</td></tr>
+<tr>
+<td align="right">Source Comment
+</td>
+<td>Comments on the class from the namespace in which the property originated. (May be represented in different languages.)
+</td></tr>
+<tr>
+<td align="right">Properties
+</td>
+<td>The properties this class can contain.
+</td></tr>
+<tr>
+<td align="right">Subclass Of
+</td>
+<td>Used to state that all the instances of one class are instances of another.
+</td></tr>
+<tr>
+   <td align="right">Usage Note</td>
+   <td>A comment on the usage of the property or class (<code>vann:usageNote</code>).</td>
+</tr>
+<tr>
+   <td align="right">Equivalent Class</td>
+   <td>The class being defined is equivalent to the class indicated (<code>owl:equivalentClass</code>).</td>
+</tr>
+</tbody></table>
+
+### Annotated Defined Term
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="right">Class URI</td>
+  <td><a href="http://purl.org/jdx/terms/AnnotatedDefinedTerm">http://purl.org/jdx/terms/AnnotatedDefinedTerm</a></td>
+</tr>
+<tr>
+  <td align="right">Label</td>
+  <td>Annotated Defined Term</td>
+</tr>
+<tr>
+   <td align="right">Defined By</td>
+   <td><a href="http://purl.org/jdx/terms/">http://purl.org/jdx/terms/</a></td>
+</tr>
+<tr>
+   <td align="right">JDX Profile Definition</td>
+   <td>Word, name, acronym, phrase, defined in a controlled value space (e.g., taxonomy, glossary, dictionary, tag list, and other forms of enumeration).</td>
+</tr>
+<tr>
+   <td align="right">Usage Note</td>
+   <td>Used in the context of JDX to assign terms from occupation, industry and instructional program classifications, skills and abilities, and abstract concepts to JDX entities. Through the class' relationship with the jdx:ScaledAnnotation class, terms can be conditioned through applications of scales for attributes such as importance and frequency.</td>
+</tr>
+</tbody></table>
+
+### Job Posting
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="right">Class URI</td>
+  <td><a href="http://purl.org/jdx/terms/JobPosting">http://purl.org/jdx/terms/JobPosting</a></td>
+</tr>
+<tr>
+  <td align="right">Label</td>
+  <td>JobPosting</td>
+</tr>
+<tr>
+   <td align="right">Defined By</td>
+   <td><a href="http://purl.org/jdx/terms/">http://purl.org/jdx/terms/</a></td>
+</tr>
+<tr>
+   <td align="right">JDX Profile Definition</td>
+   <td>Entity describing an on-line advertisement for filling one or more job openings.</td>
+</tr>
+<tr>
+   <td align="right">JDX Profile Comment</td>
+   <td>Entity that contains information on the employer and the job position based on a job description as well as how to apply for the job opening and how long the posting is valid.</td>
+</tr>
+<tr>
+   <td align="right">Properties</td>
+   <td>
+<ul>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#applicant-location-requirement">applicantLocationRequirement</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#citizenship-requirement">citizenshipRequirement</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#competency">competency</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#employment-unit">employmentUnit</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#hiring-organization">hiringOrganization</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#job-agreement">jobAgreement</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#job-schedule">jobSchedule</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#job-term">jobTerm</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#position-ID">positionID</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#required-assessment">requiredAssessment</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#requiredCredential">requiredCredential</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#securityClearanceRequirement">securityClearanceRequirement</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#sensoryRequirement">sensoryRequirement</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#specialCommitment">specialCommitment</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#workHours">workHours</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#baseSalary">baseSalary</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#payCycleInterval">payCycleInterval</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#currency">currency</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#maxValue">maxValue</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#minValue">minValue</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#datePosted">datePosted</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#incentiveCompensation">incentiveCompensation</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#industry">industry</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#jobBenefit">jobBenefit</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#jobLocation">jobLocation</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#occupationalCategory">occupationalCategory</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#title">title</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#validThrough">validThrough</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#totalJobOpenings">totalJobOpenings</a></li>
+</ul>
+   </td>
+</tr>
+</tbody></table>
+
+### Monetary Amount
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="right">Class URI</td>
+  <td><a href="http://schema.org/MonetaryAmount">http://schema.org/MonetaryAmount</a></td>
+</tr>
+<tr>
+  <td align="right">Label</td>
+  <td>Monetary Amount</td>
+</tr>
+<tr>
+   <td align="right">Defined By</td>
+   <td><a href="http://schema.org/">http://schema.org/</a></td>
+</tr>
+<tr>
+   <td align="right">JDX Profile Definition</td>
+   <td>Monetary value or range.</td>
+</tr>
+<tr>
+   <td align="right"> Source Class Definition</td>
+   <td>A monetary value or range.</td>
+</tr>
+<tr>
+   <td align="right">Usage Note</td>
+   <td>This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc.</td>
+</tr>
+</tbody></table>
+
+### Organization
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="right">Class URI</td>
+  <td><a href="http://schema.org/Organization">http://schema.org/Organization</a></td>
+</tr>
+<tr>
+  <td align="right">Label</td>
+  <td>Organization</td>
+</tr>
+<tr>
+   <td align="right">Defined By</td>
+   <td><a href="http://schema.org/">http://schema.org/</a></td>
+</tr>
+<tr>
+   <td align="right">JDX Profile Definition</td>
+   <td>Organization such as a corporate body, employer, distribution channel provider.</td>
+</tr>
+<tr>
+   <td align="right"> Source Class Definition</td>
+   <td>An organization such as a school, NGO, corporation, club, etc.</td>
+</tr>
+<tr>
+   <td align="right">Properties</td>
+   <td>
+<ul>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#email">email</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#hasJobPosting">hasJobPosting</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#employerOverview">employerOverview</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#industryCode">industryCode</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#address">address</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#legalName">legalName</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#occupationalCategory">occupationalCategory</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#telephone">telephone</a></li>
+<li><a href="http://3.17.57.171:5000/specs/jobschema-terms/#url">url</a></li>
+</ul>
+   </td>
+</tr>
+</tbody></table>
+
+### Place
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="right">Class URI</td>
+  <td><a href="http://schema.org/Place">http://schema.org/Place</a></td>
+</tr>
+<tr>
+  <td align="right">Label</td>
+  <td>Place</td>
+</tr>
+<tr>
+   <td align="right">Defined By</td>
+   <td><a href="http://schema.org/">http://schema.org/</a></td>
+</tr>
+<tr>
+   <td align="right">JDX Profile Definition</td>
+   <td>Fixed physical location.</td>
+</tr>
+<tr>
+   <td align="right"> Source Class Definition</td>
+   <td>Entities that have a somewhat fixed, physical extension.</td>
+</tr>
+</tbody></table>
+
+### Postal Address 
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="right">Class URI</td>
+  <td><a href="http://schema.org/PostalAddress">http://schema.org/PostalAddress</a></td>
+</tr>
+<tr>
+  <td align="right">Label</td>
+  <td>Postal Address</td>
+</tr>
+<tr>
+   <td align="right">Defined By</td>
+   <td><a href="http://schema.org/">http://schema.org/</a></td>
+</tr>
+<tr>
+   <td align="right">JDX Profile Definition</td>
+   <td>Mailing address of an entity.</td>
+</tr>
+<tr>
+   <td align="right"> Source Class Definition</td>
+   <td>The mailing address.</td>
+</tr>
+</tbody></table>
+
+## **Properties**:
 The format and content of the JDX property tables are summarized below. Note that not all properties defined in the table are applicable with every definition table; therefore, where not applicable, the property is not included.
 
 <table cellpadding="5" width="90%">
@@ -116,8 +386,8 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## **Properties**:
-## Address
+
+### Address
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -150,7 +420,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Annotated Term
+### Annotated Term
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -190,7 +460,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Applicant Location Requirement 
+### Applicant Location Requirement 
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -223,7 +493,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Base Salary
+### Base Salary
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -260,7 +530,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Citizenship Requirement
+### Citizenship Requirement
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -298,7 +568,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Competency
+### Competency
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -336,7 +606,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Currency
+### Currency
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -377,7 +647,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Date Posted
+### Date Posted
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -414,7 +684,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Description
+### Description
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -467,7 +737,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Email
+### Email
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -504,7 +774,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Employer Overview
+### Employer Overview
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -537,7 +807,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Employment Unit
+### Employment Unit
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -572,7 +842,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Has Job Posting
+### Has Job Posting
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -606,7 +876,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Hiring Organization
+### Hiring Organization
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -641,7 +911,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Incentive Compensation
+### Incentive Compensation
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -677,7 +947,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## In Defined Term Set 
+### In Defined Term Set 
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -714,7 +984,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Industry
+### Industry
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -758,7 +1028,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## IndustryCode
+### IndustryCode
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -805,7 +1075,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Job Agreement
+### Job Agreement
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -844,7 +1114,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## JobBenefits
+### JobBenefits
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -886,7 +1156,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Job Location
+### Job Location
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -920,7 +1190,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Job Location Type
+### Job Location Type
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -959,7 +1229,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Job Schedule
+### Job Schedule
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -998,7 +1268,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Job Term
+### Job Term
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1037,7 +1307,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Legal Name
+### Legal Name
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1074,7 +1344,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Maximum Value
+### Maximum Value
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1112,7 +1382,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Minimum Value
+### Minimum Value
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1149,7 +1419,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Name 
+### Name 
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1190,7 +1460,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Occupational Category
+### Occupational Category
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1235,7 +1505,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Pay Cycle Interval
+### Pay Cycle Interval
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1272,7 +1542,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Physical Requirement
+### Physical Requirement
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1308,7 +1578,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Position ID 
+### Position ID 
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1346,7 +1616,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Required Assessment
+### Required Assessment
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1381,7 +1651,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Required Education
+### Required Education
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1420,7 +1690,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Required Experience
+### Required Experience
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1455,7 +1725,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Required Credential
+### Required Credential
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1490,7 +1760,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Security Clearance Requirement
+### Security Clearance Requirement
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1525,7 +1795,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Sensory Requirement 
+### Sensory Requirement 
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1560,7 +1830,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Special Commitment
+### Special Commitment
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1598,7 +1868,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Street Address
+### Street Address
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1635,7 +1905,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Telephone
+### Telephone
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1672,7 +1942,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Term Code
+### Term Code
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1709,7 +1979,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Title 
+### Title 
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1749,7 +2019,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Total Job Openings
+### Total Job Openings
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1782,7 +2052,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Total Job Openings
+### Total Job Openings
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1815,7 +2085,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Valid Through
+### Valid Through
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1852,7 +2122,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## Work Hours
+### Work Hours
 
 <table cellpadding="5" width="90%">
 <tbody><tr>
@@ -1891,240 +2161,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 </tbody></table>
 
-## **Classes**
-The format and content of the JDX class tables are summarized in the following table:
 
-<table cellpadding="5" width="90%">
-<tbody><tr>
-<td width="150" align="right">Class URI
-</td>
-<td>A Uniform Resource Identifier used to identify the class.
-</td></tr>
-<tr>
-<td align="right">Label
-</td>
-<td>A human-readableLabel assigned to the class (May be represented in different languages.)
-</td></tr>
-<tr>
-<td align="right">Defined By
-</td>
-<td>An identifier of a namespace, pointer to a schema, or bibliographic reference for a document within which the class is defined.
-</td></tr>
-<tr>
-   <td align="right">JDX Definition</td>
-   <td>The definition of the class in the JDX namespace and profile. (Where JDX is profiling a source class, the JDX definition adheres to the intention of the source while particularizing the text for the JDX context.)</td>
-</tr>
-<tr>
-   <td align="right">JDX Comment</td>
-   <td>The comment on the property in the JDX namespace and profile. (The JDX comment may deviate from the source comment.)</td>
-</tr>
-<tr>
-<td align="right">Source Definition
-</td>
-<td>The definition of the class in the namespace in which the class was originated. (May be represented in different languages.)
-</td></tr>
-<tr>
-<td align="right">Source Comment
-</td>
-<td>Comments on the class from the namespace in which the property originated. (May be represented in different languages.)
-</td></tr>
-<tr>
-<td align="right">Type of Term
-</td>
-<td>The grammatical category of the term ("Property", "Class").
-</td></tr>
-<tr>
-<td align="right">Subclass Of
-</td>
-<td>Used to state that all the instances of one class are instances of another.
-</td></tr>
-<tr>
-   <td align="right">Usage Note</td>
-   <td>A comment on the usage of the property or class (<code>vann:usageNote</code>).</td>
-</tr>
-<tr>
-   <td align="right">Equivalent Class</td>
-   <td>The class being defined is equivalent to the class indicated (<code>owl:equivalentClass</code>).</td>
-</tr>
-</tbody></table>
-
-## Annotated Defined Term
-
-<table cellpadding="5" width="90%">
-<tbody><tr>
-  <td width="150" align="right">Class URI</td>
-  <td><a href="http://purl.org/jdx/terms/AnnotatedDefinedTerm">http://purl.org/jdx/terms/AnnotatedDefinedTerm</a></td>
-</tr>
-<tr>
-  <td align="right">Label</td>
-  <td>Annotated Defined Term</td>
-</tr>
-<tr>
-   <td align="right">Defined By</td>
-   <td><a href="http://purl.org/jdx/terms/">http://purl.org/jdx/terms/</a></td>
-</tr>
-<tr>
-   <td align="right">JDX Profile Definition</td>
-   <td>Word, name, acronym, phrase, defined in a controlled value space (e.g., taxonomy, glossary, dictionary, tag list, and other forms of enumeration).</td>
-</tr>
-<tr>
-   <td align="right">Type of Term</td>
-   <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Class">http://www.w3.org/2000/01/rdf-schema#Class</a>)</td>
-</tr>
-<tr>
-   <td align="right">Usage Note</td>
-   <td>Used in the context of JDX to assign terms from occupation, industry and instructional program classifications, skills and abilities, and abstract concepts to JDX entities. Through the class' relationship with the jdx:ScaledAnnotation class, terms can be conditioned through applications of scales for attributes such as importance and frequency.</td>
-</tr>
-</tbody></table>
-
-## Job Posting
-
-<table cellpadding="5" width="90%">
-<tbody><tr>
-  <td width="150" align="right">Class URI</td>
-  <td><a href="http://purl.org/jdx/terms/JobPosting">http://purl.org/jdx/terms/JobPosting</a></td>
-</tr>
-<tr>
-  <td align="right">Label</td>
-  <td>JobPosting</td>
-</tr>
-<tr>
-   <td align="right">Defined By</td>
-   <td><a href="http://purl.org/jdx/terms/">http://purl.org/jdx/terms/</a></td>
-</tr>
-<tr>
-   <td align="right">JDX Profile Definition</td>
-   <td>Entity describing an on-line advertisement for filling one or more job openings.</td>
-</tr>
-<tr>
-   <td align="right">JDX Profile Comment</td>
-   <td>Entity that contains information on the employer and the job position based on a job description as well as how to apply for the job opening and how long the posting is valid.</td>
-</tr>
-<tr>
-   <td align="right">Type of Term</td>
-   <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Class">http://www.w3.org/2000/01/rdf-schema#Class</a>)</td>
-</tr>
-</tbody></table>
-
-## Monetary Amount
-
-<table cellpadding="5" width="90%">
-<tbody><tr>
-  <td width="150" align="right">Class URI</td>
-  <td><a href="http://schema.org/MonetaryAmount">http://schema.org/MonetaryAmount</a></td>
-</tr>
-<tr>
-  <td align="right">Label</td>
-  <td>Monetary Amount</td>
-</tr>
-<tr>
-   <td align="right">Defined By</td>
-   <td><a href="http://schema.org/">http://schema.org/</a></td>
-</tr>
-<tr>
-   <td align="right">JDX Profile Definition</td>
-   <td>Monetary value or range.</td>
-</tr>
-<tr>
-   <td align="right"> Source Class Definition</td>
-   <td>A monetary value or range.</td>
-</tr>
-<tr>
-   <td align="right">Type of Term</td>
-   <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Class">http://www.w3.org/2000/01/rdf-schema#Class</a>)</td>
-</tr>
-<tr>
-   <td align="right">Usage Note</td>
-   <td>This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc.</td>
-</tr>
-</tbody></table>
-
-## Organization
-
-<table cellpadding="5" width="90%">
-<tbody><tr>
-  <td width="150" align="right">Class URI</td>
-  <td><a href="http://schema.org/Organization">http://schema.org/Organization</a></td>
-</tr>
-<tr>
-  <td align="right">Label</td>
-  <td>Organization</td>
-</tr>
-<tr>
-   <td align="right">Defined By</td>
-   <td><a href="http://schema.org/">http://schema.org/</a></td>
-</tr>
-<tr>
-   <td align="right">JDX Profile Definition</td>
-   <td>Organization such as a corporate body, employer, distribution channel provider.</td>
-</tr>
-<tr>
-   <td align="right"> Source Class Definition</td>
-   <td>An organization such as a school, NGO, corporation, club, etc.</td>
-</tr>
-<tr>
-   <td align="right">Type of Term</td>
-   <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Class">http://www.w3.org/2000/01/rdf-schema#Class</a>)</td>
-</tr>
-</tbody></table>
-
-## Place
-
-<table cellpadding="5" width="90%">
-<tbody><tr>
-  <td width="150" align="right">Class URI</td>
-  <td><a href="http://schema.org/Place">http://schema.org/Place</a></td>
-</tr>
-<tr>
-  <td align="right">Label</td>
-  <td>Place</td>
-</tr>
-<tr>
-   <td align="right">Defined By</td>
-   <td><a href="http://schema.org/">http://schema.org/</a></td>
-</tr>
-<tr>
-   <td align="right">JDX Profile Definition</td>
-   <td>Fixed physical location.</td>
-</tr>
-<tr>
-   <td align="right"> Source Class Definition</td>
-   <td>Entities that have a somewhat fixed, physical extension.</td>
-</tr>
-<tr>
-   <td align="right">Type of Term</td>
-   <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Class">http://www.w3.org/2000/01/rdf-schema#Class</a>)</td>
-</tr>
-</tbody></table>
-
-## Postal Address 
-
-<table cellpadding="5" width="90%">
-<tbody><tr>
-  <td width="150" align="right">Class URI</td>
-  <td><a href="http://schema.org/PostalAddress">http://schema.org/PostalAddress</a></td>
-</tr>
-<tr>
-  <td align="right">Label</td>
-  <td>Postal Address</td>
-</tr>
-<tr>
-   <td align="right">Defined By</td>
-   <td><a href="http://schema.org/">http://schema.org/</a></td>
-</tr>
-<tr>
-   <td align="right">JDX Profile Definition</td>
-   <td>Mailing address of an entity.</td>
-</tr>
-<tr>
-   <td align="right"> Source Class Definition</td>
-   <td>The mailing address.</td>
-</tr>
-<tr>
-   <td align="right">Type of Term</td>
-   <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Class">http://www.w3.org/2000/01/rdf-schema#Class</a>)</td>
-</tr>
-</tbody></table>
 ---
 updated: 2019-10-24
 ---

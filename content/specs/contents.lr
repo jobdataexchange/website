@@ -2,15 +2,13 @@ title: Specifications
 ---
 body:
 
-The open source JobSchema+ assets described here in specifications have been tested with a limited sample size and are expected to update to incorporate pilot findings, feedback from the community, and beta testing. As we move into our second phase, we will embark on 1-2 beta integration tests with HRIS/ATS vendors. Please use the following pages to think about JobSchema+ and your organization, including potential costs and benefits of implementing. 
 
-To go directly to the files:
-* **[JDX jobschema+ 1.0 in JSON and JSON-LD](Lightweight, recommended version)** Note that this is the `pilot-version` branch. 
-* **[Jobschema+ Full version for reference](https://github.com/jobdataexchange/Data-Modeling)** Note that this is the `master` branch.
-* **[JDX jobschema+ 1.0 in frictionlessdata format](https://github.com/jobdataexchange/specs)**
 
-## Participate and Contribute
+These specifications pages describe the underlying files (assets) of Jobschema+ (JS+) that all JS+ formatted job descriptions will link to. It allows them to contain a greater volume of, more precise, and more standardized information which enables advanced analytics - to produce findings that can improve outcomes for employers, talent sourcing providers, and jobseekers alike. The specs describe a "profile" of JS+ that is reduced from the **["full"](https://github.com/jobdataexchange/Data-Modeling/tree/full-and-pilot/JS%2B_Full)** schema which can be drawn from to incorporate features in future versions. The current release is v0.9.0 and represents the schema (essentially a vocabulary) used to format job descriptions in the JDX pilot conducted summer 2019. The next release, for 2020, will come with an implementation guide and has a list of potential features on the **[Start Here](http://3.17.57.171:5000/admin/root:docs:developer-guide)** page that we hope you'll weigh in on. At that release, we will look forward to begin supporting your implementation of JS+!
 
-Contributions, comments, and corrections are warmly welcomed. Reach out directly with your considerations at [jdx@brighthive.io][email] and discuss in the [open forum][forum]. Going forward, we will provide additional documentation and guidance for implementing JobSchema+ on your own. And if you like what you see, email us to become a JDX partner!
+The assets include:
+* [JS+ Example Files](http://3.17.57.171:5000/admin/root:specs:jobschema-example-files) - the JDX workflow produces job descriptions or job postings in a human readable format and a JSON-LD format that is machine-readable and enables advanced analytics.
+* [JS+ Terms](http://3.17.57.171:5000/admin/root:specs:jobschema-terms/) -  all of the classes and properties enabling JDX to make assertions about job postings and other entities in a posting's lifecycle.
+* [JS+ Concept Schemes](http://3.17.57.171:5000/admin/root:specs:jobschemaplus-concept-schemes) - controlled vocabularies that define the acceptable values for any properties subject to concept schemes
+* JS+ Context File - The file that contains references for the other files. There isn't an explanatory page in specs for this one since all the content is covered on the other pages, but this file can be found [here](https://github.com/jobdataexchange/Data-Modeling/blob/full-and-pilot/JS%2B_releases/v0.9.0-piloted-version/jdxcontext.json)
 
-Material is kept in a [git repo on GitHub][repo] - fork and submit a pull request to add material. There is also an issue tracker which can be used for specific issues or suggestions.

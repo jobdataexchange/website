@@ -1,27 +1,38 @@
-title: Tell Us What You Think!
+title: Start Here!
 ---
-doc_category: contributing
+doc_category: start-here
 ---
 body:
 
-The following questions are intended to prompt discussion and will also be provided in the JDX Community Forum. Please don’t hesitate to: 
-* **[email us](jdx@brighthive.io)** with your thoughts 
-* participate in our **[forum](https://groups.google.com/a/brighthive.io/forum/#!forum/jdx-community)** which is open to conversation and questions on any JDX-related topics 
-* post in our **[Github Issues](https://github.com/jobdataexchange)**. 
+For background on JDX, read the **[Documentation](http://3.17.57.171:5000/docs/)**, taking a look at JDX for an overview, analysis for reasons why to use JDX, and Namespace Policy for our sustainability plans. For technical reference, see **[Specifications](http://3.17.57.171:5000/admin/root:specs/)**. 
 
-## W3C Community Group
+## Participate and Contribute
 
-For more a more specific conversation, the W3C Community Group is another forum launched this year “to assist Schema.org in improving workforce signaling by refining existing schema.org types serving the talent pipeline and suggesting new types and properties where improved signaling cannot otherwise be achieved.” Join **[here](https://www.w3.org/community/talent-signal/)**.
+This is the best time for contributions, comments, and corrections! The open source JobSchema+ assets are expected to update to incorporate pilot findings, feedback from the community, and beta testing. 
 
-## Topics for Your Consideration:
+1. Please use this website to think about JobSchema+ and your organization, including potential costs and benefits of implementing. 
+2. Review our proposed features for the next release below and add your comments on github issues, the [open forum](https://groups.google.com/a/brighthive.io/forum/#!forum/jdx-community), or by [emailing us](jdx@brighthive.io).
+3. Going forward, we will provide an implementation guide to explain how you can use JobSchema+ to bring together an ecosystem of tools to create job descriptions and postings in JS+ format on your own.
+4. If you like what you see, email us to become a JDX partner!
 
-Will improved, structured data on in-demand jobs and skills add value to your efforts to align career pathways, curriculum, credentials, assessments, and guidance?
-* What should the JDX content and data format look like in order for it to have utility for education, training, and credentialing providers?
-* What additional information would you like to receive from employers about their jobs?
-* What metrics and outcomes from the JDX pilot matter most to your organization or institution?
-* How will improved job descriptions and postings affect your work? 
-* What changes could make the biggest impact on your work to align learning opportunities with the ever-changing demands of the talent marketplace?
-* What would be required in order for you to consider adding JDX to your product roadmap?
+### Potential Features for v1.0.0
+(note: these will link to github issues shortly)
 
+* Competency metadata: allow description of whether any competency is required/preferred/etc.
+* Competency metadata: allow description of whether any competency is a responsibility
+* Competency metadata: allow description of whether any competency is a foundational, industry, sector, or occupational competency
+* Competency metadata: allow description of level of the competency in some way
+* competency metadata: if competency has been suggested, associate original competency for machine learning purposes?
+* competency metadata: An employer can see Competency Framework publisher name for a suggested property, and it is stored with the competency
+* include new property from JS+ full: `jobStartDate`
+* A downstream analytics partner has access to the entire JD as a field within JS+ in order to see data that will otherwise be lost in the JS+ schema input process (even with `additionalProperty` enabled)
+* An employer can control what fields go into a job description vs a job posting in order to have an internal and an external version. JobDescription may contain other fields like an alternative, formal job title
+* find a way to store the combinations of Alternative/Equivalent/Minimum/Preferred/Required x Credential/Education/Experience without parsing, initially
+* An employer can use `additionalProperty` to add another key value pair
+* An employer can select multiple suggested competency statements per JD substatement when they perceive more than one competency to be present in a single substatement
+* refine `occupationalCategory` and `industryCode` to contain more information about the codes they contain
+* refine `specialCommitment` possibly to cover travel requirements instead
+* add `applicationInstructions`
+* field to contain a license
 ---
 pub_date: 2019-10-28

@@ -8,6 +8,8 @@ Jobschema+ has controlled vocabularies called concept schemes, stored in JSON-LD
 
 Filling out the following concept schemes was `OPTIONAL` in the pilot. They are outlined below, followed by tables detailing each one. Note the links are broken - live links will come in the next release. Navigate using the index on the left.
 
+The concept scheme files are located on github at **[v0.9.0-piloted-version/Concept_Schemes](https://github.com/jobdataexchange/Data-Modeling/tree/full-and-pilot/JS%2B_releases/v0.9.0-piloted-version/Concept_Schemes)**
+
 **JobAgreement**
 * Apprenticeship
 * Collective Bargaining

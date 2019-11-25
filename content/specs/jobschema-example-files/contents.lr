@@ -6,76 +6,77 @@ body:
 Jobschema+ JSON and human readable output files are produced at the end of the JDX workflow and are intended to be distributed. The human-readable file is generated off of the JSON file and would be exportable in any format supported by the HRIS/ATS vendor workflow and could also be customized. Several of the properties could be presented with more descriptive language in human-readable versions. The two example files below represent the same hypothetical job posting with exactly the same properties in each, though the terminology may currently differ slightly between them.
 
 # Example Jobschema+ Human-Readable Output File
+Download a .docx of this file **[here](https://github.com/jobdataexchange/Data-Modeling/blob/full-and-pilot/JS%2B_releases/v0.9.0-piloted-version/Example_Output_Files/Example-jobschema%2B-output-file-v0.9.0.docx)**.
 
-## Job Title
+### Job Title
 Junior Cybersecurity Specialist
-## Employer Name
+### Employer Name
 ACME Cyber
-## Employer Email
+### Employer Email
 info@acme.com
-## Employer Website
+### Employer Website
 https://acme.com
-## Employer Phone
+### Employer Phone
 (406) 234-0987
-## Employer Address
+### Employer Address
 123 Acme Way
-## Employer Identifier
+### Employer Identifier
 456-A
-## Employer Overview
+### Employer Overview
 Blake Lee founded the company in Seattle in 1989. Since then we have become a state of the art cybersecurity company with a culture of responsibility. We have 6,000 employees working every day to promote the security in a forward-thinking, innovative, sustainable way. Find out more about our global operations.
-## Primary Economic Activity
+### Primary Economic Activity
 Software design and deployment including cybersecurity.
-## Industry Code
+### Industry Code
 541512
-## Occupation Code
+### Occupation Code
 15-1112.00
-## Job Summary
+### Job Summary
 ACME Cyber, inc. is looking for junior level cybersecurity specialist to support corporate and client contracts in our Hernon, VA locations. You will be a critical member of a highly-skilled, adaptive cyber team that carries out defensive vulnerability research.
-## Job Location
+### Job Location
 Seattle, WA
-## Job Location Type
+### Job Location Type
 telecommute
-## Employment Unit
+### Employment Unit
 ITC - R&D
-## Employment Agreement
+### Employment Agreement
 Employee
-## Competencies
+### Competencies
 * Understand common software architectures, including layered and distributed architecture models
 * Microsoft Windows
 * Be able to connect common User devices to networks and secure them appropriately
 * Should be an experienced, highly self motivated individual, who works well in a team-oriented environment and possesses excellent communication and customer service skills
 
-## Assessment
+### Assessment
 Complete an interview process which includes a live coding challenge.
-## Job Term
+### Job Term
 Regular
-## Work Hours
+### Work Hours
 Normal work hours
-## Job Schedule
+### Job Schedule
 Full-time
-## Credentials
+### Credentials
 Bachelor's Degree or equivalent experience
-## Application Location Requirement
+### Application Location Requirement
 No location requirement but no relocation expenses paid.
-## Citizenship Requirement
+### Citizenship Requirement
 US Citizen
-## Physical Requirement
+### Physical Requirement
 sitting, occasional lifting (under 35 lb)
-## Sensory Requirement
+### Sensory Requirement
 Normal vision
-## Security Clearance Requirement
+### Security Clearance Requirement
 US federal type C clearance
-## Special Commitment
+### Special Commitment
 Special program for ex-offenders
-## Salary Minimum
+### Salary Minimum
 45000
-## Salary Maximum
+### Salary Maximum
 65000
-## Frequency
+### Frequency
 Per Year
-## Incentive Compensation
+### Incentive Compensation
 Annual bonus possible.
-## Benefits List
+### Benefits List
 * Health Insurance
 * Dental Insurance
 * Vision Insurance
@@ -86,11 +87,11 @@ Annual bonus possible.
 * Commuting/travel assistance
 * Workplace perks such as recreation activities, food and coffee
 
-## Date Posted
+### Date Posted
 2019-09-01
-## Valid Through
+### Valid Through
 2019-09-30
-## Job Openings
+### Job Openings
 1
 
 ----
@@ -315,4 +316,4 @@ Principally, this file is two objects within `@graph`: the `jdx:Organization` fo
 ---
 updated: 2019-10-24
 ---
-version: 1.0
+version: 0.9.0
