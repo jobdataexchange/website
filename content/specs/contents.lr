@@ -1,0 +1,16 @@
+title: Specifications
+---
+body:
+
+The open source JobSchema+ assets described here in specifications have been tested with a limited sample size and are expected to update to incorporate pilot findings, feedback from the community, and beta testing. As we move into our second phase, we will embark on 1-2 beta integration tests with HRIS/ATS vendors. Please use the following pages to think about JobSchema+ and your organization, including potential costs and benefits of implementing. 
+
+To go directly to the files:
+* **[JDX jobschema+ 1.0 in JSON and JSON-LD](Lightweight, recommended version)** Note that this is the `pilot-version` branch. 
+* **[Jobschema+ Full version for reference](https://github.com/jobdataexchange/Data-Modeling)** Note that this is the `master` branch.
+* **[JDX jobschema+ 1.0 in frictionlessdata format](https://github.com/jobdataexchange/specs)**
+
+## Participate and Contribute
+
+Contributions, comments, and corrections are warmly welcomed. Reach out directly with your considerations at [jdx@brighthive.io][email] and discuss in the [open forum][forum]. Going forward, we will provide additional documentation and guidance for implementing JobSchema+ on your own. And if you like what you see, email us to become a JDX partner!
+
+Material is kept in a [git repo on GitHub][repo] - fork and submit a pull request to add material. There is also an issue tracker which can be used for specific issues or suggestions.

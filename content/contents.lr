@@ -12,42 +12,44 @@ about_intro: The Job Data Exchange increases opportunity for all learners and wo
 ---
 fellows_heading: Announcing the 2019 JDX Partners Program
 ---
-feature1_heading: Specifications
+feature1_heading: Documentation - Start Here
 ---
-feature2_heading: Tools
+feature2_heading: Specifications
 ---
-feature3_heading: Documentation
+feature3_heading: Tools
 ---
 fellows_intro:
 
 The JDX Partners Program, supported by the US Chamber of Commerce Foundation, is supporting HRIS, ATS, and other jobs data platform partners in adopting JDX standards and tools to improve their customers' job data creation workflows. Interested partners can contact the US Chamber about the program through the link below.
 
 ---
-feature1_body: Introducing a first look at JDX JobSchema+, a standardized way of organizing structured data on the web for jobs.
+feature1_body: Get a nontechnical overview of JDX, Jobschema+, and our progress.
 ---
-feature2_body: Tools, APIs, data sources, and ready-to-use software for working with jobs data including skills and competencies. These tools are of interest to the JDX ecosystem and will be added on a rolling basis.
+feature2_body: Technical reference for implementing Jobschema+.
 ---
-feature3_body: Get an overview of JDX, the workflow, and our progress using our documentation.
+feature3_body:
+
+Tools, APIs, data sources, and software for working with jobs data. These tools are of interest to the JDX ecosystem and will be added on a rolling basis. 
 ---
 fellows_link_text: Read more and join the JDX Partners Program here.
 ---
-feature1_link_text: Go to specifications
+feature1_link_text: Go to documentation
 ---
-feature2_link_text: Go to tools
+feature2_link_text: Go to specifications
 ---
-feature3_link_text: Go to documentation
+feature3_link_text: Go to tools
 ---
-feature1_link_url: specs
+feature1_link_url: docs
 ---
-feature2_link_url: tools
+feature2_link_url: specs
 ---
-feature3_link_url: docs
+feature3_link_url: tools
 ---
-feature1_icon: package
+feature1_icon: book
 ---
-feature2_icon: software
+feature2_icon: package
 ---
-feature3_icon: book
+feature3_icon: software
 ---
 about_image: diagram.png
 ---
@@ -153,3 +155,5 @@ section3_heading: Get involved.
 partners_heading: Communicate what employers need from workers by developing competency-based job descriptions.
 ---
 partners_intro: Explore JDX and JobSchema+. Then, reach out to become an official JDX partner to join the movement of employers and HRIS providers using JDX to send clearer, always up-to-date signals about workforce needs.
+---
+partners_link_text: 

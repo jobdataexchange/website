@@ -1,0 +1,608 @@
+title: Jobschema+ Schema Table
+---
+body:
+
+# Introduction
+The Jobschema+ schema table is a way to easily see all the JDX properties proposed for the pilot. This is a good resource for discussion at the employer, education provider, and jobseeker level, with the Jobschema+ Terms spec as a reference when more detail about the JSON output file is needed. You will also find an earlier version of this table in **[PDF](https://www.uschamberfoundation.org/jdx/job-schema)**.
+
+# Jobschema+ Properties Proposed in the Pilot
+<table>
+  <tr>
+    <th>Term Category</th>
+    <th>JDX KEY Term</th>
+    <th>Pilot Testing Status</th>
+    <th>JS+ in the pilot</th>
+    <th>JSPHR</th>
+    <th>Definition of JDX Term</th>
+    <th>Additional Guidance onUse of the JDX Terms</th>
+    <th>Differences with Schema.org</th>
+    <th>Notes</th>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Applicant Location Requirement</td>
+    <td>Tested</td>
+    <td>jdx:applicantLocationRequirement</td>
+    <td>Application Location Requirement</td>
+    <td>The location(s) applicants can apply from.</td>
+    <td>This is usually used for telecommuting jobs where the applicant does not need to be in a physical location.</td>
+    <td>Same intention with plural Application Location Requirements (Schema.org) changed to the singular Application Location Requirement (JDX).</td>
+    <td>It could benefit from a controlled vocabulary with an user-defined option.</td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>EmployerOverview</td>
+    <td>Tested</td>
+    <td>jdx:employerOverview</td>
+    <td>EmployerOverview</td>
+    <td>Description of the employer, career opportunities, and work environment.</td>
+    <td></td>
+    <td>Not included in Schema.org.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>EmploymentUnit</td>
+    <td>Tested</td>
+    <td>jdx:employmentUnit</td>
+    <td>EmploymentUnit</td>
+    <td>Department, unit and/or facility where the employee reports and/or in which the job is to be performed.</td>
+    <td>The organization entity identified by the Employment Unit property should be the instance where the industry is identified using the Industry Code and Industry properties.</td>
+    <td>Not included in Schema.org.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Formatted Description</td>
+    <td>Tested</td>
+    <td>schema:description</td>
+    <td>Job Summary</td>
+    <td>Complete representation of the job including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements.</td>
+    <td>Include HTML markup for formatting. The distinction between the properties Description and Formatted Description is that the latter contains HTML formatting while the former does not.</td>
+    <td>Not included in Schema.org.</td>
+    <td>Perhaps this should include a complete version of the entire JD so as to prevent data loss in translation to JS+, but perhaps it should be stored in a collapsed way. There was variance in employer interpretation of this field.</td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td></td>
+    <td>Tested</td>
+    <td>schema:address</td>
+    <td>Employer Address</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td></td>
+    <td>Tested</td>
+    <td>telephone</td>
+    <td>Employer Phone</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Employers may want the option to exclude this in the posting.</td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td></td>
+    <td>Tested</td>
+    <td>email</td>
+    <td>Employer Email</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Employers may want the option to exclude this in the posting.</td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td></td>
+    <td>Tested</td>
+    <td>url</td>
+    <td>Employer Website</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Hiring Organization</td>
+    <td>Tested as Required</td>
+    <td>schema:legalName</td>
+    <td>Employer Name</td>
+    <td>Organization offering the job position.</td>
+    <td></td>
+    <td>Same as Schema.org.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Identifier</td>
+    <td>Tested</td>
+    <td>jdx:positionID</td>
+    <td>Employer Identifier</td>
+    <td>Identifier for any entity for internal or external uses (e.g. job, job posting, and&nbsp;&nbsp;department).</td>
+    <td></td>
+    <td>Schema.org provides for identifiers to be expressed as "Text", "URL" or "Property Value". JDX limits the option to "Property Value".</td>
+    <td>Employers may want to exclude this in the posting.</td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Industry</td>
+    <td>Tested</td>
+    <td>schema:industry</td>
+    <td>Primary Economic Activity</td>
+    <td>Description of the most critical economic or work activities performed (e.g. software development, electronic manufacturing, motor vehicle production, or diagnostic and therapeutic services).</td>
+    <td>This property is intended to hold a description of the primary activity at the location of employment from which an industry code may be derived (e.g., NAICS in the U.S. and ESCO in the EU)</td>
+    <td>In Schema.org, Industry is either a&nbsp;&nbsp;literal (text) or property value (defined term) and may capture a description of an industry or a code identifying the industry. In JDX, this property is intended to hold a description of the primary activity at the location of employment from which an industry code may be derived. Actual industry codes are recorded in the JDX Industry Code property.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Industry Code</td>
+    <td>Tested</td>
+    <td>jdx:industryCode</td>
+    <td>Industry Code</td>
+    <td>Code from a controlled vocabulary of industry types identifying the primary economic activity of an establishment defined as a single physical location where business is conducted or where services or industrial operations are performed.</td>
+    <td>This property is intended to hold an industry code identifying the primary activity at the location of employment&nbsp;&nbsp;(e.g., NAICS in the U.S. and ESCO in the EU)</td>
+    <td>Not included in Schema.org (see Industry).</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Job Agreement</td>
+    <td>Tested</td>
+    <td>jdx:jobAgreement</td>
+    <td>Employment Agreement</td>
+    <td>Employment agreement (e.g. employee, contract-to-hire, contract, internship, externship, apprenticeship, student, volunteer, under collective bargaining, eligible for overtime).</td>
+    <td></td>
+    <td>The values for JDX properties Job Agreement, Job Schedule, and Job Term are all included in a single property Employment Type in Schema.org.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Job Location</td>
+    <td>Tested as Required</td>
+    <td>schema:jobLocation</td>
+    <td>Job Location</td>
+    <td>A geographic location associated with the job position (typically single).</td>
+    <td>The Job Location should specify where the job will be physically performed. The property should not be used if no physical job location is stated.</td>
+    <td>In Schema.org, this property refers to a geographic location associated with the job position and may or may not consider where the job is physically performed.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Job Location Type</td>
+    <td>Tested</td>
+    <td>schema:jobLocationType</td>
+    <td>Job Location Type</td>
+    <td>A description of the locations where the job can be performed including in-person, remote/telecommute, or a combination.</td>
+    <td></td>
+    <td>Same intention, slight changes to definition text to make it more inclusive.</td>
+    <td>This should have a controlled vocabulary.</td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Job Schedule</td>
+    <td>Tested</td>
+    <td>jdx:jobSchedule</td>
+    <td>Job Schedule</td>
+    <td>Schedule of the employment (e.g. full-time, part-time, flextime, hourly, shared-time).</td>
+    <td></td>
+    <td>The values for JDX properties Job Agreement, Job Schedule, and Job Term are all included in a single property Employment Type in Schema.org.</td>
+    <td>More definition on the JSPHR would help.</td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Job Term</td>
+    <td>Tested</td>
+    <td>jdx:jobTerm</td>
+    <td>Job Term</td>
+    <td>Term of employment (e.g. temporary, regular, seasonal).</td>
+    <td></td>
+    <td>The values for JDX properties Job Agreement, Job Schedule, and Job Term are all included in a single property Employment Type in Schema.org.</td>
+    <td>More definition would help - as in it could read "Regular employment (neither temporary nor seasonal)".</td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Occupation Category</td>
+    <td>Tested</td>
+    <td>schema:occupationalCategory</td>
+    <td>Occupation Code</td>
+    <td>Category of the relevant occupation of the job used in the country of employment.</td>
+    <td>JDX definition recommends use of occupational taxonomies appropriate to the country of the job location to accommodate international use.</td>
+    <td>Same intention, slight changes to definition text to make it more specific to the country of employment.</td>
+    <td>Consider renaming to Occupation Code?</td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Title</td>
+    <td>Tested as Required</td>
+    <td>schema:title</td>
+    <td>Job Title</td>
+    <td>The title of the job.</td>
+    <td></td>
+    <td>Same as Schema.org.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Competency Related Information</td>
+    <td>Assessment</td>
+    <td>Tested</td>
+    <td>jdx:requiredAssessment</td>
+    <td>Assessment</td>
+    <td>Resource referenced is a direct, indirect, formative, or summative evaluation or estimation of the nature, ability, or quality of a person's performance or outcome of an action.</td>
+    <td>Entity referenced describes the key characteristics of an assessment administered to candidates for a job and may include subject areas assessed, type of assessment, and any associated assessment rubric.</td>
+    <td>Not included in Schema.org.</td>
+    <td>If we had an assessment property with metadata on whether it was required, preferred, alternative, or uncategorized, could that be helpful? Otherwise we may want to create a new uncategorized assessment property for when it has not been parsed. There is opportunity to present formatted suggestions for this field.</td>
+  </tr>
+  <tr>
+    <td>Competency Related Information</td>
+    <td>Competency</td>
+    <td>Tested</td>
+    <td>jdx:competency</td>
+    <td>Competencies</td>
+    <td>Any acquired capability of an individual that enables task performance and the attainment of which can be observed, measured, or otherwise assessed.</td>
+    <td>This property includes: abilities, attitudes, knowledge, skills, tasks, and tools/technologies (associated with some task).</td>
+    <td>Not included in Schema.org.</td>
+    <td>Additional metadata will be important here.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Competency metadata - competency framework url</td>
+    <td>Tested</td>
+    <td>url in name in schema:inDefinedTermSet</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>this is internal linked data and could be external linked data</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Competency metadata - competency framework name</td>
+    <td>Not tested</td>
+    <td>xxx in schema:inDefinedTermSet</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Competency metadata - competency framework publisher</td>
+    <td>Not tested</td>
+    <td>xxx in schema:inDefinedTermSet</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Competency metadata - required, preferred, alternative</td>
+    <td>Not tested</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>our current iteration loses this information</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Competency metadata - original substatement</td>
+    <td>Not tested</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>could be useful for ML, transparency</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Competency metadata - weight/importance level</td>
+    <td>Not tested</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Competency Related Information</td>
+    <td>Responsibility</td>
+    <td>Not tested</td>
+    <td></td>
+    <td></td>
+    <td>Key work tasks or activities over which the person in this job exercises some degree of authority, control, or leadership.</td>
+    <td></td>
+    <td>Same intention with plural Responsibilities (Schema.org) changed to the singular Responsibility (JDX).</td>
+    <td>this could be another competency metadata</td>
+  </tr>
+  <tr>
+    <td>Credentialing and Other Hiring Requirement</td>
+    <td>Alternative CredentialAlternative EducationAlternative Experience</td>
+    <td>Not tested</td>
+    <td></td>
+    <td></td>
+    <td>Description of an alternative credential, education, or experience fulfilling requirements for the job.</td>
+    <td>The award of some form of credential for an education or training experience should use credential properties, not the education properties (e.g. two years of postsecondary education leading to a “dental assistant certificate” would use credential, not education). Education or training experience without the award of some form of credential should be recorded as an educational experience (e.g. a requirement of “two years of postsecondary education” would use the education properties, not the credential properties since no credential is identified).</td>
+    <td>Not explicitly included in Schema.org. Schema.org provides Education Requirements, Experience Requirements, and Qualifications to which the more discriminating alternative, minimum, equivalent, preferred, and required can be mapped.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Credentialing and Other Hiring Requirement</td>
+    <td>Citizenship Requirement</td>
+    <td>Tested</td>
+    <td>jdx:citizenshipRequirement</td>
+    <td>Citizenship Requirement</td>
+    <td>Country of the applicant's citizenship.</td>
+    <td></td>
+    <td>Not included in Schema.org.</td>
+    <td>This should have a controlled vocabulary.</td>
+  </tr>
+  <tr>
+    <td>Credentialing and Other Hiring Requirement</td>
+    <td>Equivalent CredentialEquivalent EducationEquivalent Experience</td>
+    <td>Not tested</td>
+    <td></td>
+    <td></td>
+    <td>Description of an equivalent&nbsp;&nbsp;credential, education, or experience for the job.</td>
+    <td>See alternative credential, education, experience for more information.</td>
+    <td>Not explicitly included in Schema.org.Schema.org provides Education Requirements, Experience Requirements and Qualifications to which the more discriminating alternative, equivalent, preferred and required can be mapped.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Credentialing and Other Hiring Requirement</td>
+    <td>Minimum Credential Minimum Education Minimum Experience</td>
+    <td>Not tested</td>
+    <td></td>
+    <td></td>
+    <td>Description of the minimum&nbsp;&nbsp;credential, education, or experience needed for the job.</td>
+    <td>Minimum has two potential states: (1) A minimum entity combined with some alternative entity (e.g. a minimum of an associate of arts degree with a preference for a bachelor of arts degree;&nbsp;&nbsp;and (2) when minimum is used by itself, it is the equivalent of required. See alternate credential, education, experience for additional information.</td>
+    <td>Not explicitly included in Schema.org. Schema.org provides Education Requirements, Experience Requirements, and Qualifications to which the more discriminating alternative, minimum, equivalent, preferred, and required can be mapped.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Credentialing and Other Hiring Requirement</td>
+    <td>Physical Requirement</td>
+    <td>Tested</td>
+    <td>jdx:physicalRequirement</td>
+    <td>Physical Requirement</td>
+    <td>Resource identifying types of physical activity associated with a job.</td>
+    <td></td>
+    <td>Not included in Schema.org.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Credentialing and Other Hiring Requirement</td>
+    <td>Preferred Credential Preferred Education Preferred Experience</td>
+    <td>Not tested</td>
+    <td></td>
+    <td></td>
+    <td>Description of the preferred credential, education, or experience needed for the job.</td>
+    <td>See minimum credential, education, experience.</td>
+    <td>Not explicitly included in Schema.org. Schema.org provides Education Requirements, Experience Requirements, and Qualifications to which the more discriminating alternative, minimum, equivalent, preferred, and required can be mapped.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Credentialing and Other Hiring Requirement</td>
+    <td>Required Credential Required Education Required Experience</td>
+    <td>Tested</td>
+    <td>jdx:requiredCredential</td>
+    <td>Credentials</td>
+    <td>Description of the required credential, education, or experience needed for the job.</td>
+    <td>See minimum credential, education, experience.</td>
+    <td>Not explicitly included in Schema.org. Schema.org provides Education Requirements, Experience Requirements, and Qualifications to which the more discriminating alternative, minimum, equivalent, preferred, and required can be mapped.</td>
+    <td>See comment about assessment. This should be renamed on the JSPHR. There is a good opportunity for controlled vocabulary suggestions.</td>
+  </tr>
+  <tr>
+    <td>Credentialing and Other Hiring Requirement</td>
+    <td>Security Clearance Requirement</td>
+    <td>Tested</td>
+    <td>jdx:securityClearanceRequirement</td>
+    <td>Security Clearance Requirement</td>
+    <td>Description of any security clearance requirements for the job.</td>
+    <td></td>
+    <td>Not included in Schema.org.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Credentialing and Other Hiring Requirement</td>
+    <td>Sensory Requirement</td>
+    <td>Tested</td>
+    <td>jdx:sensoryRequirement</td>
+    <td>Sensory Requirement</td>
+    <td>Resource identifying sensory requirements and levels necessary to function on the job including hearing and vision.</td>
+    <td></td>
+    <td>Not included in Schema.org.</td>
+    <td>There is a good opportunity for controlled vocabulary suggestions.</td>
+  </tr>
+  <tr>
+    <td>Credentialing and Other Hiring Requirement</td>
+    <td>Special Commitment</td>
+    <td>Tested</td>
+    <td>jdx:specialCommitment</td>
+    <td>Special Commitment</td>
+    <td>Any special commitments associated with the job posting (e.g. low-income, native American, ex-offenders) along with any special exclusions (e.g. criminal records).</td>
+    <td></td>
+    <td>Same intention; however, the JDX definition expands on the Schema.org property by acknowledging additional target populations (e.g. low-income, native American, ex-offenders) along with any special exclusions (e.g. criminal records).</td>
+    <td>this could incl travel requirements? if not, add as separate field. It may need more definition.</td>
+  </tr>
+  <tr>
+    <td>Compensation and Work Hours</td>
+    <td>Base Salary</td>
+    <td>Tested</td>
+    <td>schema:baseSalary</td>
+    <td></td>
+    <td>Base salary of the job or of an employee in an employee role including minimum and maximum salary and unit value (e.g. hour, day, week, month, or year).</td>
+    <td>The Base Salary property references the schema.org Monetary Amount type which provides for stating minimum and maximum salary, type of currency, and valid from and valid through dates.</td>
+    <td>Same as Schema.org.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Base Salary metadata: min and max value</td>
+    <td>Tested</td>
+    <td>schema:minValue, schema:maxValue</td>
+    <td>Salary Minimum Salary Maximum</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Base Salary metadata: pay cycle</td>
+    <td>Tested</td>
+    <td>payCycleInterval</td>
+    <td>Frequency</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Compensation and Work Hours</td>
+    <td>Base Salary metadata: Currency</td>
+    <td>Tested</td>
+    <td>current</td>
+    <td></td>
+    <td>The Currency (e.g. USD) used for the main salary information in this job posting or for this employee.</td>
+    <td></td>
+    <td>Same intention with slight changes to definition text.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Compensation and Work Hours</td>
+    <td>Incentive Compensation</td>
+    <td>Tested</td>
+    <td>schema:incentiveCompensation</td>
+    <td>Incentive Compensation</td>
+    <td>Description of bonus and commission compensation aspects of the job.</td>
+    <td></td>
+    <td>Same as Schema.org.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Compensation and Work Hours</td>
+    <td>Job Benefit</td>
+    <td>Tested</td>
+    <td>jobBenefits</td>
+    <td>Benefits List</td>
+    <td>Description of benefits associated with the job (e.g. employee discount, health insurance, a U.S. 401K plan).</td>
+    <td></td>
+    <td>Same intention with plural Job Benefits (Schema.org) changed to the singular Job Benefit (JDX).</td>
+    <td>tuition was a common addition.</td>
+  </tr>
+  <tr>
+    <td>Compensation and Work Hours</td>
+    <td>Work Hours</td>
+    <td>Tested</td>
+    <td>jdx:workHours</td>
+    <td>Work Hours</td>
+    <td>Typical working hours for this job.</td>
+    <td>JDX Work Hours description should include, where appropriate, three facets: (1) normal work hours; (2) changing work hours; and (3) flexible work hours (set your own schedule). Additionally, state if overtime is available, optional, or required.</td>
+    <td>Same intention with best practice guidance.</td>
+    <td>Definition needed as in it could read "Normal work hours (neither changing nor set your own schedule)"..</td>
+  </tr>
+  <tr>
+    <td>Job Postings Only</td>
+    <td>Date Posted</td>
+    <td>Tested</td>
+    <td>schema:datePosted</td>
+    <td>Date Posted</td>
+    <td>Publication date for the job posting.</td>
+    <td></td>
+    <td>Same as Schema.org.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Postings Only</td>
+    <td>Total Job Openings</td>
+    <td>Tested</td>
+    <td>totalJobOpenings</td>
+    <td>Total Job Openings</td>
+    <td>Number of positions open for this job posting.</td>
+    <td></td>
+    <td>Not included in Schema.org.</td>
+    <td>Usage was very similar to date posted.</td>
+  </tr>
+  <tr>
+    <td>Job Postings Only</td>
+    <td>Valid Through</td>
+    <td>Tested</td>
+    <td>schema:validThrough</td>
+    <td>Valid Through</td>
+    <td>The date after which the item is not valid.</td>
+    <td></td>
+    <td>Same intention with slight change from Schema.org definition from “when” to “which”.</td>
+    <td>Usage was very similar to date posted.</td>
+  </tr>
+  <tr>
+    <td>Job Postings Only</td>
+    <td>Estimated Salary</td>
+    <td>Not tested</td>
+    <td></td>
+    <td></td>
+    <td>An estimated salary for job postings or occupations computed by outside organizations, not the hiring organization.</td>
+    <td>The estimated salary is expressed using the Schema.org Monetary Amount Distribution type and supports description of the median salary and the salaries at percentiles 25, 50, 75 and 90.</td>
+    <td>Same intention with slight changes to definition text.</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Job Overview</td>
+    <td>Additional Property</td>
+    <td>Not tested</td>
+    <td>additionalProperty</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>This allows creation of a key value pair.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Travel Requirements</td>
+    <td>Not tested</td>
+    <td>jdx:travelRequirement</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>- this should probably go in/replace special commitment.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Application instructions</td>
+    <td>Not tested</td>
+    <td>jdx:applicationInstructions ?</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>many JDs contained application instructions which were lost in the JS+.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>Company Culture</td>
+    <td>Not tested</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>Let's consider a property like this and providing guidance for how it should be filled out to help applicants self-screen. While Employer Summary may cover this, we can still consider the pros and cons of a separate field if it may be beneficial.</td>
+  </tr>
+</table>
+---
+updated: 2019-10-24
+---
+version: 1.0

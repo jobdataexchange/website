@@ -1,0 +1,1117 @@
+title: Jobschema+ Concept Schemes
+---
+body:
+
+Jobschema+ has controlled vocabularies called concept schemes, stored in JSON-LD in the data-modeling repo. When a user makes documents in JS+, if they would like to fill out one of the following properties, which are subject to concept schemes, they `MUST` select from each concept scheme's associated concepts, exactly as they are listed. 
+
+Filling out the following concept schemes was `OPTIONAL` in the pilot. They are outlined below, followed by tables detailing each one. Note the links are broken - live links will come in the next release. Navigate using the index on the left.
+
+**JobAgreement**
+* Apprenticeship
+* Collective Bargaining
+* Contract
+* Contract-to-hire
+* Employee
+* Externship
+* Internship
+* Overtime Eligible
+* Overtime Ineligible
+* Student Volunteer
+
+**JobBenefit**
+* 401(k)
+* Commuting/Travel Assistance
+* Dental Insurance
+* Gym Membership
+* Health Insurance
+* Life Insurance
+* PTO
+* Vision Insurance
+* Workplace Perks
+
+**JobSchedule**
+* Flextime
+* Full-time
+* Part-time
+* Shared-time
+
+**JobTerm**
+* Regular
+* Seasonal
+* Temporary
+
+**PayCycleInterval**
+* Day
+* Week
+* Two Weeks
+* Month
+* Quarterly
+* Half Year
+* Year
+
+**WorkHours**
+* Flexible Work Hours
+* Normal
+
+----
+## Job Agreement Concept Scheme 
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">Class URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+  <td align="left">Name</td>
+  <td>Job Agreement Concept Scheme (JDX)</td>
+</tr>
+<tr>
+   <td align="left">Description</td>
+   <td>Type of employment agreement (e.g. "employee", "contract-to-hire", "contract", "internship", "externship", "apprenticeship", "student", "volunteer", "under collective bargaining", "eligible for overtime").</td>
+</tr>
+
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Has Top Concept</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/1dae543c-9ba5-4745-a74e-42c9d49b90fe">https://jobdataexchange.org/jdx/vocabs/JobAgreement/1dae543c-9ba5-4745-a74e-42c9d49b90fe</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/d0c917f6-3dc5-44ef-aa64-1690e7f4a29e">https://jobdataexchange.org/jdx/vocabs/JobAgreement/d0c917f6-3dc5-44ef-aa64-1690e7f4a29e</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/440255f1-6543-485a-a8d4-919eb231056e">https://jobdataexchange.org/jdx/vocabs/JobAgreement/440255f1-6543-485a-a8d4-919eb231056e</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/c250ff7c-a0a7-455a-a000-065ee8a48047">https://jobdataexchange.org/jdx/vocabs/JobAgreement/c250ff7c-a0a7-455a-a000-065ee8a48047</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/ac9b5ee4-b095-411d-b7ab-cde5bed84330">https://jobdataexchange.org/jdx/vocabs/JobAgreement/ac9b5ee4-b095-411d-b7ab-cde5bed84330</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/c3d7f908-f5fe-493d-a423-492ca5f53b82">https://jobdataexchange.org/jdx/vocabs/JobAgreement/c3d7f908-f5fe-493d-a423-492ca5f53b82</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/80c294e2-2b5f-4755-b388-9eb651a6bd3a">https://jobdataexchange.org/jdx/vocabs/JobAgreement/80c294e2-2b5f-4755-b388-9eb651a6bd3a</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/38062961-81f7-433c-aa4c-4f24f505196f">https://jobdataexchange.org/jdx/vocabs/JobAgreement/38062961-81f7-433c-aa4c-4f24f505196f</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/7ce8d9ef-7bd8-4c87-a2b2-29faf353349d">https://jobdataexchange.org/jdx/vocabs/JobAgreement/7ce8d9ef-7bd8-4c87-a2b2-29faf353349d</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/4f2bb7e9-4490-4946-a3a2-c91a56023fb3">https://jobdataexchange.org/jdx/vocabs/JobAgreement/4f2bb7e9-4490-4946-a3a2-c91a56023fb3</a>
+</tr>
+</tbody>
+</table>
+
+### Apprenticeship
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/7ce8d9ef-7bd8-4c87-a2b2-29faf353349d">https://jobdataexchange.org/jdx/vocabs/JobAgreement/7ce8d9ef-7bd8-4c87-a2b2-29faf353349d</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Apprenticeship</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position may be filled by an apprentice hired to learn an occupation or profession while working and is registered with a sponsor in an approved apprenticeship program.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Collective Bargaining
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/c250ff7c-a0a7-455a-a000-065ee8a48047">https://jobdataexchange.org/jdx/vocabs/JobAgreement/c250ff7c-a0a7-455a-a000-065ee8a48047</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Collective Bargaining</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Holders of this position may engage in collective bargaining.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Contract
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/ac9b5ee4-b095-411d-b7ab-cde5bed84330">https://jobdataexchange.org/jdx/vocabs/JobAgreement/ac9b5ee4-b095-411d-b7ab-cde5bed84330</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Contract</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Contract position not qualifying as an employee.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Contract-to-Hire
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/c3d7f908-f5fe-493d-a423-492ca5f53b82">https://jobdataexchange.org/jdx/vocabs/JobAgreement/c3d7f908-f5fe-493d-a423-492ca5f53b82"</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Contract-to-Hire</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position subject to a contract-to-hire agreement by which the employee will work for the employer for a fixed period of time with an employer decision at the close of that time whether to permanently hire or dismiss for the employee.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Employee
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/1dae543c-9ba5-4745-a74e-42c9d49b90fe">https://jobdataexchange.org/jdx/vocabs/JobAgreement/1dae543c-9ba5-4745-a74e-42c9d49b90fe</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Employee</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position offered for regular employment.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Externship
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/38062961-81f7-433c-aa4c-4f24f505196f">https://jobdataexchange.org/jdx/vocabs/JobAgreement/38062961-81f7-433c-aa4c-4f24f505196f</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Externship</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position offered as an externship for a limited period of time.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Internship
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/80c294e2-2b5f-4755-b388-9eb651a6bd3a">https://jobdataexchange.org/jdx/vocabs/JobAgreement/80c294e2-2b5f-4755-b388-9eb651a6bd3a</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Internship</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position offered as an internship for a limited period of time.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+</tbody>
+</table>
+
+
+### Overtime Eligible
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/d0c917f6-3dc5-44ef-aa64-1690e7f4a29e">https://jobdataexchange.org/jdx/vocabs/JobAgreement/d0c917f6-3dc5-44ef-aa64-1690e7f4a29e</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Overtime Eligible</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position qualifies for overtime.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Overtime Ineligible
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/440255f1-6543-485a-a8d4-919eb231056e">https://jobdataexchange.org/jdx/vocabs/JobAgreement/440255f1-6543-485a-a8d4-919eb231056e</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Overtime Ineligible</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position does not qualify for overtime.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Student Volunteer
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/4f2bb7e9-4490-4946-a3a2-c91a56023fb3">https://jobdataexchange.org/jdx/vocabs/JobAgreement/4f2bb7e9-4490-4946-a3a2-c91a56023fb3</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Student Volunteer</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position open to a student volunteer (non-employee).</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/JobAgreement/">https://jobdataexchange.org/jdx/vocabs/JobAgreement/</a></td>
+</tr>
+</tbody>
+</table>
+
+## Job Benefit Concept Scheme
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">Class URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+<tr>
+  <td align="left">Name</td>
+  <td>Job Benefit Concept Scheme (JDX)</td>
+</tr>
+<tr>
+   <td align="left">Description</td>
+   <td>Benefits associated with the job (e.g., "employee discount", "health insurance", "401K plan").</td>
+</tr>
+
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Has Top Concept</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/b568f4cd-0f29-42f8-ba19-b6fd0a5e04fa">https://jobdataexchange.org/jdx/vocabs/jobBenefits/b568f4cd-0f29-42f8-ba19-b6fd0a5e04fa</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/8c30290a-dbbf-4942-a64f-211af4d36d12">https://jobdataexchange.org/jdx/vocabs/jobBenefits/8c30290a-dbbf-4942-a64f-211af4d36d12</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/001bab41-3742-4734-b868-709439d47847">https://jobdataexchange.org/jdx/vocabs/jobBenefits/001bab41-3742-4734-b868-709439d47847</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/1c4571cd-1fd7-46e4-a2c5-6e35063c01f7">https://jobdataexchange.org/jdx/vocabs/jobBenefits/1c4571cd-1fd7-46e4-a2c5-6e35063c01f7</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/c8df8b1c-c601-4cf3-989b-78d6da9923d7">https://jobdataexchange.org/jdx/vocabs/jobBenefits/c8df8b1c-c601-4cf3-989b-78d6da9923d7</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/3f7010e9-d439-4601-b36e-e0cb32184472">https://jobdataexchange.org/jdx/vocabs/jobBenefits/3f7010e9-d439-4601-b36e-e0cb32184472</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/b88390dc-d463-4529-af25-c90965d867f7">https://jobdataexchange.org/jdx/vocabs/jobBenefits/b88390dc-d463-4529-af25-c90965d867f7</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/1896131b-6055-428c-b8c8-dc51033a21d7">https://jobdataexchange.org/jdx/vocabs/jobBenefits/1896131b-6055-428c-b8c8-dc51033a21d7</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/1c71d048-ca36-4da9-9068-50c30faef258">https://jobdataexchange.org/jdx/vocabs/jobBenefits/1c71d048-ca36-4da9-9068-50c30faef258</a>
+</tr>
+</tbody>
+</table>
+
+### 401(k)
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/b568f4cd-0f29-42f8-ba19-b6fd0a5e04fa">https://jobdataexchange.org/jdx/vocabs/jobBenefits/b568f4cd-0f29-42f8-ba19-b6fd0a5e04fa</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>401(k)</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>A 401(k) is a feature of a qualified profit-sharing plan that allows employees to contribute a portion of their wages to individual accounts.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Commuting/Travel Assistance
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/8c30290a-dbbf-4942-a64f-211af4d36d12">https://jobdataexchange.org/jdx/vocabs/jobBenefits/8c30290a-dbbf-4942-a64f-211af4d36d12</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Commuting/Travel Assistance</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Subsidization of all or part of the employee's work-related travel including expenses for commuting to and from work.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+</tbody>
+</table>
+
+
+### Dental Insurance
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/001bab41-3742-4734-b868-709439d47847">https://jobdataexchange.org/jdx/vocabs/jobBenefits/001bab41-3742-4734-b868-709439d47847</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Dental Insurance</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Employer provided dental insurance.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Gym Membership
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/1c4571cd-1fd7-46e4-a2c5-6e35063c01f7">https://jobdataexchange.org/jdx/vocabs/jobBenefits/1c4571cd-1fd7-46e4-a2c5-6e35063c01f7</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Gym Membership</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Employer provided coverage for gym membership.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Health Insurance
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/c8df8b1c-c601-4cf3-989b-78d6da9923d7">https://jobdataexchange.org/jdx/vocabs/jobBenefits/c8df8b1c-c601-4cf3-989b-78d6da9923d7</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Health Insurance</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Employer provided health insurance.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+</tbody>
+</table>
+
+
+### Life Insurance
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/3f7010e9-d439-4601-b36e-e0cb32184472">https://jobdataexchange.org/jdx/vocabs/jobBenefits/3f7010e9-d439-4601-b36e-e0cb32184472</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Life Insurance</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Employer provided life insurance.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Paid Time Off
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/b88390dc-d463-4529-af25-c90965d867f7">https://jobdataexchange.org/jdx/vocabs/jobBenefits/b88390dc-d463-4529-af25-c90965d867f7</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Paid Time Off</td>
+</tr>
+<tr>
+  <td align="left">Alternative Label</td>
+  <td>PTO</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Paid time off for specific categories of activity; e.g., vacation, holiday, sick & personal leave.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Vision Insurance
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/1896131b-6055-428c-b8c8-dc51033a21d7">https://jobdataexchange.org/jdx/vocabs/jobBenefits/1896131b-6055-428c-b8c8-dc51033a21d7</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Vision Insurance</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Employer provided vision insurance.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Workforce Perks
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefits/1c71d048-ca36-4da9-9068-50c30faef258">https://jobdataexchange.org/jdx/vocabs/jobBenefits/1c71d048-ca36-4da9-9068-50c30faef258</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Workforce Perks</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Free recreation activities, food and coffee.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobBenefit/">https://jobdataexchange.org/jdx/vocabs/jobBenefit/</a></td>
+</tr>
+</tbody>
+</table>
+
+
+
+## Job Schedule Concept Scheme
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">Class URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobSchedule/">https://jobdataexchange.org/jdx/vocabs/jobSchedule/</a></td>
+</tr>
+<tr>
+  <td align="left">Name</td>
+  <td>Job Schedule Concept Scheme (JDX)</td>
+</tr>
+<tr>
+   <td align="left">Description</td>
+   <td>Values that classify the working schedule of a position offered or a position sought. Essentialy, whether a position offered or sought is full-time or part-time or has provision for flexible scheduling. Intended to classify schedule position preferences of a candidate or conversely employer preferences or requirements related to candidates with respect to an advertised position. (derived from HR Open's PositionScheduleCodeEnumType)</td>
+</tr>
+
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Has Top Concept</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/shiftSchedule/6329dbd5-6c52-4b56-8e89-84dbbe38143b">https://jobdataexchange.org/jdx/vocabs/shiftSchedule/6329dbd5-6c52-4b56-8e89-84dbbe38143b</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/shiftSchedule/c9446a77-6d1a-44ed-bce7-4e9576d1a1fe">https://jobdataexchange.org/jdx/vocabs/shiftSchedule/c9446a77-6d1a-44ed-bce7-4e9576d1a1fe</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/shiftSchedule/aae394ac-9117-4bc6-8522-a0b5cf6aa071">https://jobdataexchange.org/jdx/vocabs/shiftSchedule/aae394ac-9117-4bc6-8522-a0b5cf6aa071</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/shiftSchedule/f762db78-e123-4867-8dea-ee76c082bc69">https://jobdataexchange.org/jdx/vocabs/shiftSchedule/f762db78-e123-4867-8dea-ee76c082bc69</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/shiftSchedule/46c6e4d7-8fe0-43f4-94c0-90ca1f4d549b">https://jobdataexchange.org/jdx/vocabs/shiftSchedule/46c6e4d7-8fe0-43f4-94c0-90ca1f4d549b</a>
+</tr>
+</tbody>
+</table>
+
+### Flextime
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/shiftSchedule/6329dbd5-6c52-4b56-8e89-84dbbe38143b">https://jobdataexchange.org/jdx/vocabs/shiftSchedule/6329dbd5-6c52-4b56-8e89-84dbbe38143b</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Flextime</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Schedule of the position is flextime as defined by the employer.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobSchedule/">https://jobdataexchange.org/jdx/vocabs/jobSchedule/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobSchedule/">https://jobdataexchange.org/jdx/vocabs/jobSchedule/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Full-time
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/shiftSchedule/c9446a77-6d1a-44ed-bce7-4e9576d1a1fe">https://jobdataexchange.org/jdx/vocabs/shiftSchedule/c9446a77-6d1a-44ed-bce7-4e9576d1a1fe</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Full-time</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Schedule of the position is full-time as defined by the employer.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobSchedule/">https://jobdataexchange.org/jdx/vocabs/jobSchedule/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobSchedule/">https://jobdataexchange.org/jdx/vocabs/jobSchedule/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Part-time
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/shiftSchedule/f762db78-e123-4867-8dea-ee76c082bc69">https://jobdataexchange.org/jdx/vocabs/shiftSchedule/f762db78-e123-4867-8dea-ee76c082bc69</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Part-time</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Schedule of the position is part-time as defined by the employer.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobSchedule/">https://jobdataexchange.org/jdx/vocabs/jobSchedule/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobSchedule/">https://jobdataexchange.org/jdx/vocabs/jobSchedule/</a></td>
+</tr>
+</tbody>
+</table>
+
+
+### Shared-time
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/shiftSchedule/46c6e4d7-8fe0-43f4-94c0-90ca1f4d549b">https://jobdataexchange.org/jdx/vocabs/shiftSchedule/46c6e4d7-8fe0-43f4-94c0-90ca1f4d549b</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Shared-time</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Schedule of the position is shared-time; i.e., two (or more) workers share the duties of one full-time job, each working part-time.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobSchedule/">https://jobdataexchange.org/jdx/vocabs/jobSchedule/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobSchedule/">https://jobdataexchange.org/jdx/vocabs/jobSchedule/</a></td>
+</tr>
+</tbody>
+</table>
+
+## Job Term Concept Scheme
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">Class URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/">https://jobdataexchange.org/jdx/vocabs/jobTerm/</a></td>
+</tr>
+<tr>
+  <td align="left">Name</td>
+  <td>Job Term Concept Scheme (JDX)</td>
+</tr>
+<tr>
+   <td align="left">Description</td>
+   <td>Type of employment term (e.g. "regular", "temporary", "seasonal")</td>
+</tr>
+
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Has Top Concept</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/ff7c95de-b6d8-4155-9baa-408f1746c160">https://jobdataexchange.org/jdx/vocabs/jobTerm/ff7c95de-b6d8-4155-9baa-408f1746c160</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/aee9609e-d254-4e17-8ecc-8288de219f2b">https://jobdataexchange.org/jdx/vocabs/jobTerm/aee9609e-d254-4e17-8ecc-8288de219f2b</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/918132a8-28d1-488a-b1e5-09f111ff0cb9">https://jobdataexchange.org/jdx/vocabs/jobTerm/918132a8-28d1-488a-b1e5-09f111ff0cb9</a>
+</tr>
+</tbody>
+</table>
+
+### Regular
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/ff7c95de-b6d8-4155-9baa-408f1746c160">https://jobdataexchange.org/jdx/vocabs/jobTerm/ff7c95de-b6d8-4155-9baa-408f1746c160</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Regular</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position available for full employment.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/">https://jobdataexchange.org/jdx/vocabs/jobTerm/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/">https://jobdataexchange.org/jdx/vocabs/jobTerm/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Seasonal
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/aee9609e-d254-4e17-8ecc-8288de219f2b">https://jobdataexchange.org/jdx/vocabs/jobTerm/aee9609e-d254-4e17-8ecc-8288de219f2b</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Seasonal</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position available only for seasonal employment.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/">https://jobdataexchange.org/jdx/vocabs/jobTerm/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/">https://jobdataexchange.org/jdx/vocabs/jobTerm/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Temporary
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/918132a8-28d1-488a-b1e5-09f111ff0cb9">https://jobdataexchange.org/jdx/vocabs/jobTerm/918132a8-28d1-488a-b1e5-09f111ff0cb9</a></td>
+</tr>
+<tr>
+  <td align="left">Temporary</td>
+  <td>Temporary</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Position available only for temporary employment.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/">https://jobdataexchange.org/jdx/vocabs/jobTerm/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/jobTerm/">https://jobdataexchange.org/jdx/vocabs/jobTerm/</a></td>
+</tr>
+</tbody>
+</table>
+
+## Pay Cycle Interval Concept Scheme
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">Class URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+<tr>
+  <td align="left">Name</td>
+  <td>Pay Cycle Concept Scheme (JDX)</td>
+</tr>
+<tr>
+   <td align="left">Description</td>
+   <td>Pay cycle interval specifies how often the pay cycle occurs or, in other words, how often a person is paid. (Derived from HR Open's PayCycleIntervalCodeList.json) </td>
+</tr>
+
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Has Top Concept</span></td>
+   <td>
+    <a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/2630a169-0407-4489-ae15-a0c3bb8b97e1">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/2630a169-0407-4489-ae15-a0c3bb8b97e1</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/4c3e147c-6fac-45d0-a8e4-8357b2fb2b4a">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/4c3e147c-6fac-45d0-a8e4-8357b2fb2b4a</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/4b3b8d9f-0116-4348-b591-df11066ecdaf">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/4b3b8d9f-0116-4348-b591-df11066ecdaf</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/f21abbae-baf7-4be7-8cbe-361a128ef6a7">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/f21abbae-baf7-4be7-8cbe-361a128ef6a7</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/8b3f2d35-5e40-4867-a815-f4abb23ff257">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/8b3f2d35-5e40-4867-a815-f4abb23ff257</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/6538ab07-d110-4f4e-a607-61c8554b37ca">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/6538ab07-d110-4f4e-a607-61c8554b37ca</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/5715e482-7f8d-4de3-8d9d-cf6b234446b4">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/5715e482-7f8d-4de3-8d9d-cf6b234446b4</a>
+</tr>
+</tbody>
+</table>
+
+### Day
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/2630a169-0407-4489-ae15-a0c3bb8b97e1">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/2630a169-0407-4489-ae15-a0c3bb8b97e1</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Day</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Salary is paid daily.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Week
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/4c3e147c-6fac-45d0-a8e4-8357b2fb2b4a">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/4c3e147c-6fac-45d0-a8e4-8357b2fb2b4a</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Week</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Salary is paid weekly.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Two Weeks
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/4b3b8d9f-0116-4348-b591-df11066ecdaf">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/4b3b8d9f-0116-4348-b591-df11066ecdaf</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Two weeks</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Salary is paid every two weeks.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Month
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/f21abbae-baf7-4be7-8cbe-361a128ef6a7">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/f21abbae-baf7-4be7-8cbe-361a128ef6a7"</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Month</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Salary is paid monthly.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+</tbody>
+</table>
+
+
+### Quarterly
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/8b3f2d35-5e40-4867-a815-f4abb23ff257">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/8b3f2d35-5e40-4867-a815-f4abb23ff257</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Quarterly</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Salary is paid every three months.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Half Year
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/6538ab07-d110-4f4e-a607-61c8554b37ca">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/6538ab07-d110-4f4e-a607-61c8554b37ca</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Half Year</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Salary is paid at the end of six months.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Year
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/5715e482-7f8d-4de3-8d9d-cf6b234446b4">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/5715e482-7f8d-4de3-8d9d-cf6b234446b4</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Year</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Salary is paid at the end of the work year.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/payCycleInterval/">https://jobdataexchange.org/jdx/vocabs/payCycleInterval/</a></td>
+</tr>
+</tbody>
+</table>
+
+## Work Hours Concept Scheme
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">Class URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/workHours/">https://jobdataexchange.org/jdx/vocabs/workHours/</a></td>
+</tr>
+<tr>
+  <td align="left">Name</td>
+  <td>Work Hours Concept Scheme (JDX)</td>
+</tr>
+<tr>
+   <td align="left">Description</td>
+   <td>Typical working hours for this job; e.g., "normal" or "flexible work hours".</td>
+</tr>
+
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Has Top Concept</span></td>
+   <td>
+    <a href="https://jobdataexchange.org/jdx/vocabs/workHours/5e3b62b7-b41e-4053-899b-9112e3db4224">https://jobdataexchange.org/jdx/vocabs/workHours/5e3b62b7-b41e-4053-899b-9112e3db4224</a><br />
+    <a href="https://jobdataexchange.org/jdx/vocabs/workHours/510cd708-a6e7-45c4-b03d-7a6060aa4f5e">https://jobdataexchange.org/jdx/vocabs/workHours/510cd708-a6e7-45c4-b03d-7a6060aa4f5e</a>
+</tr>
+</tbody>
+</table>
+
+### Flexible Work Hours
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/workHours/5e3b62b7-b41e-4053-899b-9112e3db4224">https://jobdataexchange.org/jdx/vocabs/workHours/5e3b62b7-b41e-4053-899b-9112e3db4224</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Flexible Work Hours</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Flexible work hours of schedule is an alternative to the traditional 9:00am to 5:00pm, 40-hour work week. It allows employees to vary their arrival and/or departure times. </td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/workHours/">https://jobdataexchange.org/jdx/vocabs/workHours/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/workHours/">https://jobdataexchange.org/jdx/vocabs/workHours/</a></td>
+</tr>
+</tbody>
+</table>
+
+### Normal
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="left">ConceptScheme URI</td>
+  <td><a href="https://jobdataexchange.org/jdx/vocabs/workHours/510cd708-a6e7-45c4-b03d-7a6060aa4f5e">https://jobdataexchange.org/jdx/vocabs/workHours/510cd708-a6e7-45c4-b03d-7a6060aa4f5e</a></td>
+</tr>
+<tr>
+  <td align="left">Preferred Label</td>
+  <td>Normal</td>
+</tr>
+<tr>
+   <td align="left">Definition</td>
+   <td>Typical, full-time work week consists of no more than 40 hours per week, usually from 9 a.m. until 5 p.m.</td>
+</tr>
+<tr>
+   <td align="left">In Scheme</td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/workHours/">https://jobdataexchange.org/jdx/vocabs/workHours/</a></td>
+</tr>
+<tr>
+   <td align="left"><span style="white-space: nowrap;">Top Concept Of</span></td>
+   <td><a href="https://jobdataexchange.org/jdx/vocabs/workHours/">https://jobdataexchange.org/jdx/vocabs/workHours/</a></td>
+</tr>
+</tbody>
+</table>
+
+
+---
+version: 0.9.0
+---
+updated: 2019-11-24
