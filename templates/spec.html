@@ -37,11 +37,17 @@
           </tr>
           {% endif %}
           <tr>
+            <th>URI</th>
+            <td>
+              <a href="{{this._slug}}">{{this._slug}}
+            </td>
+          </tr>  
+          <! ––     <tr>
             <th>{{ bag('global_content').json_schema_for_spec }}</th>
             <td>
               <a href="/schemas/{{this._slug}}.json">/schemas/{{this._slug}}.json
             </td>
-          </tr>
+          </tr> ––>
           {% if this.version %}
           <tr>
             <th>{{ bag('global_content').version }}</th>
