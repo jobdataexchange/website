@@ -1,5 +1,7 @@
 title: Jobschema+ Concept Schemes
 ---
+slug: https://github.com/jobdataexchange/Data-Modeling/tree/full-and-pilot/JS%2B_releases/v0.9.0-piloted-version/Concept_Schemes
+---
 body:
 
 Jobschema+ has controlled vocabularies called concept schemes, stored in JSON-LD in the data-modeling repo. When a user makes documents in JS+, if they would like to fill out one of the following properties, which are subject to concept schemes, they `MUST` select from each concept scheme's associated concepts, exactly as they are listed. 
