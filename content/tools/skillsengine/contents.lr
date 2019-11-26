@@ -1,0 +1,19 @@
+title: SkillsEngine
+---
+description: SkillsEngine’s data services analyze text and return collections of scored skill descriptors from a taxonomy. SkillsEngine’s Calibrate directly maps curriculum to validated skill profiles based on industry needs. The Profile Builder generates a custom competency profile based on skill statements across over 850 occupations.
+---
+featured: yes
+---
+link1: https://skillsengine.com/
+---
+link1_label: Website
+---
+link2: https://skillsengine.com/apis
+---
+link2_label: APIs
+---
+link3: https://builder.skillsengine.com/
+---
+link3_label: Skills profile builder
+---
+priority: 4
