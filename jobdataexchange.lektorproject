@@ -13,4 +13,4 @@ enabled = yes
 target = s3://jobsdataexchange.org
 
 [servers.ghpages]
-target = ghpages://jobsdataexchange/website
+target = ghpages+https://jobdataexchange/website
