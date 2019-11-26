@@ -19,6 +19,8 @@ jobs:
       - run:
           name: install Lektor
           command: |
+            python3 -m venv venv
+            . venv/bin/activate
             pip install Lektor
 
       - run:
