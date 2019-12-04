@@ -6,6 +6,13 @@ This is the Job Data Exchange Developer and Partner website, hosted at https://j
 
 ## Contributing
 
+- Install pipenv
+- `pipenv install`
+- `pipenv run lektor server`
+- The server will be available at localhost:5000
+
+## Previous Contributing Steps
+
 - Install Lektor
 - Install a recent Node
 - `npm install`
