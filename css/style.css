@@ -5751,12 +5751,12 @@ html.mm-dropdown.mm-opened:not(.mm-opening) .mm-menu:not(.mm-dropdown) {
   font-family: frictionlessdata, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; }
   .home-template .main-nav .dropdown-toggle {
     color: #fff;
-    background-color: #1A1A1A;
-    border-color: #1A1A1A; }
+    background-color: #5f2c8c;
+    border-color: #5f2c8c; }
     .home-template .main-nav .dropdown-toggle:hover {
       color: #fff;
-      background-color: #070707;
-      border-color: #010000; }
+      background-color: #9041d6;
+      border-color: #9041d6; }
     .home-template .main-nav .dropdown-toggle:focus, .home-template .main-nav .dropdown-toggle.focus {
       -webkit-box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.5);
               box-shadow: 0 0 0 3px rgba(26, 26, 26, 0.5); }
