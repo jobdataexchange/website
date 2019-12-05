@@ -3761,8 +3761,8 @@ img {
 
 .main-nav .dropdown-toggle {
   color: #fff;
-  background-color: #EB6619;
-  border-color: #EB6619;
+  background-color: #5f2c8c;
+  border-color: #5f2c8c;
   padding: 1rem 2rem 1rem 1rem;
   width: 100%;
   text-align: left; }
@@ -3971,9 +3971,9 @@ fieldset[disabled] a.btn {
     border-color: #EB6619; }
   .btn-primary:active, .btn-primary.active,
   .show > .btn-primary.dropdown-toggle {
-    background-color: #cc5612;
+    background-color: #5f2c8c;
     background-image: none;
-    border-color: #c05111; }
+    border-color: #5f2c8c; }
 
 .btn-secondary {
   color: #fff;
