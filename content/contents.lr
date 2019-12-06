@@ -95,7 +95,7 @@ feature4_body: Integrate the JDX JobSchema+, a standardized way of organizing st
 ---
 feature4_heading:
 
-1. 
+Step 1 
 ---
 feature4_icon: docs
 ---
@@ -107,7 +107,7 @@ feature5_body: Augment the JDX JobSchema+ implementation with open data tools an
 ---
 feature5_heading:
 
-2. 
+Step 2 
 ---
 feature5_icon: book
 ---
