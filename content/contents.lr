@@ -1,6 +1,6 @@
 _model: home
 ---
-banner_main_text: Helping good jobs have better jobs descriptions.
+banner_main_text: Helping good jobs have better job descriptions.
 ---
 banner_cta_text: Play video
 ---
@@ -23,7 +23,7 @@ fellows_intro:
 The JDX Partners Program, supported by the US Chamber of Commerce Foundation, is supporting HRIS, ATS, and other jobs data platform partners in adopting JDX standards and tools to improve their customers' job data creation workflows. Interested partners can contact the US Chamber about the program through the link below.
 
 ---
-feature1_body: Get a nontechnical overview of JDX, Jobschema+, and our progress.
+feature1_body: 
 ---
 feature2_body: Technical reference for implementing Jobschema+.
 ---
@@ -81,31 +81,39 @@ Open data infrastructure and open, linked data that supports real-time informati
 ---
 newsletter_intro:
 
-Sign up to receive JDX updates and digest emails on JDX topics. 
+Sign up to receive JDX updates. 
 ---
-section1_heading: The Job Data Exchange (JDX) and its open data toolkit improves employers’ ability to communicate their hiring needs to jobseekers, educators, and workforce data partners.
+section1_heading:
+
+Employers and HRIS vendors looking to improve hiring practices and systems to find qualified talent, view the simple two-step approach below: 
 ---
-section2_heading: Get involved.
+section2_heading:
+
+Action Steps To Implement JDX v1.0.0 
 ---
-feature4_body: All our code is made available under a free and open source license. Code and documentation contributions and adoptions are highly encouraged.
+feature4_body: Integrate the JDX JobSchema+, a standardized way of organizing structured data on the web for jobs, into employers' HRIS systems to improve job descriptions and postings resulting in clearer signals for developing and hiring qualified talent.
 ---
-feature4_heading: GitHub
+feature4_heading:
+
+1. 
 ---
-feature4_icon: gitter
+feature4_icon: docs
 ---
-feature4_link_text: Go to Github
+feature4_link_text: View Start Here Page
 ---
-feature4_link_url: https://github.com/jobdataexchange
+feature4_link_url: /docs/start-here
 ---
-feature5_body: To discuss any concerns or suspected issues, open an issue in Github.
+feature5_body: Augment the JDX JobSchema+ implementation with open data tools and resources to improve the information being input into the JDX JobSchema+ data fields.
 ---
-feature5_heading: Issue Tracker
+feature5_heading:
+
+2. 
 ---
-feature5_icon: gitter
+feature5_icon: book
 ---
-feature5_link_text: Go to Github
+feature5_link_text: View Implementation Guide
 ---
-feature5_link_url: https://gitter.im/jdx/chat
+feature5_link_url: /docs/implementation-guide
 ---
 feature6_body:
 
@@ -152,8 +160,10 @@ feature9_link_url: https://calendar.google.com/calendar/
 ---
 section3_heading: Get involved.
 ---
-partners_heading: Communicate what employers need from workers by developing competency-based job descriptions.
+partners_heading: The Job Data Exchange™ (JDX) Vision
 ---
-partners_intro: Explore JDX and JobSchema+. Then, reach out to become an official JDX partner to join the movement of employers and HRIS providers using JDX to send clearer, always up-to-date signals about workforce needs.
+partners_intro:
+
+The Job Data Exchange (JDX) is an open data infrastructure that will improve how quickly and clearly employers are able to communicate their hiring requirements to education and training providers to keep pace with a dynamic economy and talent marketplace. View the [U.S. Chamber of Commerce Foundation webpage](https://www.uschamberfoundation.org/workforce-development/JDX) for additional background on the JDX initiative. 
 ---
 partners_link_text: 
