@@ -1,6 +1,6 @@
-title: Start Here!
+title: Implementation Guide
 ---
-doc_category: start-here
+doc_category: overview-definition
 ---
 body:
 
@@ -34,5 +34,18 @@ This is the best time for contributions, comments, and corrections! The open sou
 * refine `specialCommitment` possibly to cover travel requirements instead
 * add `applicationInstructions`
 * field to contain a license
----
-pub_date: 2019-10-28
+
+--------
+
+The following workflow roughly describes the process of creating or updating a job description/posting using the JobSchema+ and other enabled features like: 
+* competency extraction, suggestion, and matching, 
+* property (field) suggestions, dropdown fields, or autocompletion, 
+* scoring the completed job description/posting, 
+* and distributing it to talent sourcing providers, job boards etc. at the discretion of the user.
+
+This process can be enhanced by information provided from pooled data at a national, regional, occupational, and/or industry level. Note this workflow will come together inside existing HRIS/ATS workflow and integrating services and software from other providers.
+
+![workflow](screen-shot-2019-10-23-at-10.09.03-pm.png)
+
+In addition, there is a Step 0 involving any organization beginning this process for the first time. In order to collect the optional input data to fill out JobSchema+, many organizations will collaborate internally between their various roles involved in HR. Ideally, using JDX may spark intra- and inter-organizational discussion around processes including competency-based hiring, engagement, screening/interviewing, internal training, performance evaluations, and retention. At minimum, the process will benefit from the user of JDX setting aside some time to think about the JobSchema+ properties for their organization before beginning. The process itself of creating or updating a job description/posting is expected to take under an hour with the selection of competencies taking the bulk of the time but significantly reducing the time that would be needed to perform this selection manually. 
+
