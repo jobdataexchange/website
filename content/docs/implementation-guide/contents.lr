@@ -4,16 +4,60 @@ doc_category: documentation
 ---
 body:
 
-For background on JDX, read the **[Documentation](http://3.17.57.171:5000/docs/)**, taking a look at JDX for an overview, analysis for reasons why to use JDX, and Namespace Policy for our sustainability plans. For technical reference, see **[Specifications](http://3.17.57.171:5000/admin/root:specs/)**. 
+For background on JDX, read the **[Documentation](/../docs/)**. For technical reference, see **[Specifications](/../../specs/)**. 
 
-## Participate and Contribute
+Note: Jobschema+ will be ready to implement at release 1.0.0, expected shortly, at which point this guide will update with more detail.
 
-This is the best time for contributions, comments, and corrections! The open source JobSchema+ assets are expected to update to incorporate pilot findings, feedback from the community, and beta testing. 
+## The JDX-Enabled Workflow
+
+The following workflow roughly describes the process of creating or updating a job description/posting using the JobSchema+ and other enabled features like: 
+* competency extraction, suggestion, and matching, 
+* property (field) suggestions, dropdown fields, or autocompletion, 
+* scoring the completed job description/posting, 
+* and distributing it to talent sourcing providers, job boards etc. at the discretion of the user.
+up to the point of distribution. This was the process piloted in 2019. This process can be enhanced by information provided from pooled data at a national, regional, occupational, and/or industry level. This workflow will come together inside existing HRIS/ATS workflow and integrating services and software from other providers. 
+
+![workflow](screen-shot-2019-10-23-at-10.09.03-pm.png)
+
+The big picture for JDX involves the data that employers create in job descriptions/postings not only being used to make better hires, but also to signal to talent sourcing providers new or changing regional and/or occupational requirements, enable better labor market information, and more. In the diagram below, the workflow is expanded into the ecosystem, showing in the smaller black arrows the way value can travel back to the sources of the data in a positive feedback loop. JDX supplies some of the elements here - Jobschema+, coordination, and data pooling, but most are brought together collaboratively through partnership.
+
+![JDX-process](screen-shot-2019-12-09-at-2.10.48-am.png)
+
+This process is written for the example case of an employer collaborative implementing JDX to improve their signal to local talent sourcing providers in an effort to improve the quality of their hires, but this case is written generally. 
+
+### Step 0: Preparation
+In order to collect the optional input data to fill out JobSchema+ for the first time, many organizations will collaborate internally between their various roles involved in HR. Ideally, using JDX may spark intra- and inter-organizational discussion around processes including competency-based hiring, engagement, screening/interviewing, internal training, performance evaluations, and retention. At minimum, the process will benefit from the user of JDX setting aside some time to think about the JobSchema+ properties for their organization before beginning. The process itself of creating or updating a job description/posting depends on the implementation and the employer's choice of how many fields they'd like to complete, with the selection of competencies taking the bulk of the time but significantly reducing the time that would be needed to perform this selection manually. 
+
+### Step 1: Job Data Input
+This step through step 4 would typically reside in one or more HRIS or ATS vendors used by the participating employers. The vendors would incorporate the collection of the Jobschema+ properties into their existing workflow and produce the JS+ output files, both in the human-readable and the JSON-LD formats. JS+ v1.0.0 is expected to require extremely few properties - limited to those required in the [Google JobPosting spec](https://developers.google.com/search/docs/data-types/job-posting). This provides quite a bit of freedom. It would be ideal to provide the option for new job descriptions/postings to be made in the workflow and for existing ones to be updated through the process. An increasing number of the terms in JS+ are under controlled vocabularies, providing drop-down options for high data quality and ease of use where the values for a term should be constrained. See Concept Schemes. If there is a property that we do not have a term for, in v1.0.0 it is expected that there will be a term called `additionalProperty` or similar which allows the user to input a key-value pair. HRIS and ATS implementers are encouraged to develop a profile of JDX if desired, pulling from the existing vocabularies JS+ draws from such as schema.org and HR Open, and the JS+ full profile of additional terms to create a customized implementation.
+
+### Step 2 & 3: Analyze & Match and Scoring & Suggestions
+These steps are grouped to indicate that the order is not important. These steps also may occur for the user throughout the process of inputting their information.
+To improve the quality and quantity of data without exceeding users' time constraints, JDX highly encourages the use of autocoding the `IndustryCode` and `occupationalCategory` based on either the entirety of the input or a portion thereof. 
+
+The bulk of this step focuses on the skills and competencies section of the documents. JDX recommends the intelligent pairing of competency frameworks and skills lists with each document. This step brings together the data partners such as open competency framework providers O*NET, ESCO, Emsi's Skills, and Competency Clearinghouse with Analytics partners such as SkillsEngine and Emsi. The JDX pilot created a open-source tool called [Competensor](https://github.com/jobdataexchange/competensor) for matching statements from the job descriptions and postings with any selected competency framework. The pilot revealed that there are 3 key steps:
+1. Selection or recommendation of frameworks for a given job description/posting
+2. Matching statements from the frameworks to the statements from the document
+3. Allowing the user to accept each suggestion as-is, reject it, or modify it
+
+JDX's JSON-LD format captures the source of each statement in the output file, whether it be user-generated, suggested, or suggested and modified. It does so by linking to a unique identifier for the source using `schema:inDefinedTermSet`. The `competency` statement itself also receives a unique identifier under its `@id`. 
+ 
+Once the document has been filled out by the user, it is possible to give the user a score for their completion. A simple score could be a percentage complete out of all the available terms, with more complex scoring available based on desired outcomes.
+
+### Step 4: Distribution
+The output job posting in the human-readable format is not required to have the exact same terminology as the JSON-LD format. It would also be appropriate to add branding and other customization to the users' preference. This makes the output job description customizable. It should be distributed anywhere the employer would normally distribute a job posting. See the human-readable and JSON-LD output files [here](https://jobdataexchange.io/specs/jobschema-example-files/).
+
+### Step 5: Data Pooling, Sharing, and Insights
+While the quality of applicants and labor market information can be improved by the previous steps alone, pooling the JSON-LD files unlocks the ability to conduct data science at scale. The employer collaborative interested in improving their signal to talent sourcing providers can at this step elect to contribute to a data collaborative which secures ownership of their contributed data and its future uses while pooling it with other contributors. Researchers, analytics providers, and other contributor-chosen users can be granted specific accesses to analyze the data, leading to unlocked insights that can be shared with participating talent sourcing providers for evidence-based decision-making.
+
+## Next Steps
+
+This is the best time for contributions and comments! The open source JobSchema+ v1.0.0 is expected to update to incorporate pilot findings, feedback from the community. 
 
 1. Please use this website to think about JobSchema+ and your organization, including potential costs and benefits of implementing. 
 2. Review our proposed features for the next release below and add your comments on github issues, the [open forum](https://groups.google.com/a/brighthive.io/forum/#!forum/jdx-community), or by [emailing us](jdx@brighthive.io).
-3. Going forward, we will provide an implementation guide to explain how you can use JobSchema+ to bring together an ecosystem of tools to create job descriptions and postings in JS+ format on your own.
-4. If you like what you see, email us to become a JDX partner!
+3. Going forward, we will update this implementation guide with more detail on to explain how you can use JobSchema+ to bring together an ecosystem of tools to create job descriptions and postings in JS+ format on your own.
+4. If you like what you see, [email us](mailto:jdx@brighthive.io) to become a JDX partner!
 
 ### Potential Features for v1.0.0
 (note: these will link to github issues shortly)
@@ -27,25 +71,10 @@ This is the best time for contributions, comments, and corrections! The open sou
 * include new property from JS+ full: `jobStartDate`
 * A downstream analytics partner has access to the entire JD as a field within JS+ in order to see data that will otherwise be lost in the JS+ schema input process (even with `additionalProperty` enabled)
 * An employer can control what fields go into a job description vs a job posting in order to have an internal and an external version. JobDescription may contain other fields like an alternative, formal job title
-* find a way to store the combinations of Alternative/Equivalent/Minimum/Preferred/Required x Credential/Education/Experience without parsing, initially
+* Store the combinations of Alternative/Equivalent/Minimum/Preferred/Required x Credential/Education/Experience without parsing, initially
 * An employer can use `additionalProperty` to add another key value pair
 * An employer can select multiple suggested competency statements per JD substatement when they perceive more than one competency to be present in a single substatement
 * refine `occupationalCategory` and `industryCode` to contain more information about the codes they contain
 * refine `specialCommitment` possibly to cover travel requirements instead
 * add `applicationInstructions`
 * field to contain a license
-
---------
-
-The following workflow roughly describes the process of creating or updating a job description/posting using the JobSchema+ and other enabled features like: 
-* competency extraction, suggestion, and matching, 
-* property (field) suggestions, dropdown fields, or autocompletion, 
-* scoring the completed job description/posting, 
-* and distributing it to talent sourcing providers, job boards etc. at the discretion of the user.
-
-This process can be enhanced by information provided from pooled data at a national, regional, occupational, and/or industry level. Note this workflow will come together inside existing HRIS/ATS workflow and integrating services and software from other providers.
-
-![workflow](screen-shot-2019-10-23-at-10.09.03-pm.png)
-
-In addition, there is a Step 0 involving any organization beginning this process for the first time. In order to collect the optional input data to fill out JobSchema+, many organizations will collaborate internally between their various roles involved in HR. Ideally, using JDX may spark intra- and inter-organizational discussion around processes including competency-based hiring, engagement, screening/interviewing, internal training, performance evaluations, and retention. At minimum, the process will benefit from the user of JDX setting aside some time to think about the JobSchema+ properties for their organization before beginning. The process itself of creating or updating a job description/posting is expected to take under an hour with the selection of competencies taking the bulk of the time but significantly reducing the time that would be needed to perform this selection manually. 
-
