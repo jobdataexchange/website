@@ -8,19 +8,19 @@ The aim of JDX is to reduce friction in the talent marketplace by making it easi
 
 ## Site Map
 
-**[Documentation](/docs/)** - Why JDX matters, development timeline, guidance on implementing, and sustainability
-* [Start Here!](docs/start-here/) - Background, definitions, current JDX results from pilot testing
-* [Implementation Guide](docs/implementation-guide/) - How the pieces of JDX come together
-* [Namespace Policy & Expectations for Maintenance](docs/expectations-for-maintenance/) - How JDX links stay alive and are updated
+**[Documentation](/../)** - Why JDX matters, development timeline, guidance on implementing, and sustainability
+* [Start Here!](/) - Background, definitions, current JDX results from pilot testing
+* [Implementation Guide](/../implementation-guide/) - How the pieces of JDX come together
+* [Namespace Policy & Expectations for Maintenance](/../expectations-for-maintenance/) - How JDX links stay alive and are updated
 
-**[Specifications](/specs/)** - Technical reference for the code that makes up Jobschema+, a cornerstone of the JDX ecosystem
-* [Introduction](/specs/introduction) - Info on the specs and releases
-* [Concept Schemes](/specs/concept-schemes) - Also known as "controlled vocabularies" which stipulate which values are acceptable for certain terms
-* [Terms](/specs/terms) - the "dictionary" of vocabulary used in Jobschema+
-* [Example Files](/specs/example-files) - This demonstrates an example of the basic files JDX can output in its current release 
-* [Changelog](/specs/changelog) - A record of updates for each release
+**[Specifications](/../../specs/)** - Technical reference for the code that makes up Jobschema+, a cornerstone of the JDX ecosystem
+* [Introduction](/../../specs/introduction) - Info on the specs and releases
+* [Concept Schemes](/../../specs/concept-schemes) - Also known as "controlled vocabularies" which stipulate which values are acceptable for certain terms
+* [Terms](/../../specs/terms) - the "dictionary" of vocabulary used in Jobschema+
+* [Example Files](/../../specs/example-files) - This demonstrates an example of the basic files JDX can output in its current release 
+* [Changelog](/../../specs/changelog) - A record of updates for each release
 
-**[Tools](/tools/)** - A list of resources in the JDX ecosystem that may be referenced in this website
+**[Tools](/../../tools/)** - A list of resources in the JDX ecosystem that may be referenced in this website
 
 ## Why JDX?
 
@@ -104,3 +104,5 @@ Preliminary analysis is limited based on a very small sample size of the pilot t
 
 ![info-increase](screen-shot-2019-10-25-at-2.36.09-am.png)
 
+---
+pub_date: 2019-12-09

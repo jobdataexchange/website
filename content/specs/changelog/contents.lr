@@ -12,12 +12,12 @@ body:
 </tr>
 
 <tr>
-<td class="release"><a href="@@@">v1.0.0-beta Overview</a><br>2019</td>
+<td class="release"><a href="@@@">Coming soon - v1.0.0 Folder</a><br>2019</td>
 <td>
 <span id="v.next"></span>
-<span id="v1.0.0-beta"></span>
+<span id="v1.0.0"></span>
 <p>
-Please review the proposed features on github issues @@@. 
+Please comment on the proposed features on <a href="https://github.com/jobdataexchange/Data-Modeling/issues?utf8=%E2%9C%93&q=is%3Aenhancement">github issues</a>
 </p>
 </td>
 
@@ -25,13 +25,12 @@ Please review the proposed features on github issues @@@.
 
 
 <tr>
-<td class="release"><a href="@@@">v0.9.0 Overview</a><br>2019</td>
+<td class="release"><a href="https://github.com/jobdataexchange/Data-Modeling">v0.9.0 Folder</a><br>2019</td>
 <td>
 <span id="v.next"></span>
 <span id="v0.9.0"></span>
 <p>
-The version used to pilot Jobschema+ with a cohort of 12 employers. Not a stable release.
-</p>
+The version used to pilot Jobschema+ with a cohort of 12 employers. 
 </td>
 <td>
 <h3>Vocabulary</h3>
@@ -67,7 +66,7 @@ Simplified example for <a href="/Audiobook">Audiobook</a> .
 </tr>
 
 <tr>
-<td class="release"><a href="@@@">v0.8.0 Overview</a><br>2019</td>
+<td class="release"><a href="https://www.uschamberfoundation.org/jdx/job-schema">v0.8.0 Page</a><br>2019</td>
 <td>
 <span id="v.next"></span>
 <span id="v0.8.0"></span>
