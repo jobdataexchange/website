@@ -51,7 +51,7 @@ feature2_icon: package
 ---
 feature3_icon: software
 ---
-about_image: diagram.png
+about_image: jdx-future-state-diagram-v5.png
 ---
 about_image_width: 777
 ---
@@ -83,15 +83,11 @@ newsletter_intro:
 
 Sign up to receive JDX updates. 
 ---
-section1_heading:
-
-Employers and HRIS vendors looking to improve hiring practices and systems to find qualified talent, view the simple two-step approach below: 
+section1_heading: 
 ---
-section2_heading:
-
-Action Steps To Implement JDX v1.0.0 
+section2_heading: Developers interested in integrating the JDX JobSchema+ data standard and JDX open data tools into their product or platform can follow these two steps:
 ---
-feature4_body: Integrate the JDX JobSchema+, a standardized way of organizing structured data on the web for jobs, into employers' HRIS systems to improve job descriptions and postings resulting in clearer signals for developing and hiring qualified talent.
+feature4_body: Integrate the JDX JobSchema+
 ---
 feature4_heading:
 
@@ -103,7 +99,7 @@ feature4_link_text: View Start Here Page
 ---
 feature4_link_url: /docs/start-here
 ---
-feature5_body: Augment the JDX JobSchema+ implementation with open data tools and resources to improve the information being input into the JDX JobSchema+ data fields.
+feature5_body: Augment the JDX JobSchema+ by integrating open data tools and resources that improve utilization of the data standard for the purposes of generating skill-based job descriptions and postings
 ---
 feature5_heading:
 
@@ -164,6 +160,7 @@ partners_heading: The Job Data Exchange™ (JDX) Vision
 ---
 partners_intro:
 
-The Job Data Exchange (JDX) is an open data infrastructure that will improve how quickly and clearly employers are able to communicate their hiring requirements to education and training providers to keep pace with a dynamic economy and talent marketplace. View the [U.S. Chamber of Commerce Foundation webpage](https://www.uschamberfoundation.org/workforce-development/JDX) for additional background on the JDX initiative. 
+The JDX includes an open data standard for job descriptions and postings and open data tools to support them. The data standard and tools enable employers and HR partners to dynamically signal in-demand jobs, skills, credentials, and other hiring requirements to education partners, learners, and job seekers.
+
 ---
 partners_link_text: 
