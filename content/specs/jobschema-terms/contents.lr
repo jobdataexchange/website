@@ -50,14 +50,14 @@ In the tables below, the following prefixes refer to the following schema source
   </tr>
 </table>
 
-# Conceptual Model & Schema Serializations
+# Conceptual Model
 The following serialization of the latest version of the JDX Application Profile schema is available: RDF Turtle ***
 
 The JDX Conceptual Model is available. (Full Size) ***
 
-## JDX Terms—Properties & Classes
+# JDX Terms—Properties & Classes
 
-### **Classes**
+## **Classes**
 The format and content of the JDX class tables are summarized in the following table. All of the classes are of the type (http://www.w3.org/2000/01/rdf-schema#Class)
 
 <table cellpadding="5" width="90%">
@@ -112,6 +112,10 @@ The format and content of the JDX class tables are summarized in the following t
    <td align="right">Equivalent Class</td>
    <td>The class being defined is equivalent to the class indicated (<code>owl:equivalentClass</code>).</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td>A fictional example of the term encoded as it could be in a JDX output file such as a job description or a job posting.</td>
+</tr>
 </tbody></table>
 
 ### Annotated Defined Term
@@ -137,7 +141,47 @@ The format and content of the JDX class tables are summarized in the following t
    <td align="right">Usage Note</td>
    <td>Used in the context of JDX to assign terms from occupation, industry and instructional program classifications, skills and abilities, and abstract concepts to JDX entities. Through the class' relationship with the jdx:ScaledAnnotation class, terms can be conditioned through applications of scales for attributes such as importance and frequency.</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:industryCode": {
+                "@type": "AnnotatedDefinedTerm",
+                "termCode": "541512"
+            } </code></pre> </td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:jobSchedule": {
+                "@type": "AnnotatedDefinedTerm",
+                "name": "Full-time"
+            } </code></pre> </td>
+</tr>
 </tbody></table>
+
+### Job
+
+<table cellpadding="5" width="90%">
+<tbody><tr>
+  <td width="150" align="right">Class URI</td>
+  <td><a href="http://purl.org/jdx/terms/Job">http://purl.org/jdx/terms/Job</a></td>
+</tr>
+<tr>
+  <td align="right">Label</td>
+  <td>Job</td>
+</tr>
+<tr>
+   <td align="right">Defined By</td>
+   <td><a href="http://purl.org/jdx/terms/">http://purl.org/jdx/terms/</a></td>
+</tr>
+<tr>
+   <td align="right">JDX Profile Definition</td>
+   <td>Formally defined and titled role for performing a set of work tasks or activities.</td>
+</tr>
+<tr>
+   <td align="right">Usage Note</td>
+   <td> Entity used internally as "master" to which all properties used in JobDescription, JobPosting, and JobCompetencyProfile are applicable. The jdx:JobDescription, jdx:JobCompetencyProfile and jdx:JobPosting define windows into the content of the jdx:Job. Do NOT use jdx:Job as an entity in any public facing resource.</td>
+</tr>
+</tbody></table>
+
 
 ### Job Posting
 
@@ -198,6 +242,18 @@ The format and content of the JDX class tables are summarized in the following t
 </ul>
    </td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> 
+        {
+            "@id": "https://jobdataexchange.org/jdx/pp/resource/9542b372-6436-4fc1-a5b6-8ca8d3ba04e6",
+            "@type": "JobPosting",
+            "jdx:applicantLocationRequirement": {
+                "@type": "schema:Place",
+                "name": "No location requirement but no relocation expenses paid."
+            }
+</code></pre>
+</tr>
 </tbody></table>
 
 ### Monetary Amount
@@ -226,6 +282,21 @@ The format and content of the JDX class tables are summarized in the following t
 <tr>
    <td align="right">Usage Note</td>
    <td>This type can be used to describe an amount of money such as $50 USD, or a range as in describing a bank account being suitable for a balance between £1,000 and £1,000,000 GBP, or the value of a salary, etc.</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:baseSalary": {
+                "@type": "schema:MonetaryAmount",
+                "jdx:payCycleInterval": {
+                    "@type": "jdx:AnnotateDefinedTerm",
+                    "name": {
+                        "en-US": "Per Year"
+                    }
+                },
+                "schema:currency": "USD",
+                "schema:maxValue": "65000",
+                "schema:minValue": "45000",
+            } </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -268,6 +339,17 @@ The format and content of the JDX class tables are summarized in the following t
 </ul>
    </td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code>  {
+            "@id": "https://jobdataexchange.org/jdx/pp/resource/f0a23159-e3c3-43df-94da-b15c749599d0",
+            "@type": "jdx:Organization",
+            "email": "info@acme.com",
+            "hasJobPosting": "https://jobdataexchange.org/jdx/pp/resource/b9fc49d4-1344-4cb4-8e3d-21247887b77e",
+            "jdx:employerOverview": {
+                "en-US": "Blake Lee founded the company in Seattle in 1989. Since then we have become a state of the art cybersecurity company with a culture of responsibility. We have 6,000 employees working every day to promote the security in a forward-thinking, innovative, sustainable way. Find out more about our global operations."
+            } </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Place
@@ -292,6 +374,16 @@ The format and content of the JDX class tables are summarized in the following t
 <tr>
    <td align="right"> Source Class Definition</td>
    <td>Entities that have a somewhat fixed, physical extension.</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:jobLocation": {
+                "@type": "schema:Place",
+                "address": {
+                    "@type": "schema:PostalAddress",
+                    "schema:streetAddress": "Seattle, WA"
+                }
+            } </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -318,9 +410,17 @@ The format and content of the JDX class tables are summarized in the following t
    <td align="right"> Source Class Definition</td>
    <td>The mailing address.</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:address": {
+                "@type": "schema:PostalAddress",
+                "schema:streetAddress": "",
+                "streetAddress": "123 Acme Way"
+            } </code></pre> </td>
+</tr>
 </tbody></table>
 
-## **Properties**:
+## **Properties**
 The format and content of the JDX property tables are summarized below. Note that not all properties defined in the table are applicable with every definition table; therefore, where not applicable, the property is not included.
 
 <table cellpadding="5" width="90%">
@@ -384,6 +484,10 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Equivalent Property</td>
    <td>The property being defined is equivalent to the property indicated (<code>owl:equivalentProperty</code>).</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td>A fictional example of the term encoded as it could be in a JDX output file such as a job description or a job posting.</td>
+</tr>
 </tbody></table>
 
 
@@ -418,6 +522,16 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>PostalAddress (<a href="http://schema.org/PostalAddress">http://schema.org/PostalAddress</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:address": {
+                "@type": "schema:PostalAddress",
+                "schema:streetAddress": "",
+                "streetAddress": "123 Acme Way"
+            }, </code></pre> </td>
+</tr>
+<tr>
+
 </tbody></table>
 
 ### Annotated Term
@@ -491,6 +605,16 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>GeoCoordinates (<a href="http://schema.org/GeoCoordinates">http://schema.org/GeoCoordinates</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> {
+            "@id": "https://jobdataexchange.org/jdx/pp/resource/9542b372-6436-4fc1-a5b6-8ca8d3ba04e6",
+            "@type": "JobPosting",
+            "jdx:applicantLocationRequirement": {
+                "@type": "schema:Place",
+                "name": "No location requirement but no relocation expenses paid."
+            },</code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Base Salary
@@ -527,6 +651,21 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>MonetaryAmount (<a href="http://schema.org/MonetaryAmount">http://schema.org/MonetaryAmount</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:baseSalary": {
+                "@type": "schema:MonetaryAmount",
+                "jdx:payCycleInterval": {
+                    "@type": "jdx:AnnotateDefinedTerm",
+                    "name": {
+                        "en-US": "Per Year"
+                    }
+                },
+                "schema:currency": "USD",
+                "schema:maxValue": "65000",
+                "schema:minValue": "45000",
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -566,6 +705,24 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Usage Note</td>
    <td>Use a value selected from a country code list such as the Library of Congress' List of Countries (http://id.loc.gov/vocabulary/countries.html).</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:citizenshipRequirement": {
+                "@type": "AnnotatedDefinedTerm",
+                "name": {
+                    "en-US": "US Citizen"
+                }
+            }, </code></pre> </td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:citizenshipRequirement": {
+                "@type": "AnnotatedDefinedTerm",
+                "name": {
+                    "en-US": "None"
+                }
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Competency
@@ -603,6 +760,23 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Usage Note</td>
    <td>This property has been defined as a super-property for a set of more refined subproperties including knowledge, skills, abilities, attitudes, tasks, and work activities that indicate qualification for the job; encode competencies using the jdx:AnnotatedDefinedTerm entity.</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:competency": [
+                {
+                    "@id": "https://jobdataexchange.org/jdx/competency/e8d09da2-5474-598d-9218-3615d3ab1c2b",
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "schema:description": {
+                        "en-US": "Understand common software architectures, including layered and distributed architecture models"
+                    },
+                    "schema:inDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "name": {
+                            "url": "https://jobdataexchange.org/jdx/framework/44a01b50-4628-51e0-b06a-aae3e669d5b8"
+                        }
+                    }
+                }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -645,6 +819,21 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>MonetaryAmount(<a href="https://schema.org/MonetaryAmount">https://schema.org/MonetaryAmount</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:baseSalary": {
+                "@type": "schema:MonetaryAmount",
+                "jdx:payCycleInterval": {
+                    "@type": "jdx:AnnotateDefinedTerm",
+                    "name": {
+                        "en-US": "Per Year"
+                    }
+                },
+                "schema:currency": "USD",
+                "schema:maxValue": "65000",
+                "schema:minValue": "45000",
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Date Posted
@@ -681,6 +870,10 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>dateTime (<a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:datePosted": "2019-09-01", </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -735,6 +928,12 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Usage Note</td>
    <td>For description of the jdx:Job, jdx:JobDescription or jdx:JobPosting, the profile definition of this property is: "Summary of the salient aspects of a job, including job responsibilities, qualifications, skills, working hours, education requirements, and experience requirements."</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:description": {
+                "en-US": "ACME Cyber, inc. is looking for junior level cybersecurity specialist to support corporate and client contracts in our Hernon, VA locations. You will be a critical member of a highly-skilled, adaptive cyber team that carries out defensive vulnerability research."
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Email
@@ -772,6 +971,17 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>string (<a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> {
+            "@id": "https://jobdataexchange.org/jdx/pp/resource/f0a23159-e3c3-43df-94da-b15c749599d0",
+            "@type": "jdx:Organization",
+            "email": "info@acme.com",
+            "hasJobPosting": "https://jobdataexchange.org/jdx/pp/resource/b9fc49d4-1344-4cb4-8e3d-21247887b77e",
+            "jdx:employerOverview": {
+                "en-US": "Blake Lee founded the company in Seattle in 1989. Since then we have become a state of the art cybersecurity company with a culture of responsibility. We have 6,000 employees working every day to promote the security in a forward-thinking, innovative, sustainable way. Find out more about our global operations."
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Employer Overview
@@ -804,6 +1014,17 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> {
+            "@id": "https://jobdataexchange.org/jdx/pp/resource/f0a23159-e3c3-43df-94da-b15c749599d0",
+            "@type": "jdx:Organization",
+            "email": "info@acme.com",
+            "hasJobPosting": "https://jobdataexchange.org/jdx/pp/resource/b9fc49d4-1344-4cb4-8e3d-21247887b77e",
+            "jdx:employerOverview": {
+                "en-US": "Blake Lee founded the company in Seattle in 1989. Since then we have become a state of the art cybersecurity company with a culture of responsibility. We have 6,000 employees working every day to promote the security in a forward-thinking, innovative, sustainable way. Find out more about our global operations."
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -840,6 +1061,13 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>Organization (<a href="https://schema.org/Organization">https://schema.org/Organization</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:employmentUnit": {
+                "@type": "Organization" ,
+                "name": "ITC - R&D"
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Has Job Posting
@@ -865,7 +1093,6 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Type of Term</td>
    <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Property">http://www.w3.org/2000/01/rdf-schema#Property</a>)</td>
 </tr>
-
 <tr>
    <td align="right">Domain Includes</td>
    <td>Organization (<a href="https://schema.org/Organization">https://schema.org/Organization</a>)</td>
@@ -873,6 +1100,17 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>JobPosting (<a href="http://purl.org/jdx/terms/JobPosting">http://purl.org/jdx/terms/JobPosting</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> {
+            "@id": "https://jobdataexchange.org/jdx/pp/resource/f0a23159-e3c3-43df-94da-b15c749599d0",
+            "@type": "jdx:Organization",
+            "email": "info@acme.com",
+            "hasJobPosting": "https://jobdataexchange.org/jdx/pp/resource/b9fc49d4-1344-4cb4-8e3d-21247887b77e",
+            "jdx:employerOverview": {
+                "en-US": "Blake Lee founded the company in Seattle in 1989. Since then we have become a state of the art cybersecurity company with a culture of responsibility. We have 6,000 employees working every day to promote the security in a forward-thinking, innovative, sustainable way. Find out more about our global operations."
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -909,6 +1147,10 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>Organization (<a href="https://schema.org/Organization">https://schema.org/Organization</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:hiringOrganization": "https://jobdataexchange.org/jdx/pp/resource/f0a23159-e3c3-43df-94da-b15c749599d0" , </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Incentive Compensation
@@ -930,7 +1172,6 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right"> Source Property Definition</td>
    <td>Description of bonus and commission compensation aspects of the job.</td>
 </tr>
-
 <tr>
    <td align="right">Type of Term</td>
    <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Property">http://www.w3.org/2000/01/rdf-schema#Property</a>)</td>
@@ -944,6 +1185,12 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:incentiveCompensation": {
+                "en-US": "Annual bonus possible."
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -981,6 +1228,23 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>AnnotatedDefinedTermSet (<a href="http://purl.org/jdx/terms/AnnotatedDefinedTermSet">http://purl.org/jdx/terms/AnnotatedDefinedTermSet</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:competency": [
+                {
+                    "@id": "https://jobdataexchange.org/jdx/competency/e8d09da2-5474-598d-9218-3615d3ab1c2b",
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "schema:description": {
+                        "en-US": "Understand common software architectures, including layered and distributed architecture models"
+                    },
+                    "schema:inDefinedTermSet": {
+                        "@type": "DefinedTermSet",
+                        "name": {
+                            "url": "https://jobdataexchange.org/jdx/framework/44a01b50-4628-51e0-b06a-aae3e669d5b8"
+                        }
+                    }
+                }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1025,6 +1289,12 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Usage Note</td>
    <td>The industry description expected here is a brief narrative of the most critical economic or work activities performed. To identify a formal industry code, such as NAICS in the U.S., use the industryCode property.</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:industry": {
+                "en-US": "Software design and deployment including cybersecurity."
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1073,6 +1343,13 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Usage Note</td>
    <td>If the industry code is drawn from NAICS, use the more specific <code>naics</code> property.</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:industryCode": {
+                "@type": "AnnotatedDefinedTerm",
+                "termCode": "541512"
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Job Agreement
@@ -1111,6 +1388,13 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Usage Note</td>
    <td>Use a value selected from a controlled vocabulary of employment contract agreements; select from an existing enumeration of such types.</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:jobAgreement": {
+                "@type": "AnnotatedDefinedTerm" ,
+                "name": "Employee"
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1154,6 +1438,35 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Usage Note</td>
    <td>Use a value selected from a controlled vocabulary of benefit types; select from an existing enumeration of such types.</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code>"schema:jobBenefits": [
+                {
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "name": {
+                        "en-US": "Health Insurance"
+                    }
+                },
+                {
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "name": {
+                        "en-US": "401(k)"
+                    }
+                },
+                {
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "name": {
+                        "en-US": "Gym membership"
+                    }
+                },
+                {
+                    "@type": "jdx:AnnotatedDefinedTerm",
+                    "name": {
+                        "en-US": "Commuting/travel assistance"
+                    }
+                },
+            ], </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Job Location
@@ -1187,6 +1500,16 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>boolean (<a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:jobLocation": {
+                "@type": "schema:Place",
+                "address": {
+                    "@type": "schema:PostalAddress",
+                    "schema:streetAddress": "Seattle, WA"
+                }
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1227,6 +1550,12 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:jobLocationType": {
+                "en-US": "telecommute"
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Job Schedule
@@ -1265,6 +1594,13 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Usage Note</td>
    <td>Use a value selected from a controlled vocabulary of employment schedule types; select from an existing enumeration of such types.</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:jobSchedule": {
+                "@type": "AnnotatedDefinedTerm",
+                "name": "Full-time"
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1305,6 +1641,13 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Usage Note</td>
    <td>Use a value selected from a controlled vocabulary of employment term types; select from an existing enumeration of such types.</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:jobTerm": {
+                "@type": "AnnotatedDefinedTerm" ,
+                "name": "Regular"
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Legal Name
@@ -1342,6 +1685,12 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:legalName": {
+                "en-US": "ACME Cyber"
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Maximum Value
@@ -1367,7 +1716,6 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right"> Source Property Definition</td>
    <td>The upper value of some characteristic or property.</td>
 </tr>
-
 <tr>
    <td align="right">Type of Term</td>
    <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Property">http://www.w3.org/2000/01/rdf-schema#Property</a>)</td>
@@ -1379,6 +1727,21 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>float (<a href="http://www.w3.org/2001/XMLSchema#float">http://www.w3.org/2001/XMLSchema#float</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:baseSalary": {
+                "@type": "schema:MonetaryAmount",
+                "jdx:payCycleInterval": {
+                    "@type": "jdx:AnnotateDefinedTerm",
+                    "name": {
+                        "en-US": "Per Year"
+                    }
+                },
+                "schema:currency": "USD",
+                "schema:maxValue": "65000",
+                "schema:minValue": "45000",
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1416,6 +1779,21 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>float (<a href="http://www.w3.org/2001/XMLSchema#float">http://www.w3.org/2001/XMLSchema#float</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:baseSalary": {
+                "@type": "schema:MonetaryAmount",
+                "jdx:payCycleInterval": {
+                    "@type": "jdx:AnnotateDefinedTerm",
+                    "name": {
+                        "en-US": "Per Year"
+                    }
+                },
+                "schema:currency": "USD",
+                "schema:maxValue": "65000",
+                "schema:minValue": "45000",
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1457,6 +1835,13 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Usage Note</td>
    <td>For the name of the hiring organization, use the subproperty schema:legalName.</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:jobSchedule": {
+                "@type": "AnnotatedDefinedTerm",
+                "name": "Full-time"
+            } </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1503,6 +1888,13 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Usage Note</td>
    <td>Use a value selected from a controlled vocabulary of occupation categories such as the Standard Occupational Classification (SOC); encode using the jdx:AnnotatedDefinedTerm entity.</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:occupationalCategory": {
+                "@type": "AnnotatedDefinedTerm",
+                "termCode": "15-1112.00"
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Pay Cycle Interval
@@ -1540,6 +1932,21 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Usage Note</td>
    <td>Use a value selected from a controlled vocabulary of pay cycles (e.g., the HR Open PayCycleIntervalCodeList); encode using the jdx:AnnotatedDefinedTerm entity.</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:baseSalary": {
+                "@type": "schema:MonetaryAmount",
+                "jdx:payCycleInterval": {
+                    "@type": "jdx:AnnotateDefinedTerm",
+                    "name": {
+                        "en-US": "Per Year"
+                    }
+                },
+                "schema:currency": "USD",
+                "schema:maxValue": "65000",
+                "schema:minValue": "45000",
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Physical Requirement
@@ -1575,6 +1982,18 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:physicalRequirement": {
+                "en-US": "sitting, occasional lifting (under 35 lb)"
+            }, </code></pre> </td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:physicalRequirement": {
+                "en-US": "Must pass fitness test above cutoff threshold."
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1614,6 +2033,14 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Usage Note</td>
    <td>For the identifier of a particular posting for a position, use jdx:postingID.</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:positionID": "456-A", </code></pre> </td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:positionID": "21897784", </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Required Assessment
@@ -1649,79 +2076,19 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>AssessmentProfile (<a href="http://purl.org/jdx/terms/AssessmentProfile">http://purl.org/jdx/terms/AssessmentProfile</a>)</td>
 </tr>
-</tbody></table>
-
-### Required Education
-
-<table cellpadding="5" width="90%">
-<tbody><tr>
-  <td width="150" align="right">Property URI</td>
-  <td><a href="http://purl.org/jdx/terms/requiredEducation">http://purl.org/jdx/terms/requiredEducation</a></td>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:requiredAssessment": {
+                "@type": "AssessmentProfile",
+                "description": "Complete an interview process which includes a live coding challenge."
+            }, </code></pre> </td>
 </tr>
 <tr>
-  <td align="right">Label</td>
-  <td>Required Education</td>
-</tr>
-<tr>
-   <td align="right">Defined By</td>
-   <td><a href="http://purl.org/jdx/terms/">http://purl.org/jdx/terms/</a></td>
-</tr>
-<tr>
-   <td align="right">JDX Definition</td>
-   <td>Description of the required education or training needed for the position or occupation.</td>
-</tr>
-<tr>
-   <td align="right">Type of Term</td>
-   <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Property">http://www.w3.org/2000/01/rdf-schema#Property</a>)</td>
-</tr>
-<tr>
-   <td align="right">Domain Includes</td>
-   <td>Condition (<a href="http://purl.org/jdx/terms/Condiiton">http://purl.org/jdx/terms/Condition</a>)<br>Job (<a href="http://purl.org/jdx/terms/Job">http://purl.org/jdx/terms/Job</a>)<br> 
-   JobDescription (<a href="http://purl.org/jdx/terms/JobDescription">http://purl.org/jdx/terms/JobDescription</a>)<br>
-   JobPosting (<a href="http://purl.org/jdx/terms/JobPosting">http://purl.org/jdx/terms/JobPosting</a>)</td>
-</tr>
-<tr>
-   <td align="right">Range Includes</td>
-   <td>QualifyingExperience (<a href="http://purl.org/jdx/terms/QualifyingExperience">http://purl.org/jdx/terms/QualifyingExperience</a>)</td>
-</tr>
-<tr>
-   <td align="right">Usage Note</td>
-   <td>Specific credential requirements should use jdx:requiredCredential.</td>
-</tr>
-</tbody></table>
-
-### Required Experience
-
-<table cellpadding="5" width="90%">
-<tbody><tr>
-  <td width="150" align="right">Property URI</td>
-  <td><a href="http://purl.org/jdx/terms/requiredExperience">http://purl.org/jdx/terms/requiredExperience</a></td>
-</tr>
-<tr>
-  <td align="right">Label</td>
-  <td>Required Experience</td>
-</tr>
-<tr>
-   <td align="right">Defined By</td>
-   <td><a href="http://purl.org/jdx/terms/">http://purl.org/jdx/terms/</a></td>
-</tr>
-<tr>
-   <td align="right">JDX Definition</td>
-   <td>Description of the required experience needed for the position or occupation.</td>
-</tr>
-<tr>
-   <td align="right">Type of Term</td>
-   <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Property">http://www.w3.org/2000/01/rdf-schema#Property</a>)</td>
-</tr>
-<tr>
-   <td align="right">Domain Includes</td>
-   <td>Condition (<a href="http://purl.org/jdx/terms/Condiiton">http://purl.org/jdx/terms/Condition</a>)<br>Job (<a href="http://purl.org/jdx/terms/Job">http://purl.org/jdx/terms/Job</a>)<br> 
-   JobDescription (<a href="http://purl.org/jdx/terms/JobDescription">http://purl.org/jdx/terms/JobDescription</a>)<br>
-   JobPosting (<a href="http://purl.org/jdx/terms/JobPosting">http://purl.org/jdx/terms/JobPosting</a>)</td>
-</tr>
-<tr>
-   <td align="right">Range Includes</td>
-   <td>QualifyingExperience (<a href="http://purl.org/jdx/terms/QualifyingExperience">http://purl.org/jdx/terms/QualifyingExperience</a>)</td>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:requiredAssessment": {
+                "@type": "AssessmentProfile",
+                "description": "Written assessment will used to screen applicants."
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1758,6 +2125,15 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>Credential (<a href="http://purl.org/jdx/terms/Credential">http://purl.org/jdx/terms/Credential</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:requiredCredential": {
+                "@type": "Credential",
+                "description": {
+                    "en-US": "Bachelor's Degree or equivalent experience"
+                }
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Security Clearance Requirement
@@ -1793,6 +2169,18 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:securityClearanceRequirement": {
+                "en-US": "US federal type C clearance"
+            }, </code></pre> </td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:securityClearanceRequirement": {
+                "en-US": "Background check"
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Sensory Requirement 
@@ -1827,6 +2215,12 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:sensoryRequirement": {
+                "en-US": "Normal vision"
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1866,6 +2260,12 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:specialCommitment": {
+              "en-US": "Special program for ex-offenders"
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Street Address
@@ -1902,6 +2302,16 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:jobLocation": {
+                "@type": "schema:Place",
+                "address": {
+                    "@type": "schema:PostalAddress",
+                    "schema:streetAddress": "89 Clearwater Ave, Seattle, WA, 76543"
+                }
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -1940,6 +2350,14 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>string (<a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:telephone": "(406) 234-0987", </code></pre> </td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:telephone": "4062340987", </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Term Code
@@ -1976,6 +2394,20 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>string (<a href="http://www.w3.org/2001/XMLSchema#string">http://www.w3.org/2001/XMLSchema#string</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:occupationalCategory": {
+                "@type": "AnnotatedDefinedTerm",
+                "termCode": "15-1112.00"
+            }, </code></pre> </td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:industryCode": {
+                "@type": "AnnotatedDefinedTerm",
+                "termCode": "541512"
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -2017,6 +2449,12 @@ The format and content of the JDX property tables are summarized below. Note tha
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
 </tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:title": {
+                "en-US": "Junior Cybersecurity Specialist"
+            }, </code></pre> </td>
+</tr>
 </tbody></table>
 
 ### Total Job Openings
@@ -2048,40 +2486,11 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 <tr>
    <td align="right">Range Includes</td>
-   <td>float (<a href="http://www.w3.org/2001/XMLSchema#float">http://www.w3.org/2001/XMLSchema#float</a>)</td>
-</tr>
-</tbody></table>
-
-### Total Job Openings
-
-<table cellpadding="5" width="90%">
-<tbody><tr>
-  <td width="150" align="right">Property URI</td>
-  <td><a href="http://purl.org/jdx/terms/totalJobOpenings">http://purl.org/jdx/terms/totalJobOpenings</a></td>
+   <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
 </tr>
 <tr>
-  <td align="right">Label</td>
-  <td>Total Job Openings</td>
-</tr>
-<tr>
-   <td align="right">Defined By</td>
-   <td><a href="http://purl.org/jdx/terms/">http://purl.org/jdx/terms/</a></td>
-</tr>
-<tr>
-   <td align="right">JDX Definition</td>
-   <td>Total number of positions open at all locations.</td>
-</tr>
-<tr>
-   <td align="right">Type of Term</td>
-   <td>Property (<a href="http://www.w3.org/2000/01/rdf-schema#Property">http://www.w3.org/2000/01/rdf-schema#Property</a>)</td>
-</tr>
-<tr>
-   <td align="right">Domain Includes</td>
-   <td>JobPosting (<a href="http://purl.org/jdx/terms/JobPosting">http://purl.org/jdx/terms/JobPosting</a>)</td>
-</tr>
-<tr>
-   <td align="right">Range Includes</td>
-   <td>float (<a href="http://www.w3.org/2001/XMLSchema#float">http://www.w3.org/2001/XMLSchema#float</a>)</td>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:totalJobOpenings": "1" </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -2119,6 +2528,10 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>date (<a href="http://www.w3.org/2001/XMLSchema#date">http://www.w3.org/2001/XMLSchema#date</a>)<br> dateTime (<a href="http://www.w3.org/2001/XMLSchema#dateTime">http://www.w3.org/2001/XMLSchema#dateTime</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "schema:validThrough": "2019-09-30", </code></pre> </td>
 </tr>
 </tbody></table>
 
@@ -2158,6 +2571,13 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Range Includes</td>
    <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
+</tr>
+<tr>
+   <td align="right">Example Encoding</td>
+   <td><pre><code> "jdx:workHours": {
+                "@type": "AnnotatedDefinedTerm",
+                "name": "Normal work hours"
+            }, </code></pre> </td>
 </tr>
 </tbody></table>
 
