@@ -6,16 +6,43 @@ body:
 
 The aim of JDX is to reduce friction in the talent marketplace by making it easier for employers to clearly communicate their hiring needs, job applicants to identify what jobs they qualify for, and educators to know what needs are emerging in the labor market. JDX provides a data standard and open data infrastructure to improve how quickly and clearly employers, through their HR partners, communicate in-demand jobs, skills, and other hiring requirements to education and workforce partners. 
 
-In 2016, U.S. Chamber of Commerce Foundation in [“Clearer Signals: Building an Employer-Led Job Registry for Talent Pipeline Management,”](https://www.uschamberfoundation.org/sites/default/files/Clearer%20Signals.pdf) detailed the strategies that would need to be designed and implemented in order to improve how well, timely, and efficiently employers communicate what they need from job applicants. One of the strategies is creating more transparent job descriptions and hiring requirements. The success of the strategy rests on tools that provide job description analysis services and a data-driven resource library that provides the common language and frameworks for developing job descriptions. 
+## Site Map
 
-![What JDX Needs to Work](screen-shot-2019-10-22-at-11.50.35-pm.png)
+**[Documentation](/docs/)** - Why JDX matters, development timeline, guidance on implementing, and sustainability
+* [Start Here!](docs/start-here/) - Background, definitions, current JDX results from pilot testing
+* [Implementation Guide](docs/implementation-guide/) - How the pieces of JDX come together
+* [Namespace Policy & Expectations for Maintenance](docs/expectations-for-maintenance/) - How JDX links stay alive and are updated
 
-In 2018, a team set out to refine how technology would be leveraged to develop the tools needed to send clearer signals. These tools became the prototype version of JDX, testing the data standard and open data infrastructure needed to make it real and get closer to achieving its goal. Working with employers and other partners, the team tested a new data standard to inform the development of competency-driven job descriptions that would also convey much-needed information about what skills, knowledge, and abilities employers are looking for from job applicants. The testing was driven by a critical question around how much new information about a job could easily be provided across diverse types of employers and industries and whether that new information is actionable by talent and workforce development providers and could inform curriculum and learning objectives. Employers tested how the data standard creates better job descriptions through a reference application designed to analyze an existing job description and improve it by 
-1. identifying what information in the description matches fields from the data standard; 
-2. collecting information from employers to complete missing fields from the data standard; and 
-3. recommending competencies from a competency model or framework that aligns with the job title. The testing of competency recommendations aimed to answer questions about the usability, including completeness, of competency models and frameworks, whether employers could pull from a framework and include competency statements in their job descriptions and postings, and whether those statements help employers better communicate their hiring requirements compared to their original job description.
+**[Specifications](/specs/)** - Technical reference for the code that makes up Jobschema+, a cornerstone of the JDX ecosystem
+* [Introduction](/specs/introduction) - Info on the specs and releases
+* [Concept Schemes](/specs/concept-schemes) - Also known as "controlled vocabularies" which stipulate which values are acceptable for certain terms
+* [Terms](/specs/terms) - the "dictionary" of vocabulary used in Jobschema+
+* [Example Files](/specs/example-files) - This demonstrates an example of the basic files JDX can output in its current release 
+* [Changelog](/specs/changelog) - A record of updates for each release
 
-JDX is not intended to be a single application but rather a set of tools, data specifications, data resources and services, and a network of applications, partners, and users. The reference application, however, validated the usefulness of the tools that it leveraged. This website provides access to the tools developed for JDX to support the ecosystem that can derive value from better data on jobs. JDX has launched this website as it approaches its Phase 2 focused on deployment and beta testing.  
+**[Tools](/tools/)** - A list of resources in the JDX ecosystem that may be referenced in this website
+
+## Why JDX?
+
+Seven million open job postings in America risk remaining unfilled because job seekers, employers, and educators are out of sync. Stuck using static job descriptions and working with out-of-date or incomplete information, employers struggle to communicate to jobseekers, educators, and workforce partners precisely what is needed for workers to succeed in their workplace. These concerns are augmented by the high costs of developing validated, competency-based job postings from scratch, increasing demands on HR professionals’ time, and a more dynamic, fast-paced labor market.
+
+JDX, and the data standard it employs, is a technological leap forward that allows employers and their HR partners to move towards competency-based hiring, helping them to break down a job description into specific skill and hiring requirements. JDX tools—which are open-source, non-proprietary and free to use—organize jobs data from employers in a structured, machine-readable way that can be optimized for use by education and workforce partners who help students and job seekers prepare for the workforce. Additionally, government statistical agencies, labor market analysis firms, job boards, and other platforms can benefit from the more granular data JDX produces.
+
+The JDX ecosystem supports:
+* Helping employers and employer collaboratives develop more informative and competency-based job descriptions
+* Providing employers with feedback and recommendations on how to make improvements to job descriptions and postings based on aggregations
+* Providing content suggestions in real time to accelerate creation of or updates to job descriptions or postings
+* Supporting the validation of job descriptions across an industry or occupation
+* Distributing job postings to education and workforce partners in real time
+
+Benefits:
+* **Education and training providers** will receive better signals of competency and skill requirements from the business community resulting in improved opportunities for alignment of curriculum, credentials, assessments, and career services.
+* **Job seekers** will have access to better data on skills, competencies, and requirements needed for a job resulting in an improved experience when searching and applying for jobs enabling more equitable hiring opportunities.
+* **Employers** will receive improved demand-driven data on hiring requirements for jobs to compare, contrast, and develop their job descriptions and postings resulting in a more qualified candidate pool and in return improved screening, hiring, and retention.
+* **Human Resource (HR)** partners will improve the quantity and quality of open data resources being used in their systems resulting in improved HRIS and ATS platforms in the talent marketplace.
+* **Data partners** and owners of data resources can make their data available through the JDX open data tools and can benefit from new data analytics resulting from their use.
+
+![Future State](jdx-future-state-diagram-v5.png)
 
 -------------
 
@@ -26,20 +53,19 @@ JobSchema+ provides a standardized way of organizing structured data on the web 
 
 ![Jobschema+](screen-shot-2019-10-22-at-11.39.09-pm.png)
 
-The JobSchema+ full specification demonstrates the extensive possibilities of the schema. The JobSchema+ 1.0 specification represents a version trimmed down for testing in the JDX pilot. Based on pilot learnings, JDX expects to develop another version.
-See the full and 1.0 specifications here.
+The JobSchema+ full specification demonstrates the extensive possibilities of the schema. The JobSchema+ 0.9.0 specification represents a version trimmed down for testing in the JDX pilot. Based on pilot learnings, JDX will develop v1.0.0 for implementation.
 
 ## Competency Frameworks and Skills Lists
 
-JDX allows employers to link to defined terms which specify skill and competency requirements. These terms can be defined in formal competency models (e.g., [Competency Clearinghouse](https://www.careeronestop.org/competencymodel/home.aspx)) or in lists of skill-related phrases derived from labor market data (e.g., [Emsi](https://www.economicmodeling.com/)).
+JDX allows employers to link to defined terms which specify skill and competency requirements. These terms can be defined in formal competency models (e.g., [Competency Clearinghouse](https://www.careeronestop.org/competencymodel/home.aspx)) or in lists of skill-related phrases derived from labor market data (e.g., [Emsi](https://www.economicmodeling.com/)). Another way to think about this: ""competency" is a higher order skill or contextualized synthesis of multiple skills (ex. budgeting and negotiation skills, when pulled together and contextualized by specific pathway - nursing vs. accounting - skills actually can vary within competencies) - competencies are often an academic tool- developed differently depending on institution and thus subjective, this is especially important when aligning to standards. Skills - are precise, granular units - what needs to be learned for that specific learning experience. Skills are the foundation of broader competencies, and can be reverse engineered from competencies as well."
 
 ## Competensor
 
-Competensor is an open source efficient library for cross-level semantic matching of unstructured text to structured framework descriptions. It was developed with funding from the US Chamber of Commerce Foundation to power automatic competency translation from job postings to selected rows from occupational and industrial competency frameworks. It has been designed to process 50+ job postings a second across a wide variety of competency frameworks. Competensor leverages Tensorflow, Auto-Sklearn, Pandas, and Numpy. Competensor was used in the JDX pilot to test an example tool for parsing competencies and skills from job descriptions or postings. See Competensor here.
+Competensor is an open source efficient library for cross-level semantic matching of unstructured text to structured framework descriptions. It was developed with funding from the US Chamber of Commerce Foundation to power automatic competency translation from job postings to selected rows from occupational and industrial competency frameworks. It has been designed to process 50+ job postings a second across a wide variety of competency frameworks. Competensor leverages Tensorflow, Auto-Sklearn, Pandas, and Numpy. Competensor was used in the JDX pilot to test an example tool for parsing competencies and skills from job descriptions or postings. See **[Competensor](https://github.com/jobdataexchange/competensor)**.
 
 ## JDX API
 
-Competensor and the JDX API worked together to serve the JDX test application. See the [github repo](https://github.com/brighthive/jdx-api) and the [swagger spec](https://app.swaggerhub.com/apis/loganripplinger/JDX-reference-backend-application-real).
+Competensor and the JDX API worked together to serve the JDX test application. See the [github repo](https://github.com/jobdataexchange/jdx-api) and the [swagger spec](https://app.swaggerhub.com/apis/loganripplinger/JDX-reference-backend-application-real).
 
 ## JDX Validator
 
@@ -50,6 +76,19 @@ The JDX validator will validate JobSchema+ JSON-LD formatted files. Coming soon!
 The scope of this application was to enable employers to pilot test running 1-2 job descriptions/postings through an interface prompting them and assisting them to fill out all the JobSchema+ properties. It produced a JSON output file and a human-readable version. The outputs were compared to the originals as one measure of the success of the pilot. See the [github repo](https://github.com/jobdataexchange/reference-app-ui) for this application.
 
 ----------
+## Background
+
+In 2016, U.S. Chamber of Commerce Foundation in [“Clearer Signals: Building an Employer-Led Job Registry for Talent Pipeline Management,”](https://www.uschamberfoundation.org/sites/default/files/Clearer%20Signals.pdf) detailed the strategies that would need to be designed and implemented in order to improve how well, timely, and efficiently employers communicate what they need from job applicants. One of the strategies is creating more transparent job descriptions and hiring requirements. The success of the strategy rests on tools that provide job description analysis services and a data-driven resource library that provides the common language and frameworks for developing job descriptions. 
+
+![What JDX Needs to Work](screen-shot-2019-10-22-at-11.50.35-pm.png)
+
+In 2018, a team set out to refine how technology would be leveraged to develop the tools needed to send clearer signals. These tools became the prototype version of JDX, testing the data standard and open data infrastructure needed to make it real and get closer to achieving its goal. Working with employers and other partners, the team tested a new data standard to inform the development of competency-driven job descriptions that would also convey much-needed information about what skills, knowledge, and abilities employers are looking for from job applicants. The testing was driven by a critical question around how much new information about a job could easily be provided across diverse types of employers and industries and whether that new information is actionable by talent and workforce development providers and could inform curriculum and learning objectives. Employers tested how the data standard creates better job descriptions through a reference application designed to analyze an existing job description and improve it by: 
+1. Identifying what information in the description matches fields from the data standard; 
+2. Collecting information from employers to complete missing fields from the data standard; and 
+3. Recommending competencies from a competency model or framework that aligns with the job title. The testing of competency recommendations aimed to answer questions about the usability, including completeness, of competency models and frameworks, whether employers could pull from a framework and include competency statements in their job descriptions and postings, and whether those statements help employers better communicate their hiring requirements compared to their original job description.
+
+JDX is not intended to be a single application but rather a set of tools, data specifications, data resources and services, and a network of applications, partners, and users. The reference application, however, validated the usefulness of the tools that it leveraged. This website provides access to the tools developed for JDX to support the ecosystem that can derive value from better data on jobs. JDX has launched this website as it approaches its Phase 2 focused on deployment and beta testing.  
+
 # Analysis
 
 JDX engaged employers to pilot-test the JDX prototype and the data that derives from the JDX JobSchema+. Technical assistance from BrightHive was offered to JDX employers throughout the pilot-testing phase. Evaluation and findings of the JDX pilot and use of the JDX JobSchema+ to be released in late 2019 and shared with the Talent Marketplace Signaling W3C Community Group and HR Open Standards for consideration.
