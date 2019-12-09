@@ -8,16 +8,15 @@ The aim of JDX is to reduce friction in the talent marketplace by making it easi
 
 ## Site Map
 
-**[Documentation](/../)** - Why JDX matters, development timeline, guidance on implementing, and sustainability
-* [Start Here!](/) - Background, definitions, current JDX results from pilot testing
-* [Implementation Guide](/../implementation-guide/) - How the pieces of JDX come together
-* [Namespace Policy & Expectations for Maintenance](/../expectations-for-maintenance/) - How JDX links stay alive and are updated
+**[Documentation](/../docs/)** - Why JDX matters, development timeline, guidance on implementing, and sustainability
+* [Start Here!](/../docs/start-here/) - Background, current JDX results from pilot testing, definitions
+* [Implementation Guide](/../docs/implementation-guide/) - How the pieces of JDX come together
+* [Namespace Policy & Expectations for Maintenance](/../docs/expectations-for-maintenance/) - How JDX links stay alive and are updated
 
 **[Specifications](/../../specs/)** - Technical reference for the code that makes up Jobschema+, a cornerstone of the JDX ecosystem
-* [Introduction](/../../specs/introduction) - Info on the specs and releases
-* [Concept Schemes](/../../specs/concept-schemes) - Also known as "controlled vocabularies" which stipulate which values are acceptable for certain terms
-* [Terms](/../../specs/terms) - the "dictionary" of vocabulary used in Jobschema+
-* [Example Files](/../../specs/example-files) - This demonstrates an example of the basic files JDX can output in its current release 
+* [Concept Schemes](/../../specs/jobschemaplus-concept-schemes) - Also known as "controlled vocabularies" which stipulate which values are acceptable for certain terms
+* [Terms](/../../specs/jobschema-terms) - the "dictionary" of vocabulary used in Jobschema+
+* [Example Files](/../../specs/jobschema-example-files) - This demonstrates an example of the basic files JDX can output in its current release 
 * [Changelog](/../../specs/changelog) - A record of updates for each release
 
 **[Tools](/../../tools/)** - A list of resources in the JDX ecosystem that may be referenced in this website
@@ -43,37 +42,6 @@ Benefits:
 * **Data partners** and owners of data resources can make their data available through the JDX open data tools and can benefit from new data analytics resulting from their use.
 
 ![Future State](jdx-future-state-diagram-v5.png)
-
--------------
-
-# Definitions
-
-## JobSchema+
-JobSchema+ provides a standardized way of organizing structured data on the web for jobs. The schema is intended to create better, and a greater volume and granularity of data on jobs, including competencies and credentialing requirements. The JDX JobSchema+ extends and improves upon Schema.org and aligns with HR Open Standards and W3C Talent Marketplace Signaling Community Group.
-
-![Jobschema+](screen-shot-2019-10-22-at-11.39.09-pm.png)
-
-The JobSchema+ full specification demonstrates the extensive possibilities of the schema. The JobSchema+ 0.9.0 specification represents a version trimmed down for testing in the JDX pilot. Based on pilot learnings, JDX will develop v1.0.0 for implementation.
-
-## Competency Frameworks and Skills Lists
-
-JDX allows employers to link to defined terms which specify skill and competency requirements. These terms can be defined in formal competency models (e.g., [Competency Clearinghouse](https://www.careeronestop.org/competencymodel/home.aspx)) or in lists of skill-related phrases derived from labor market data (e.g., [Emsi](https://www.economicmodeling.com/)). Another way to think about this: ""competency" is a higher order skill or contextualized synthesis of multiple skills (ex. budgeting and negotiation skills, when pulled together and contextualized by specific pathway - nursing vs. accounting - skills actually can vary within competencies) - competencies are often an academic tool- developed differently depending on institution and thus subjective, this is especially important when aligning to standards. Skills - are precise, granular units - what needs to be learned for that specific learning experience. Skills are the foundation of broader competencies, and can be reverse engineered from competencies as well."
-
-## Competensor
-
-Competensor is an open source efficient library for cross-level semantic matching of unstructured text to structured framework descriptions. It was developed with funding from the US Chamber of Commerce Foundation to power automatic competency translation from job postings to selected rows from occupational and industrial competency frameworks. It has been designed to process 50+ job postings a second across a wide variety of competency frameworks. Competensor leverages Tensorflow, Auto-Sklearn, Pandas, and Numpy. Competensor was used in the JDX pilot to test an example tool for parsing competencies and skills from job descriptions or postings. See **[Competensor](https://github.com/jobdataexchange/competensor)**.
-
-## JDX API
-
-Competensor and the JDX API worked together to serve the JDX test application. See the [github repo](https://github.com/jobdataexchange/jdx-api) and the [swagger spec](https://app.swaggerhub.com/apis/loganripplinger/JDX-reference-backend-application-real).
-
-## JDX Validator
-
-The JDX validator will validate JobSchema+ JSON-LD formatted files. Coming soon!
-
-## JDX Test Application
-
-The scope of this application was to enable employers to pilot test running 1-2 job descriptions/postings through an interface prompting them and assisting them to fill out all the JobSchema+ properties. It produced a JSON output file and a human-readable version. The outputs were compared to the originals as one measure of the success of the pilot. See the [github repo](https://github.com/jobdataexchange/reference-app-ui) for this application.
 
 ----------
 ## Background
@@ -103,6 +71,37 @@ Preliminary analysis is limited based on a very small sample size of the pilot t
 * Content from the original job description should not be lost in the new version, including information around culture and brand  
 
 ![info-increase](screen-shot-2019-10-25-at-2.36.09-am.png)
+
+----------------
+
+# Definitions
+
+## JobSchema+
+JobSchema+ provides a standardized way of organizing structured data on the web for jobs. The schema is intended to create better, and a greater volume and granularity of data on jobs, including competencies and credentialing requirements. The JDX JobSchema+ extends and improves upon Schema.org and aligns with HR Open Standards and W3C Talent Marketplace Signaling Community Group.
+
+![Jobschema+](screen-shot-2019-10-22-at-11.39.09-pm.png)
+
+The JobSchema+ full specification demonstrates the extensive possibilities of the schema. The JobSchema+ 0.9.0 specification represents a version trimmed down for testing in the JDX pilot. Based on pilot learnings, JDX will develop v1.0.0 for implementation.
+
+## Competency Frameworks and Skills Lists
+
+JDX allows employers to link to defined terms which specify skill and competency requirements. These terms can be defined in formal competency models (e.g., [Competency Clearinghouse](https://www.careeronestop.org/competencymodel/home.aspx)) or in lists of skill-related phrases derived from labor market data (e.g., [Emsi](https://www.economicmodeling.com/)). Another way to think about this: ""competency" is a higher order skill or contextualized synthesis of multiple skills (ex. budgeting and negotiation skills, when pulled together and contextualized by specific pathway - nursing vs. accounting - skills actually can vary within competencies) - competencies are often an academic tool- developed differently depending on institution and thus subjective, this is especially important when aligning to standards. Skills - are precise, granular units - what needs to be learned for that specific learning experience. Skills are the foundation of broader competencies, and can be reverse engineered from competencies as well."
+
+## Competensor
+
+Competensor is an open source efficient library for cross-level semantic matching of unstructured text to structured framework descriptions. It was developed with funding from the US Chamber of Commerce Foundation to power automatic competency translation from job postings to selected rows from occupational and industrial competency frameworks. It has been designed to process 50+ job postings a second across a wide variety of competency frameworks. Competensor leverages Tensorflow, Auto-Sklearn, Pandas, and Numpy. Competensor was used in the JDX pilot to test an example tool for parsing competencies and skills from job descriptions or postings. See **[Competensor](https://github.com/jobdataexchange/competensor)**.
+
+## JDX API
+
+Competensor and the JDX API worked together to serve the JDX test application. See the [github repo](https://github.com/jobdataexchange/jdx-api) and the [swagger spec](https://app.swaggerhub.com/apis/loganripplinger/JDX-reference-backend-application-real).
+
+## JDX Validator
+
+The JDX validator will validate JobSchema+ JSON-LD formatted files. Coming soon!
+
+## JDX Test Application
+
+The scope of this application was to enable employers to pilot test running 1-2 job descriptions/postings through an interface prompting them and assisting them to fill out all the JobSchema+ properties. It produced a JSON output file and a human-readable version. The outputs were compared to the originals as one measure of the success of the pilot. See the [github repo](https://github.com/jobdataexchange/reference-app-ui) for this application.
 
 ---
 pub_date: 2019-12-09

@@ -7,9 +7,9 @@ body:
 These specifications pages describe the underlying files of Jobschema+ (JS+) that all JS+ formatted job descriptions or postings will link to. It allows them to contain a greater volume of, more precise, more interrelated, and more standardized information which enables advanced analytics - to produce findings that can improve outcomes for employers, talent sourcing providers, and jobseekers alike. The specs describe a "profile" of JS+ that is reduced from the **["full"](https://github.com/jobdataexchange/Data-Modeling/tree/master/JS%2B_Full)** schema which can be drawn from to incorporate features in future versions. The current release is v0.9.0 and represents the schema (essentially a vocabulary) used to format job descriptions in the JDX pilot conducted summer 2019. The next release, v1.0.0, has a list of potential features on the **[Implementation Guide](../docs/implementation-guide)** page that we hope you'll weigh in on. At that release, we will look forward to begin supporting your implementation of JS+!
 
 The files include:
-* [JS+ Example Files](/jobschema-example-files/) - the JDX workflow produces job descriptions or job postings in a human readable format and a JSON-LD format that is machine-readable and enables advanced analytics.
-* [JS+ Terms](/jobschema-terms/) -  all of the classes and properties enabling JDX to make assertions about job postings and other entities in a posting's lifecycle.
-* [JS+ Concept Schemes](/jobschemaplus-concept-schemes/) - controlled vocabularies that define the acceptable values for any properties subject to concept schemes
+* [JS+ Example Files](/specs/jobschema-example-files/) - the JDX workflow produces job descriptions or job postings in a human readable format and a JSON-LD format that is machine-readable and enables advanced analytics.
+* [JS+ Terms](/specs/jobschema-terms/) -  all of the classes and properties enabling JDX to make assertions about job postings and other entities in a posting's lifecycle.
+* [JS+ Concept Schemes](/specs/jobschemaplus-concept-schemes/) - controlled vocabularies that define the acceptable values for any properties subject to concept schemes
 * JS+ Context File - The file that contains references for the other files. There isn't an explanatory page in specs for this one since all the content is covered on the other pages, but this file can be found [here](https://github.com/jobdataexchange/Data-Modeling/blob/master/JS%2B_releases/v0.9.0-piloted-version/jdxcontext.json)
 
-Also in Specs, find our [Changelog](/changelog/) for updates on each release.
+Also in Specs, find our [Changelog](/specs/changelog/) for updates on each release.
