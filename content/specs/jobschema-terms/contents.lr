@@ -294,8 +294,8 @@ The format and content of the JDX class tables are summarized in the following t
                     }
                 },
                 "schema:currency": "USD",
-                "schema:maxValue": "65000",
-                "schema:minValue": "45000",
+                "schema:maxValue": 65000,
+                "schema:minValue": 45000,
             } </code></pre> </td>
 </tr>
 </tbody></table>
@@ -663,8 +663,8 @@ The format and content of the JDX property tables are summarized below. Note tha
                     }
                 },
                 "schema:currency": "USD",
-                "schema:maxValue": "65000",
-                "schema:minValue": "45000",
+                "schema:maxValue": 65000,
+                "schema:minValue": 45000,
             }, </code></pre> </td>
 </tr>
 </tbody></table>
@@ -830,8 +830,8 @@ The format and content of the JDX property tables are summarized below. Note tha
                     }
                 },
                 "schema:currency": "USD",
-                "schema:maxValue": "65000",
-                "schema:minValue": "45000",
+                "schema:maxValue": 65000,
+                "schema:minValue": 45000,
             }, </code></pre> </td>
 </tr>
 </tbody></table>
@@ -1739,8 +1739,8 @@ The format and content of the JDX property tables are summarized below. Note tha
                     }
                 },
                 "schema:currency": "USD",
-                "schema:maxValue": "65000",
-                "schema:minValue": "45000",
+                "schema:maxValue": 65000,
+                "schema:minValue": 45000,
             }, </code></pre> </td>
 </tr>
 </tbody></table>
@@ -1791,8 +1791,8 @@ The format and content of the JDX property tables are summarized below. Note tha
                     }
                 },
                 "schema:currency": "USD",
-                "schema:maxValue": "65000",
-                "schema:minValue": "45000",
+                "schema:maxValue": 65000,
+                "schema:minValue": 45000,
             }, </code></pre> </td>
 </tr>
 </tbody></table>
@@ -1943,8 +1943,8 @@ The format and content of the JDX property tables are summarized below. Note tha
                     }
                 },
                 "schema:currency": "USD",
-                "schema:maxValue": "65000",
-                "schema:minValue": "45000",
+                "schema:maxValue": 65000,
+                "schema:minValue": 45000,
             }, </code></pre> </td>
 </tr>
 </tbody></table>
@@ -2486,11 +2486,11 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 <tr>
    <td align="right">Range Includes</td>
-   <td>langString (<a href="http://www.w3.org/1999/02/22-rdf-syntax-ns#langString">http://www.w3.org/1999/02/22-rdf-syntax-ns#langString</a>)</td>
+   <td>float (<a href="http://www.w3.org/2001/XMLSchema#float">http://www.w3.org/2001/XMLSchema#float</a>)</td>
 </tr>
 <tr>
    <td align="right">Example Encoding</td>
-   <td><pre><code> "jdx:totalJobOpenings": "1" </code></pre> </td>
+   <td><pre><code> "jdx:totalJobOpenings": 1 </code></pre> </td>
 </tr>
 </tbody></table>
 
