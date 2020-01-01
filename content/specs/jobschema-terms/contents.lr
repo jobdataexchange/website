@@ -1474,11 +1474,11 @@ The format and content of the JDX property tables are summarized below. Note tha
 <table cellpadding="5" width="90%">
 <tbody><tr>
   <td width="150" align="right">Property URI</td>
-  <td><a href="http://purl.org/jdx/terms/jobImmediateStart">http://purl.org/jdx/terms/jobImmediateStart</a></td>
+  <td><a href="http://purl.org/jdx/terms/jobLocation">http://purl.org/jdx/terms/jobLocation</a></td>
 </tr>
 <tr>
   <td align="right">Label</td>
-  <td>Job Immediate Start</td>
+  <td>Job Location</td>
 </tr>
 <tr>
    <td align="right">Defined By</td>
@@ -1486,7 +1486,7 @@ The format and content of the JDX property tables are summarized below. Note tha
 </tr>
 <tr>
    <td align="right">JDX Definition</td>
-   <td>Indicator as to whether a position is available for an immediate start.</td>
+   <td>Typically single geographic location where the work is performed.</td>
 </tr>
 <tr>
    <td align="right">Type of Term</td>
@@ -1495,11 +1495,13 @@ The format and content of the JDX property tables are summarized below. Note tha
 <tr>
    <td align="right">Domain Includes</td>
    <td>Job (<a href="http://purl.org/jdx/terms/Job">http://purl.org/jdx/terms/Job</a>)<br>
-   JobPosting (<a href="http://purl.org/jdx/terms/JobPosting">http://purl.org/jdx/terms/JobPosting</a>)</td>
+   JobDescription (<a href="http://purl.org/jdx/terms/JobDescription">http://purl.org/jdx/terms/JobDescription</a>)<br>
+   JobPosting (<a href="http://purl.org/jdx/terms/JobPosting">http://purl.org/jdx/terms/JobPosting</a>)<br>
+   Organization (<a href="https://schema.org/Organization">https://schema.org/Organization</a>)</td>
 </tr>
 <tr>
    <td align="right">Range Includes</td>
-   <td>boolean (<a href="http://www.w3.org/2001/XMLSchema#boolean">http://www.w3.org/2001/XMLSchema#boolean</a>)</td>
+   <td>Place (<a href="https://schema.org/Place">https://schema.org/Place</a>)</td>
 </tr>
 <tr>
    <td align="right">Example Encoding</td>
